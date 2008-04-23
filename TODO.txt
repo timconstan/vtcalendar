@@ -1,0 +1,30 @@
+FEATURES
+--------
+- don't allow calendar admins to lock themselves out from the calendar by restricting access
+- search by sponsor
+- display email addresses as javascript to protect against spammers
+- harden against cross-site scripting attacks
+- make "manage users" available in default calendar for all newly created calendars
+  (important for setting passwords when LDAP is not used)
+- document export parameters timebegin=today and rangedays=30
+- document difference between a calendar and categories
+
+BUGS
+----
+- when admin edits an "to-be-approved" item it is automatically approved (which is OK) but
+also becomes the event of the admin (which is not OK)
+- using the filter resets the calendar to the view that includes today
+- userids are sometime case sensitive, sometimes not -> you may be able to login with an upper/lowercase Id but not "Manage users" for example
+
+
+IDEAS FOR FUTURE IMPROVEMENTS
+-----------------------------
+- iCal import
+- sorted log
+- have a print view for the calendar
+- have a calendar output designed for pocket PC
+- implement a year view that highlights certain admin or user-defined categories
+- make it an option whether or not the admin gets an email upon a new event submission (the admin should be able to change that)
+- remember search parameter after using the back button
+- have a feature to allow copy of all search results via vCalendar/iCalendar
+- improve search further (take out special characters [intelligently]) e.g. "parents' day"

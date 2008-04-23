@@ -1,0 +1,4 @@
+Please refer to the opensource website for 
+documentation and installation instructions:
+
+http://vtcalendar.sourceforge.net/

@@ -1,0 +1,22 @@
+VTCalendar
+
+Product Description:
+VTCalendar is a web-based event calendar that allows for decentralized data input and includes 
+a central approval mechanism. It also supports calendar hosting for individual organizations 
+and the forwarding of events from these individual calendars to the main event calendar.
+http://vtcalendar.sourceforge.net/
+
+Copyright (c) Jochen Rode, Web Hosting Group and 
+Virginia Polytechnic Institute and State University, 
+All Rights Reserved.
+
+Contact Information
+Jochen Rode, jrode@users.sourceforge.net
+VT Calendar falls under the Open-Source Software label because it is released under the GNU Lesser General Public License (LGPL). 
+For details, see http://www.gnu.org/copyleft/lesser.html
+
+THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESSED OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR(S) OR THE ORGANIZATION THAT EMPLOYED THEM BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+- The name of the product must not be used to endorse or promote products derived from this software without prior written permission. For written permission, please contact the copyright holders (see contact information, above). 
+- The name and trademarks of copyright holder(s) and/or Virginia Polytechnic Institute and State University may NOT be used in advertising or publicity pertaining to the Software without specific, written prior permission. Title to copyright in the Software and any associated documentation will at all times remain with the copyright holders.
+- The export of software employing encryption technology may require a specific license from the United States Government. It is the responsibility of any person or organization contemplating export to obtain such a license before exporting this Software.

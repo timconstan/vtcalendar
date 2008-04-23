@@ -1,0 +1,58 @@
+2.2.2 (released May 24, 2005)
+--------------------------------
+- fixed bug [ 1207823 ] Nobody can login if *whole* calendar requires auth
+
+2.2.1 (released May 16, 2005)
+--------------------------------
+- CRITICAL: fixed bug [ 1202293 ] Permission problem (critical)
+- fixed bug [ 1202291 ] Main admins cannot be added or deleted
+- fixed bug [ 1202842 ] Password of users w/o prefix cannot be changed
+- fixed bug [ 1183446 ] Values in main_week_datetitle
+- fixed bug [ 1183460 ] No keywords error
+
+2.2.0 (released April 7, 2005)
+--------------------------------
+- JavaScript popup calendar for date selection (using the open-source jscalendar)
+- new icons to make the look&feel more consistent
+- added customization for all colors of the calendar (this extended the database structure somewhat)
+- highlight occurrences of keyword in search results
+- "Search" now also searches the "location" field (in case someone knows the place but forgot the event name or date)
+- added "title" property to all icon-only links
+- internationalization support
+  - configurable starting day for the beginning of week (e.g. USA: Sunday, Europe: Monday)
+  - configurable date formats (to support regional differences)
+  - German translation (public interface only) (Jochen)
+  - Latvian translation (public interface only) (Juris)
+
+2.1.0 (released October 1, 2004)
+--------------------------------
+- CRITICAL: hardened code against SQL injection hacking techniques
+- CRITICAL: added input checking for all GET/POST/COOKIE variables
+- made event filter work in all browsers (eliminated javascript)
+- "Jump to..." drop-down menu for quick long-range date navigation
+- fixed bug: - event that was repeated and is edited to be one-time -> old events were not deleted
+- "Manage events" screen now shows all events (not only today's and future)
+- removed global setvariables.inc.php and put only necessary variables in each page
+- fixed bug: XML event import (no event id was generated in public view)
+- added file "VERSION" that contains the current version number which is displayed on the bottom of each page
+- changed all $HTTP_GET_VARS and $HTTP_POST_VARS references to $_GET and $_POST respectively (for compatibility to default PHP5 install)
+- changed code that produced PHP notices messages (uninitialized variables, unquoted array indexes etc.)
+
+2.0.4 (released April 2, 2004)
+------------------------------
+- CRITICAL: fixed a bug that would (under rare cirumstances) lead to event deletions
+- fixed "Manage Templates" which did not work for sponsors other than the administrator
+- fixed a bug in the export/download script (export.php) that would lead to certain events not showing up (events that had been forwarded from different calendars)
+- in table "vtcal_user" removed column "calendarid" ("ALTER TABLE vtcal_user DROP calendarid;") and edited all scripts that referenced this. Now user-IDs are system-wide unique
+- added a check to make sure users exist in the database or LDAP before they can be added as "main admins"
+- modified editcalendar.php to automatically make a new entry to vtcal_sponsor if a new calendar is created
+- "Manage users" is now only available to the main administrator(s)
+
+2.0.3 (released Oct 17, 2003)
+-----------------------------
+- added CHANGELOG :)
+- added iCalendar support (including subscription function for iCal-compatible calendars)
+- renamed all included scripts from include_xyz.php to xyz.inc.php
+- added an auto-create of 3 categories when adding new calendar
+- changed install script to include timezone offset
+- fixed error in search: timebegin_day did not get evaluated correctly

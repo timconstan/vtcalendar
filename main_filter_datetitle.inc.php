@@ -1,0 +1,1 @@
+<?php echo lang('filter_events');?>

@@ -1,0 +1,1 @@
+<?php echo lang('subscribe_download'); ?>
