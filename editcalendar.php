@@ -117,7 +117,7 @@
     pageheader(lang('edit_calendar'),
                lang('edit_calendar'),
                "Update","",$database);
-    echo "<BR>";
+    echo "<br />";
     box_begin("inputbox",lang('edit_calendar'));
 		if ( !isset($check) ) {
   		$result = DBQuery($database, "SELECT * FROM vtcal_calendar WHERE id='".sqlescape($cal['id'])."'" );
@@ -128,11 +128,11 @@
     pageheader(lang('add_new_calendar'),
                lang('add_new_calendar'),
                "Update","",$database);
-    echo "<BR>";
+    echo "<br />";
     box_begin("inputbox",lang('add_new_calendar'));
 	}
 ?>
-<br>
+<br />
 <form method="post" action="editcalendar.php">
 <TABLE border="0" cellpadding="2" cellspacing="0">
   <TR>
@@ -157,15 +157,15 @@
   <INPUT type="text" size="20" name="cal[id]" maxlength=<?php echo constCalendaridMAXLENGTH; ?> value="<?php
   if ( isset($check) ) { $cal['id']=stripslashes($cal['id']); }
   if ( isset($cal['id']) ) { echo HTMLSpecialChars($cal['id']); }
-?>"> <I><?php echo lang('calendar_id_example'); ?></I>
+?>"> <em><?php echo lang('calendar_id_example'); ?></em>
 <?php
   } // end: else: if ( isset ($cal['id']) )
 	else {
 	  echo '<input type="hidden" name="cal[id]" value="',$cal['id'],'">';
-		echo "<b>".$cal['id']."</b>\n"; 
+		echo "<strong>".$cal['id']."</strong>\n"; 
 	}
 ?>
-<BR>
+<br />
     </TD>
   </TR>
   <TR>
@@ -184,12 +184,12 @@
       <INPUT type="text" size="50" name="cal[name]" maxlength=<?php echo constCalendarnameMAXLENGTH; ?>  value="<?php
   if ( isset($check) ) { $cal['name']=stripslashes($cal['name']); }
   if ( isset($cal['name']) ) { echo HTMLSpecialChars($cal['name']); }
-?>"> <I><?php echo lang('calendar_name_example'); ?></I><BR>
+?>"> <em><?php echo lang('calendar_name_example'); ?></em><br />
     </TD>
   </TR>
   <TR>
     <TD class="bodytext" valign="top">
-      <?php echo lang('administrators'); ?><br>
+      <?php echo lang('administrators'); ?><br />
     </TD>
     <TD class="bodytext" valign="top">
 <?php
@@ -218,7 +218,7 @@
 				$i++;
 			}
 		}
-		?></textarea><br>
+		?></textarea><br />
 		<i><?php echo lang('administrators_example'); ?></i>
     </TD>
   </TR>
@@ -233,14 +233,14 @@
   $c = $result->fetchRow(DB_FETCHMODE_ASSOC,0);
   $defaultcalendarname = $c['name'];
 ?>
-      <br>
+      <br />
       <table border="0">
         <tr align="left" valign="top">
           <td><input type="checkbox" name="cal[forwardeventdefault]" id="forwardeventdefault" value="1"<?php 
 					if (isset($cal['forwardeventdefault']) && $cal['forwardeventdefault']=="1") { echo " checked"; } 
 					?>></td>
           <td>
-             <label for="forwardeventdefault"><?php echo lang('also_display_on_calendar_message'); ?> <?php echo $defaultcalendarname ?></label><br>
+             <label for="forwardeventdefault"><?php echo lang('also_display_on_calendar_message'); ?> <?php echo $defaultcalendarname ?></label><br />
       <?php echo lang('also_display_on_calendar_notice'); ?></td>
         </tr>
       </table>
@@ -258,7 +258,7 @@
 		echo '<input type="hidden" name="new" value="1">';
   }
 ?>		
-    <BR>
+    <br />
     <INPUT type="submit" name="save" value="<?php echo lang('ok_button_text'); ?>">
     <INPUT type="submit" name="cancel" value="<?php echo lang('cancel_button_text'); ?>">
   	</td>
@@ -267,6 +267,6 @@
 </form>
 <?php
   box_end();
-  echo "<BR>";
+  echo "<br />";
   require("footer.inc.php");
 ?>

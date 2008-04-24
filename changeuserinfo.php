@@ -98,7 +98,7 @@
       pageheader(lang('edit_user'),
                lang('edit_user'),
 	             "Update","",$database);
-      echo "<BR>\n";
+      echo "<br />\n";
       box_begin("inputbox",lang('edit_user'));
 		}
   }
@@ -106,7 +106,7 @@
     pageheader(lang('add_new_user'),
                lang('add_new_user'),
                "Update","",$database);
-    echo "<BR>\n";
+    echo "<br />\n";
     box_begin("inputbox",lang('add_new_user'));
   }
 
@@ -123,12 +123,12 @@
 <TABLE border="0" cellpadding="2" cellspacing="0">
   <TR>
     <TD class="bodytext" valign="baseline">
-      <b><?php echo lang('user_id'); ?>:<FONT color="#FF0000">*</FONT></b>
+      <strong><?php echo lang('user_id'); ?>:<FONT color="#FF0000">*</FONT></strong>
     </TD>
     <TD class="bodytext" valign="baseline">
 <?php
   if (!empty($chooseuser)) {
-	  echo "<b>".$userid."</b>";
+	  echo "<strong>".$userid."</strong>";
 	}
 	else {
   	if (isset($check) && $check && (empty($userid))) {
@@ -142,16 +142,16 @@
 ?><INPUT type="text" size="10" name="userid" maxlength=<?php echo $maxlength_id; ?>  value="<?php
   if (isset($check) && $check) { $userid=stripslashes($userid); }
   if (isset($userid)) { echo HTMLSpecialChars(substr($userid,strlen(AUTH_DB_USER_PREFIX))); }
-?>"> <I>(e.g. <?php echo AUTH_DB_USER_PREFIX; ?>jsmith)</I>
+?>"> <em>(e.g. <?php echo AUTH_DB_USER_PREFIX; ?>jsmith)</em>
 <?php
   } // end: else: if (!empty($userid))
 ?>
-<BR>
+<br />
     </TD>
   </TR>
   <TR>
     <TD class="bodytext" valign="baseline">
-      <b><?php echo lang('password'); ?><FONT color="#FF0000">*</FONT></b>
+      <strong><?php echo lang('password'); ?><FONT color="#FF0000">*</FONT></strong>
     </TD>
     <TD class="bodytext" valign="baseline">
 <?php
@@ -159,12 +159,12 @@
     feedback(lang('choose_password'),1);
   }
 ?>
-      <INPUT type="password" size="14" name="user[password]" maxlength=<?php echo constPasswordMaxLength; ?>  value="<?php if (!empty($chooseuser)) { echo "#nochange$"; } ?>"> <BR>
+      <INPUT type="password" size="14" name="user[password]" maxlength=<?php echo constPasswordMaxLength; ?>  value="<?php if (!empty($chooseuser)) { echo "#nochange$"; } ?>"> <br />
     </TD>
   </TR>
   <TR>
     <TD class="bodytext" valign="baseline">
-      <b><?php echo lang('email'); ?></b>
+      <strong><?php echo lang('email'); ?></strong>
     </TD>
     <TD class="bodytext" valign="baseline">
       <INPUT type="text" size="20" name="user[email]" maxlength=<?php echo constEmailMaxLength; ?> value="<?php
@@ -175,12 +175,12 @@
   	echo HTMLSpecialChars($user['email']);
 	}
 ?>">
-      <I><?php echo lang('email_example'); ?></I><BR>
+      <em><?php echo lang('email_example'); ?></em><br />
     </TD>
   </TR>
 </TABLE>
 <INPUT type="hidden" name="check" value="1">
-<BR>
+<br />
 <?php
  if (!empty($chooseuser)) { 
    echo "<INPUT type=\"hidden\" name=\"chooseuser\" value=\"1\">\n"; 
@@ -192,6 +192,6 @@
 </FORM>
 <?php
   box_end();
-  echo "<br><br>";
+  echo "<br /><br />";
   require("footer.inc.php");
 ?>

@@ -27,27 +27,27 @@
 						 lang('update_calendar'),
 						 "Update","",$database);
 
-	echo "<BR>";
+	echo "<br />";
   echo '<table cellspacing="5" cellpadding="0" border="0"><tr><td valign="top">'."\n";
   echo "<fieldset>\n";
-  echo "<legend><b>",lang('sponsors_options'),"&nbsp;</b></legend><br>\n";
+  echo "<legend><strong>",lang('sponsors_options'),"&nbsp;</strong></legend><br />\n";
 
   if ( isset($fbid) ) {
 		if ($fbid=="eaddsuccess" && !$_SESSION["AUTH_ADMIN"]) {
 			feedback(lang('new_event_submitted_notice')." ".stripslashes(urldecode("\"$fbparam\"")),0);
-			echo "<BR>";
+			echo "<br />";
 		}
 		elseif ($fbid=="eupdatesuccess" && !$_SESSION["AUTH_ADMIN"] ) {
 			feedback(lang('updated_event_submitted_notice')." ".stripslashes(urldecode("\"$fbparam\"")),0);
-			echo "<BR>";
+			echo "<br />";
 		}
 		elseif ($fbid=="urlchangesuccess") {
 			feedback(lang('hompage_changed_notice')." ".stripslashes(urldecode("\"$fbparam\"")),0);
-			echo "<BR>";
+			echo "<br />";
 		}
 		elseif ($fbid=="emailchangesuccess") {
 			feedback(lang('email_changed_notice')." ".stripslashes(urldecode("\"$fbparam\"")),0);
-			echo "<BR>";
+			echo "<br />";
 		}
   } // end: if ( isset($fbid) )
 ?>
@@ -69,8 +69,8 @@
   </TD>
 </TR>
 <TR>
-  <TD><br></TD>
-  <TD><br></TD>
+  <TD><br /></TD>
+  <TD><br /></TD>
 </TR>
 <TR>
   <TD class="inputbox">
@@ -81,8 +81,8 @@
   </TD>
 </TR>
 <TR>
-  <TD><br></TD>
-  <TD><br></TD>
+  <TD><br /></TD>
+  <TD><br /></TD>
 </TR>
 <TR>
   <TD class="inputbox">
@@ -101,8 +101,8 @@
   </TD>
 </TR>
 <TR>
-  <TD><br></TD>
-  <TD><br></TD>
+  <TD><br /></TD>
+  <TD><br /></TD>
 </TR>
 <TR>
   <TD class="inputbox">
@@ -135,7 +135,7 @@
   if ($_SESSION["AUTH_ADMIN"]) {
 		echo "<td valign=\"top\">\n";
 	  echo "<fieldset>\n";
-	  echo "<legend><b>",lang('administrators_options'),"&nbsp;</b></legend><br>\n";
+	  echo "<legend><strong>",lang('administrators_options'),"&nbsp;</strong></legend><br />\n";
 ?>
 <TABLE width="100%" border="0" cellspacing="1" cellpadding="2">
 <TR>
@@ -145,8 +145,8 @@
   <TD>&nbsp;</TD>
 </TR>
 <TR>
-  <TD><br></TD>
-  <TD><br></TD>
+  <TD><br /></TD>
+  <TD><br /></TD>
 </TR>
 <TR>
   <TD class="inputbox">
@@ -161,7 +161,7 @@
   <TD>&nbsp;</TD>
 </TR>
 <TR>
-  <TD colspan="2"><br></TD>
+  <TD colspan="2"><br /></TD>
 </TR>
 <TR>
   <TD class="inputbox">
@@ -189,7 +189,7 @@
 </TR>
 <TR>
   <TD class="inputbox">
-    <a href="viewsearchlog.php"><?php echo lang('view_search_log'); ?></a><br><br><br>
+    <a href="viewsearchlog.php"><?php echo lang('view_search_log'); ?></a><br /><br /><br />
   </TD>
   <TD></TD>
 </TR>
@@ -203,7 +203,7 @@
   if ( $_SESSION["AUTH_MAINADMIN"] ) {
 		echo "<td valign=\"top\">\n";
 		  echo "<fieldset>\n";
-		  echo "<legend><b>",lang('main_administrators_options'),"&nbsp;</b></legend><br>\n";
+		  echo "<legend><strong>",lang('main_administrators_options'),"&nbsp;</strong></legend><br />\n";
 ?>
 <TABLE width="100%" border="0" cellspacing="1" cellpadding="3">
 <?php
@@ -229,7 +229,7 @@
     <a href="managemainadmins.php"><?php echo lang('manage_main_admins'); ?></a>
   </TD>
   <TD>
-	  &nbsp;<br><br><br><br><br><br><br><br><br><br><br><br>
+	  &nbsp;<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 	</TD>
 </TR>
 </table>
@@ -240,7 +240,7 @@
 ?>
 </tr>
 </table>
-<BR>
+<br />
 <?php
   require("footer.inc.php");
 ?>

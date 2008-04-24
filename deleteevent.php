@@ -102,7 +102,7 @@
   pageheader(lang('delete_event'),
              lang('delete_event'),
              "Update","",$database);
-  echo "<BR>";
+  echo "<br />";
   box_begin("inputbox",lang('delete_event'));
 ?>
 <FORM method="post" action="deleteevent.php">
@@ -125,7 +125,7 @@
 
         print_event($event);  
 ?>
-    <BR>
+    <br />
 <?php
 		if (!empty($event['repeatid'])) {
 			echo '<font color="#00AA00">';
@@ -142,11 +142,11 @@
     $repeat['mode'] = 0;
   }
 ?>
-  <BR>
-  <BR>
-  <B><?php echo lang('delete_event_confirm'); ?></B>
-  <BR>
-  <BR>
+  <br />
+  <br />
+  <strong><?php echo lang('delete_event_confirm'); ?></strong>
+  <br />
+  <br />
   <INPUT type="hidden" name="eventid" value="<?php echo $eventid; ?>">
   <INPUT type="hidden" name="deleteconfirmed" value="1">
   <INPUT type="submit" name="deletethis" value="<?php echo lang('button_delete_this_event'); ?>">
@@ -159,10 +159,10 @@
 ?>
   &nbsp;
   <INPUT type="submit" name="cancel" value="<?php echo lang('cancel_button_text'); ?>">
-  <BR>
+  <br />
 </FORM>
 <?php
   box_end();
-  echo "<BR>";
+  echo "<br />";
   require("footer.inc.php");
 ?>

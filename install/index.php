@@ -92,7 +92,7 @@ body, td, p {
 		  $q = trim($queries[$i]);
 			if (!empty($q)) {
   			if ( DB::isError( $result = $database->query( $q ) ) ) {
-	  			echo '<span style="color:red; font-size:16pt; font-weight:bold">Error! '.DB::errorMessage($result).':</span> '.$q.'<br><br>';
+	  			echo '<span style="color:red; font-size:16pt; font-weight:bold">Error! '.DB::errorMessage($result).':</span> '.$q.'<br /><br />';
 					$error = true;
 		  	}
 			} 
@@ -101,8 +101,8 @@ body, td, p {
 		
 		if (!$error) {
  			echo '<h2 style="color:#009900">Installation successful.</h2>';
-			echo "If you want to make any configuration changes please modify the newly created file <b>config.inc.php</b>.<br><br>";
-			echo '<span style="color:red; font-size:16pt; font-weight:bold">Security Notice:</span> Make sure to remove or secure the <b>/install</b> directory.<br><br>';
+			echo "If you want to make any configuration changes please modify the newly created file <strong>config.inc.php</strong>.<br /><br />";
+			echo '<span style="color:red; font-size:16pt; font-weight:bold">Security Notice:</span> Make sure to remove or secure the <strong>/install</strong> directory.<br /><br />';
 		  echo 'Your calendar is now available at: <a href="'.$base_url.'">'.$base_url.'</a>.';
 		}
 	}
@@ -114,12 +114,12 @@ body, td, p {
 	  <td>
 <table width="100%" border="0" cellspacing="1" cellpadding="5">
   <tr bgcolor="#CCCCCC">
-    <td colspan="2" valign="baseline" nowrap><br>
+    <td colspan="2" valign="baseline" nowrap><br />
       This installation procedure creates
       the file <font face="Courier New, Courier, mono"><strong>config.inc.php</strong></font> which
       can
-be edited later by hand.<br>
-<br></td>
+be edited later by hand.<br />
+<br /></td>
     </tr>
   <tr bgcolor="#FFFFFF">
     <td valign="baseline" nowrap><strong>Language:</strong></td>
@@ -148,11 +148,11 @@ foreach ($languages as $language) {
     <td width="10%" valign="baseline" nowrap><strong>Database software:</strong></td>
     <td width="90%" valign="baseline">
       <input name="databasetype" type="radio" value="mysql" checked>
-MySQL <br>
+MySQL <br />
 <input name="databasetype" type="radio" value="postgres">
-PostgreSQL<br>
+PostgreSQL<br />
 <input name="databasetype" type="radio" value="other"> 
-other (manual setup)<br><br>
+other (manual setup)<br /><br />
 If you would like to use a  database different from MySQL and PostgreSQL you
 should
 finish
@@ -193,18 +193,18 @@ tested with MySQL and PostgreSQL.</td>
   <tr bgcolor="#FFFFFF">
     <td valign="baseline" nowrap><strong>Authentication:</strong></td>
     <td valign="baseline"><input name="auth_db" type="checkbox" id="auth_db" value="1" checked>
-enable authentication via internal calendar database:<br>
+enable authentication via internal calendar database:<br />
 <table width="100%" border="0" cellspacing="3" cellpadding="3">
   <tr>
     <td width="1%" nowrap>&nbsp;&nbsp;&nbsp;</td>
     <td width="9%" valign="baseline" nowrap><strong>User name prefix:</strong></td>
     <td width="90%" valign="baseline"><input name="username_prefix" type="text" id="username_prefix" size="30" maxlength="100">
-      (e.g. calendar.)<br>
+      (e.g. calendar.)<br />
       This can be used to keep the name space separate if you enable authentication
       via database <em>and</em> LDAP. If you just use database authentication,
       leave this field blank.</td>
   </tr>
-</table><br>
+</table><br />
   <input name="auth_ldap" type="checkbox" id="auth_ldap" value="1">
 enable authentication via external LDAP server:
 <table width="100%" border="0" cellspacing="3" cellpadding="3">
@@ -226,18 +226,18 @@ enable authentication via external LDAP server:
       (e.g. ou=users,dc=myorg,dc=edu)</td>
   </tr>
 </table>
-<br>
+<br />
 <table width="100%" border="0" cellspacing="3" cellpadding="3">
   <tr>
     <td width="9%" valign="baseline" nowrap><strong>Valid user-ID:</strong></td>
     <td width="90%" valign="baseline"><input name="ldap_userfield2" type="text" id="ldap_userfield22" value="/^[A-Za-z][_A-Za-z0-9\-]{1,7}$/" size="60" maxlength="300">
-      (regular expression)<br>
+      (regular expression)<br />
       For example:
 /^[A-Za-z][_A-Za-z0-9\-]{1,7}$/ or in case you have defined a user name prefix &quot;calendar.&quot; it
 would be: /^(calendar\.){0,1}[A-Za-z][_A-Za-z0-9\-]{1,7}$/)      </td>
   </tr>
 </table>
-<br>
+<br />
 <table width="100%" border="0" cellspacing="3" cellpadding="3">
   <tr>
     <td colspan="2" valign="baseline" nowrap bgcolor="#eeeeee"><strong>Main administrator</strong></td>
@@ -269,7 +269,7 @@ would be: /^(calendar\.){0,1}[A-Za-z][_A-Za-z0-9\-]{1,7}$/)      </td>
   <tr bgcolor="#FFFFFF">
     <td valign="top" nowrap><strong>Secure URL:</strong></td>
     <td><input name="base_secureurl" type="text" id="base_url" size="30" maxlength="100">      
-       (e.g. https://secure.myorg.edu/calendar/)<br>
+       (e.g. https://secure.myorg.edu/calendar/)<br />
        This URL is used when the user clicks the &quot;Update&quot; tab in order to secure
        all user-ID/password traffic. If you don't have a secure server with a
        copy of the calendar code, just put the same URL as you entered in &quot;Full
@@ -282,10 +282,10 @@ would be: /^(calendar\.){0,1}[A-Za-z][_A-Za-z0-9\-]{1,7}$/)      </td>
   </tr>
   <tr bgcolor="#CCCCCC">
     <td valign="top" nowrap>&nbsp;</td>
-    <td><br>
+    <td><br />
       <input type="submit" name="install" value="&nbsp;&nbsp;Install&nbsp;&nbsp;">
-      <br>
-      <br></td>
+      <br />
+      <br /></td>
   </tr>
 </table>
 </td>

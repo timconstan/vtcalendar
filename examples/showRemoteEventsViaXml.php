@@ -19,6 +19,6 @@
          '&eventid=',$event->eventid,'">',
          $event->title, 
          '</a>',        
-         "<br>\n";
+         "<br />\n";
   }
 ?>

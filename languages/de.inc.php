@@ -129,8 +129,8 @@ dann k&ouml;nnen Sie einzelne Veranstaltungen, eine bestimmte Kategorie oder den
 &quot;abonnieren&quot; oder herunterladen.
 Zur Zeit ist der iCalendar Standard nur voll unterst&uuml;tzt von
 <a href="http://www.apple.com/ical/">Apple\'s iCal</a>, und  
-<a href="http://www.mozilla.org/projects/calendar/">Mozilla Calendar</a>.<br>
-<br>
+<a href="http://www.mozilla.org/projects/calendar/">Mozilla Calendar</a>.<br />
+<br />
 Falls Ihre Kalendarsoftware keine ganzen Kategorien herunterladen kann, k&ouml;nnen Sie dennoch versuchen
 einzelne Veranstaltungen in Ihre Software zu &uuml;bertragen, indem Sie auf den Link
 &quot;'.$lang['copy_event_to_pda'].'&quot; benutzen, der sich auf jeder Seite
@@ -159,7 +159,7 @@ $lang['category_name_already_exists'] = 'This name already exist. Please choose 
 $lang['category_name'] = 'Category name';
 
 $lang['add_new_keyword_pair'] = 'Add new keyword pair';
-$lang['add_new_keyword_pair_instructions'] = 'Do NOT add multiple words.<br> A keyword (or alternative keyword) cannot contain spaces.';
+$lang['add_new_keyword_pair_instructions'] = 'Do NOT add multiple words.<br /> A keyword (or alternative keyword) cannot contain spaces.';
 $lang['keyword_cannot_be_empty'] = 'The keyword cannot be empty.';
 $lang['alternative_keyword'] = 'Alternative keyword:';
 
@@ -329,14 +329,14 @@ $lang['all'] = 'all';
 $lang['specific_sponsor'] = 'specific sponsor:';
 $lang['specific_sponsor_example'] = '(case-insensitive substring search, e.g. school of the arts)';
 $lang['from'] = 'from'; // from Feb 17, 2005...
-$lang['export_message'] = 'Depending on your browser you might see an <b>empty screen</b> after pressing &quot;Start Export&quot;.<br> 
-Use the &quot;<b>View Source</b>&quot; option of your browser to view the exported data.';
+$lang['export_message'] = 'Depending on your browser you might see an <strong>empty screen</strong> after pressing &quot;Start Export&quot;.<br /> 
+Use the &quot;<strong>View Source</strong>&quot; option of your browser to view the exported data.';
 
 $lang['choose_sponsor_role'] = 'Choose your sponsor role';
 $lang['error_not_authorized'] = 'Error! Not authorized.';
 $lang['error_not_authorized_message'] = 'You are currently not authorized to update the calendar because you have not been assigned to an event sponsor.';
 $lang['help_signup_link'] = 'Sign up with the calendar';
-$lang['login_failed'] = 'Login failed.<br> Please check your user-ID and password and try again.';
+$lang['login_failed'] = 'Login failed.<br /> Please check your user-ID and password and try again.';
 $lang['help'] = 'Help';
 $lang['recurring'] = 'recurring';
 $lang['on_the'] = 'on the';
@@ -410,11 +410,11 @@ $lang['contact_phone'] = 'Contact phone';
 $lang['contact_phone_example'] = '(e.g. (540) 992-4892)';
 $lang['contact_email'] = 'Contact e-mail';
 $lang['contact_email_example'] = '(e.g. icinfo@hotmail.com)';
-$lang['event_page_web_address'] = 'Event page<br> web address';
+$lang['event_page_web_address'] = 'Event page<br /> web address';
 $lang['event_page_url_example'] = '(e.g. http://www.ic.vt.edu/talks/future.html)';
 $lang['button_restore_all_sponsor_defaults'] = 'Restore all sponsor defaults';
-$lang['displayed_sponsor_name'] = 'Displayed<br> sponsor name';
-$lang['sponsor_page_web_address'] = 'Sponsor page<br> web address';
+$lang['displayed_sponsor_name'] = 'Displayed<br /> sponsor name';
+$lang['sponsor_page_web_address'] = 'Sponsor page<br /> web address';
 $lang['button_restore_default'] = 'Restore default';
 $lang['also_display_on'] = 'Also display this event on the'; // ... Calendar ...
 $lang['assign_to_category'] = 'and assign it to this category';
@@ -445,9 +445,9 @@ $lang['submitted_for_approval_explanation'] = '...update has yet to be reviewed 
 $lang['approved_explanation'] = '...event is displayed in the calendar';
 
 $lang['manage_featured_search_keywords'] = 'Manage featured search keywords';
-$lang['featured_search_keywords_message'] = 'Below you can associate certain search keywords with custom<br>
-text messages or HTML. This can be used to answer to keywords<br>
-which are frequently used but rarely have a match within the<br>
+$lang['featured_search_keywords_message'] = 'Below you can associate certain search keywords with custom<br />
+text messages or HTML. This can be used to answer to keywords<br />
+which are frequently used but rarely have a match within the<br />
 calendar.';
 $lang['or_manage_existing_keywords'] = 'or manage existing keywords:';
 
@@ -457,9 +457,9 @@ $lang['or_delete_existing'] = 'or delete existing:';
 $lang['main_admins_total'] = 'Main admins total';
 
 $lang['manage_search_keywords'] = 'Manage search keywords';
-$lang['manage_search_keywords_message'] = 'The following list contains keywords which are tried by the calendar search engine<br>
-in addition to the keyword provided by the user. You can improve the search engine\'s<br>
-power by building a list of common synonyms (or alternative keywords) for <br>
+$lang['manage_search_keywords_message'] = 'The following list contains keywords which are tried by the calendar search engine<br />
+in addition to the keyword provided by the user. You can improve the search engine\'s<br />
+power by building a list of common synonyms (or alternative keywords) for <br />
 frequently-used keywords.';
 $lang['or_manage_existing_pairs'] = 'or manage existing pairs:';
 
@@ -508,9 +508,9 @@ $lang['pastcolor'] = 'Past color';
 $lang['todaycolor'] = 'Today color';
 $lang['futurecolor'] = 'Future color';
 
-$lang['colorscheme'] = 'When choosing colors for the calendar try to establish a <strong>matching color scheme</strong>.<br>
+$lang['colorscheme'] = 'When choosing colors for the calendar try to establish a <strong>matching color scheme</strong>.<br />
 Play with the <A target="newWindow" onclick="new_window(this.href); return false" href="http://www.colorschemer.com/online.html">color schemer tool from www.colorschemer.com</a>.
-Also, in order to facilitate readability, <br>
+Also, in order to facilitate readability, <br />
 make sure you have <strong>sufficient contrast</strong> between text/link color and the other colors.';
 
 $lang['help_addevent'] = 'Add event';
@@ -528,43 +528,43 @@ $lang['help_addevent_contents'] = 'You have 4 options:
 $lang['help_addnewevent'] = 'Add new event';
 $lang['help_addnewevent_contents'] = 'If you don\'t have any <A href="helptemplate.php">templates</A> predefined,
 just go ahead and <A href="helpfillinevent.php">fill in the event information</A>.
-<BR>
-<BR>
-In case you do have templates they will be shown to you so that you can pick one.<BR>
+<br />
+<br />
+In case you do have templates they will be shown to you so that you can pick one.<br />
 You can also choose &quot;blank&quot;, meaning that you don\'t wish any fields to be preset.';
 
 $lang['help_approval'] = 'Approval of submitted events';
-$lang['help_approval_contents'] = 'For security reasons, every update to the event calendar has to be <B>approved
-by the calendar administrator.</B><BR>
-<BR>
-The administrator reviews submitted events and updates. Event information may be approved or rejected.<BR>
-<BR>
+$lang['help_approval_contents'] = 'For security reasons, every update to the event calendar has to be <strong>approved
+by the calendar administrator.</strong><br />
+<br />
+The administrator reviews submitted events and updates. Event information may be approved or rejected.<br />
+<br />
 If an update is rejected the information is not publicized; instead, the event is marked with a short comment
 stating the reason for the rejection. By editing a rejected event you can re-submit the information which will
-then be checked the following weekday.<BR>
-<BR>
-Because of the approval mechanism the <B>submitted updates are not immediately publicized</B>.<BR>
-<BR>
+then be checked the following weekday.<br />
+<br />
+Because of the approval mechanism the <strong>submitted updates are not immediately publicized</strong>.<br />
+<br />
 If you delete an event from the calendar an approval is not necessary.
 The event information will be instantly removed from the calendar.';
 
 $lang['help_copyevent'] = 'Copy event';
 $lang['help_copyevent_contents'] = 'When you choose to copy an existing event all the input fields for the new
-event you are creating will be copied from the one you have chosen.<BR>
-If you chose a recurring event the recurrence information will also be copied.<BR>
-<BR>
-You can make changes or <A href="helpfillinevent.php">fill in</A> additional information.<BR>
-<BR>
-Please keep in mind that the event you create will have to be <A href="helpapproval.php">approved</A>.<BR>
-Therefore, it will <B>not be immediately visible</B> in the calendar.';
+event you are creating will be copied from the one you have chosen.<br />
+If you chose a recurring event the recurrence information will also be copied.<br />
+<br />
+You can make changes or <A href="helpfillinevent.php">fill in</A> additional information.<br />
+<br />
+Please keep in mind that the event you create will have to be <A href="helpapproval.php">approved</A>.<br />
+Therefore, it will <strong>not be immediately visible</strong> in the calendar.';
 
 $lang['help_deletevent'] = 'Delete event';
 $lang['help_deletevent_contents'] = 'Before the event is deleted from the calendar you will have to confirm your
-deletion.<BR>
+deletion.<br />
 If your event is a recurring event you will be presented with the option to
 either delete the event on just that specific date (button &quot;Delete this event&quot;)
-or delete all recurrences (button &quot;Delete ALL recurrences of this event&quot;).<BR>
-<BR>
+or delete all recurrences (button &quot;Delete ALL recurrences of this event&quot;).<br />
+<br />
 The event will be immediately removed from the calendar.';
 
 $lang['help_export'] = 'Exporting Events';
@@ -572,7 +572,7 @@ $lang['help_export_intro'] = 'You can export all or a subset of the data of the 
 <ul>
   <li>by choosing the link 
   &quot;export events&quot; in the sponsor\'s options menu</li>
-  <li>or by directly accessing the export URL<br>e.g. ';
+  <li>or by directly accessing the export URL<br />e.g. ';
 $lang['help_export_formats'] = '<p>Currently the calendar supports the following export formats:</p>
 <ul>
     <li>XML (custom XML; for format see below) (type=xml) </li>
@@ -582,8 +582,8 @@ $lang['help_export_formats'] = '<p>Currently the calendar supports the following
     <li>VoiceXML 2.0 (type=vxml)    
 </ul>';
 $lang['help_export_xmlformat_example'] = 'This is an example of the custom XML format:';
-$lang['help_export_data_format'] = '<strong>The following table describes the data format:</strong><br>
-<br>
+$lang['help_export_data_format'] = '<strong>The following table describes the data format:</strong><br />
+<br />
 <table border="1" cellspacing="0" cellpadding="5">
   <tr>
     <th>field name</th>
@@ -639,7 +639,7 @@ $lang['help_export_data_format'] = '<strong>The following table describes the da
       <ul>
         <li>if the event is a recurring event it contains the recurrence definition in 
         <a href="http://www.imc.org/pdi/vcal-10.txt">vCalendar format</a></li>
-        <li>e.g. &quot;W1 MO WE FR 20000502T235900&quot; means that an event repeats every week<br>
+        <li>e.g. &quot;W1 MO WE FR 20000502T235900&quot; means that an event repeats every week<br />
             Monday, Wednesday &amp; Friday until May 2, 2000</li>
       </ul>
     </td>
@@ -674,7 +674,7 @@ $lang['help_export_data_format'] = '<strong>The following table describes the da
   </tr>
   <tr>
     <td>description</td>
-    <td>a long text describing the specifics of an event<br>
+    <td>a long text describing the specifics of an event<br />
     the description is only displayed in the detailed view</td>
   </tr>
   <tr>
@@ -717,26 +717,26 @@ $lang['help_categoryid_name'] = 'Name';
 
 $lang['help_fillinevent'] = 'Fill in event information';
 $lang['help_fillinevent_contents'] = 'Every event is described by a number of parameters.
-Only the fields <B>Date, Time, Category and Title are required</B>.<BR>
-None of the other <A href="helpinputfields.php">input fields</A> is mandatory.<BR>
-<BR>
+Only the fields <strong>Date, Time, Category and Title are required</strong>.<br />
+None of the other <A href="helpinputfields.php">input fields</A> is mandatory.<br />
+<br />
 After you have entered all your information press the &quot;Preview event&quot; button
 at the bottom of the page. This will take you to a new page showing how your event
-will look in the different views.<BR>
-<BR>
+will look in the different views.<br />
+<br />
 Then you have the options to either save or go back to make changes. If you press
-the &quot;Cancel&quot; button all your input will be discarded.<BR>
-If you press <B>&quot;Save changes&quot;</B> your <B>event will be submitted
-for <A href="helpapproval.php">approval</A></B> by the calendar administrator.<BR>
-It might take <B>up to 24 hours until the changes are
-reflected in the calendar</B>.';
+the &quot;Cancel&quot; button all your input will be discarded.<br />
+If you press <strong>&quot;Save changes&quot;</strong> your <strong>event will be submitted
+for <A href="helpapproval.php">approval</A></strong> by the calendar administrator.<br />
+It might take <strong>up to 24 hours until the changes are
+reflected in the calendar</strong>.';
 
 $lang['help_import'] = 'Importing events';
 $lang['help_import_intro'] = '<P>In order to be able to add event data into the VT calendar without using 
 its web interface for manual input, the calendar enables you to import events from other sources.
 This feature allows you to prepare a file containing all new events which then will be 
-uploaded to the calendar. Nevertheless, <b>changes to existing events have to be made using the 
-calendar web interface</b>.
+uploaded to the calendar. Nevertheless, <strong>changes to existing events have to be made using the 
+calendar web interface</strong>.
 </P>
 <P>The process of adding a batch of events is the following:
 <ol>
@@ -761,7 +761,7 @@ any value at all, the event does not have a specified ending time
 $lang['help_import_data_format'] = 'The following table contains all the fields that 
 describe an event, their intended usage, the allowed field length, the syntax and an indicator whether an element
 can be empty or not (like <code>&lt;timeend&gt;&lt;/timeend&gt;</code>).
-<br>
+<br />
 <table border="1" cellspacing="0" cellpadding="5">
   <tr>
     <th>field name</th>
@@ -842,7 +842,7 @@ can be empty or not (like <code>&lt;timeend&gt;&lt;/timeend&gt;</code>).
   </tr>
   <tr>
     <td>description</td>
-    <td>a long text describing the specifics of an event<br>
+    <td>a long text describing the specifics of an event<br />
     the description is only displayed in the detailed view</td>
     <td>max. 5000</td>
     <td>free text</td>
@@ -904,8 +904,8 @@ can be empty or not (like <code>&lt;timeend&gt;&lt;/timeend&gt;</code>).
 </table>';
 
 $lang['help_inputfields'] = 'Input fields';
-$lang['help_inputfields_contents'] = 'The following table shows the meaning of the input fields:<BR>
-<BR>
+$lang['help_inputfields_contents'] = 'The following table shows the meaning of the input fields:<br />
+<br />
 <TABLE width="100%" border="1" cellspacing="1" cellpadding="3">
   <TR align="left">
     <TH class="helpbox">Field name</TH>
@@ -915,8 +915,8 @@ $lang['help_inputfields_contents'] = 'The following table shows the meaning of t
       <TD class="helpbox">Date</TD>
       <TD class="helpbox">Choose between one of the radio buttons to determine whether your
       event is a one-time or a recurring event. Then you will be given the opportunity to specify the
-      date of the one-time event or define the recurrence for a repeating event.<BR>
-      The validity of the date you picked is checked after pressing the &quot;Preview Event&quot; button.<BR>
+      date of the one-time event or define the recurrence for a repeating event.<br />
+      The validity of the date you picked is checked after pressing the &quot;Preview Event&quot; button.<br />
       </TD>
     <TR>
     <TR>
@@ -932,11 +932,11 @@ $lang['help_inputfields_contents'] = 'The following table shows the meaning of t
     <TR>
       <TD class="helpbox">Title</TD>
       <TD class="helpbox">Give your event a descriptive title. When choosing one, remember that
-      the category is always displayed along with the title.<BR>
-      <BR>
+      the category is always displayed along with the title.<br />
+      <br />
       Neither the weekly nor the monthly view shows your sponsor name. That\'s why you have to
-      make sure that the user will have a rough idea about the event just by reading the title.<BR>
-      <BR>
+      make sure that the user will have a rough idea about the event just by reading the title.<br />
+      <br />
       The input space for the title is limited to 40 characters to avoid cluttering the
       screen with too long titles.
       </TD>
@@ -945,8 +945,8 @@ $lang['help_inputfields_contents'] = 'The following table shows the meaning of t
       <TD class="helpbox">Description</TD>
       <TD class="helpbox">Give a detailed description of the event here. Remember that you can save people
       a lot of hassle if you give all the information available to you, so that
-      they are not required to call you or send out an email.<BR>
-      <BR>
+      they are not required to call you or send out an email.<br />
+      <br />
       You are not limited in space.</TD>
     <TR>
     <TR>
@@ -993,10 +993,10 @@ $lang['help_inputfields_contents'] = 'The following table shows the meaning of t
 $lang['help_signup'] = 'How to post events';
 $lang['help_signup_authorization'] = 'Authorization can be obtained by contacting the calendar coordinator
  at ';
-$lang['help_signup_contents'] = 'Please send an email containing:<br>
-1) The name of your organization/club<BR>
-2) The user-ID (the ID used to check e-mail) of the person(s) who will be entering information<br>
-<BR>
+$lang['help_signup_contents'] = 'Please send an email containing:<br />
+1) The name of your organization/club<br />
+2) The user-ID (the ID used to check e-mail) of the person(s) who will be entering information<br />
+<br />
 All event submissions will be reviewed by the calendar coordinator before
 they are posted. Consequently, it is important to submit items at
 least two days in advance of the event.
@@ -1004,26 +1004,26 @@ During the review process, submissions will be checked to see if they are
 appropriate for posting and edited for clarity and conciseness.';
 
 $lang['help_template'] = 'Templates';
-$lang['help_template_contents'] = 'Are you entering <B>events with similar information</B> over and over?
-Than <B>templates</B> are what you need to <B>save time</B>.<BR>
-With templates you can <B>predefine input fields</B>
+$lang['help_template_contents'] = 'Are you entering <strong>events with similar information</strong> over and over?
+Than <strong>templates</strong> are what you need to <strong>save time</strong>.<br />
+With templates you can <strong>predefine input fields</strong>
 of the <A href="helpfillinevent.php">form you have to fill in when entering a new event</A>.
-As an <B>example</B> suppose, that it is common for your organization
-to host guest speakers.<BR>
-<BR>
+As an <strong>example</strong> suppose, that it is common for your organization
+to host guest speakers.<br />
+<br />
 Here is what you can do:
 <OL>
   <LI>
-    <B>add a new template</B> with the name &quot;Guest speaker&quot;,
-    <B>set the fields which usually do not change </B>like category, location,
+    <strong>add a new template</strong> with the name &quot;Guest speaker&quot;,
+    <strong>set the fields which usually do not change </strong>like category, location,
     price and contact information
   </LI>
   <LI>
-    <B>add new event</B> and <B>choose the template</B> you have just
+    <strong>add new event</strong> and <strong>choose the template</strong> you have just
     created from the list that will appear
   </LI>
   <LI>
-    <B>fill out the remaining fields</B> of the form like data, title,
+    <strong>fill out the remaining fields</strong> of the form like data, title,
     description etc. and save the event.
   </LI>
 </OL>';
@@ -1038,11 +1038,11 @@ $lang['help_updatecopydelete_contents'] = 'You have 2 options:
 </OL>';
 $lang['help_updateevent'] = 'Update event';
 $lang['help_updateevent_contents'] = 'When you choose to update an existing event you can make changes or
-<A href="helpfillinevent.php">fill in</A> additional information.<BR>
-<BR>
-Please keep in mind that the changes you make will have to be <A href="helpapproval.php">approved</A> again.<BR>
-Therefore, they will <B>not be immediately visible</B> in the calendar.<BR>
-<BR>
+<A href="helpfillinevent.php">fill in</A> additional information.<br />
+<br />
+Please keep in mind that the changes you make will have to be <A href="helpapproval.php">approved</A> again.<br />
+Therefore, they will <strong>not be immediately visible</strong> in the calendar.<br />
+<br />
 If your event is a recurring event you will be presented with the option to
 either save the changes just for that one date (button &quot;Save changes&quot;)
 or for all recurrences (button &quot;Save changes for ALL recurrences&quot;).';

@@ -3,9 +3,9 @@ if (!defined("ALLOWINCLUDES")) { exit; } // prohibits direct calling of include 
 ?><table cellspacing="5" cellpadding="0" width="100%" bgcolor="#ffffff" border="0">
       <FORM method="post" action="main.php?view=search">
 			<tr><td colspan="3">
-			<br>
+			<br />
         <INPUT type="submit" name="back" value="&laquo; <?php echo lang('back_to_prev_page'); ?>">
-				<br><br>
+				<br /><br />
 			</td></tr>
 <?php
 if (isset($timebegin_year)) { // details was called from the searchform
@@ -71,7 +71,7 @@ if (!empty($keyword)) {
 				echo $search_featured[$kw];
 				echo '</td></tr></table>';
 				echo '</td></tr></table>';
-			  	echo "  <br><br></td>\n</tr>\n";
+			  	echo "  <br /><br /></td>\n</tr>\n";
 			}
 			
 			$query.= " and (";
@@ -102,7 +102,7 @@ if ($ievent < $result->numRows()) {
 else {
 ?>
         <tr valign="top">
-          <td colspan="3"><br><span class="announcement">&nbsp;&nbsp;<?php echo lang('no_events_found'); ?>.<br><br><br><br><br><br></span></td>
+          <td colspan="3"><br /><span class="announcement">&nbsp;&nbsp;<?php echo lang('no_events_found'); ?>.<br /><br /><br /><br /><br /><br /></span></td>
         </tr>
 <?php	
 } // end: else: if ($ievent < $result->numRows())
@@ -117,7 +117,7 @@ while ($ievent < $result->numRows()) {
 
     //echo Day_of_Week_Abbreviation(Day_of_Week($event_timebegin['month'],$event_timebegin['day'],$event_timebegin['year'])),", ";
     //echo Month_to_Text_Abbreviation($event_timebegin['month'])," ",$event_timebegin['day'],", ",$event_timebegin['year'];
-    echo "<br>";
+    echo "<br />";
     if ($event['wholedayevent']==0) {
   	  disassemble_eventtime($event);	
 			echo timestring($event['timebegin_hour'],$event['timebegin_min'],$event['timebegin_ampm']);
@@ -128,7 +128,7 @@ while ($ievent < $result->numRows()) {
 	}
 	echo '</td>',"\n";
 	echo '          <td width="1%" bgcolor="',$_SESSION["MAINCOLOR"],'"><img src="images/spacer.gif" width="5" height=1" alt=""></td>',"\n";
-	echo "          <td width=\"98%\"><a href=\"main.php?view=event&eventid=",$event['eventid'],"\"><b>",highlight_keyword($keyword,$event['title']),"</b></a> -\n";
+	echo "          <td width=\"98%\"><a href=\"main.php?view=event&eventid=",$event['eventid'],"\"><strong>",highlight_keyword($keyword,$event['title']),"</strong></a> -\n";
 	echo "            ",highlight_keyword($keyword,$event['category_name'])," ";
 	if (!empty($event['location'])) { echo "(".highlight_keyword($keyword,$event['location']).")"; }
 
@@ -143,13 +143,13 @@ while ($ievent < $result->numRows()) {
 		echo "<img src=\"images/nuvola/16x16/actions/button_cancel.png\" height=\"16\" width=\"16\" alt=\"",lang('delete_event'),"\" border=\"0\"></a>";
     }
 
-	echo "<br>\n";
+	echo "<br />\n";
 	if (!empty($event['description'])) {
 		echo highlight_keyword($keyword,$event['description']);
 		echo " \n";
 	}
 	else {
-		echo "<br>\n";
+		echo "<br />\n";
 	}
 	echo "</td>\n";
 	echo '        </tr>',"\n";
@@ -167,7 +167,7 @@ while ($ievent < $result->numRows()) {
 $searchlogresult = DBQuery($database, "INSERT INTO vtcal_searchlog (calendarid,time,ip,numresults,keyword) VALUES ('".sqlescape($_SESSION["CALENDARID"])."','".sqlescape(date("Y-m-d H:i:s", time()))."','".sqlescape($_SERVER['REMOTE_ADDR'])."','".sqlescape($result->numRows())."','".sqlescape($keyword)."')" );
 ?>
         <tr valign="top">
-          <td colspan="3"><br><br><br></td>
+          <td colspan="3"><br /><br /><br /></td>
         </tr>
       </FORM>
       </table>

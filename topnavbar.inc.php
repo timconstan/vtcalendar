@@ -69,10 +69,10 @@ else { echo '<a href="main.php?view=month">',lang('month'),'</a>'; } ?>&nbsp;&nb
   if (!empty($_SESSION["AUTH_USERID"])) {
 ?>
     <table cellpadding="3" cellspacing="0" border="0"><tr><td>
-		<b><?php echo $_SESSION["AUTH_USERID"]; ?></b> 
+		<strong><?php echo $_SESSION["AUTH_USERID"]; ?></strong> 
 <?php		
   if (!empty($_SESSION["AUTH_SPONSORNAME"])) {
-		echo "(<b>",$_SESSION["AUTH_SPONSORNAME"],"</b>)"; 
+		echo "(<strong>",$_SESSION["AUTH_SPONSORNAME"],"</strong>)"; 
 	}
 ?>		
 		<?php echo lang('is_logged_on'); ?> 

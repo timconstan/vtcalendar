@@ -20,7 +20,7 @@
   if ($check) { $template_name=stripslashes($template_name); }
   echo HTMLSpecialChars($template_name);
 ?>">
-      <I><?php echo lang('template_name_example'); ?></I>
+      <em><?php echo lang('template_name_example'); ?></em>
     </td>
   <tr>
 </table>

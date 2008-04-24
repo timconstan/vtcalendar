@@ -24,17 +24,17 @@
   pageheader(lang('clear_search_log'),
              lang('clear_search_log'),
              "Update","",$database);
-  echo "<BR>";
+  echo "<br />";
   box_begin("inputbox",lang('clear_search_log'));
 ?>
 <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-  <?php echo lang('clear_search_log_confirm'); ?><br>
-	<BR>
+  <?php echo lang('clear_search_log_confirm'); ?><br />
+	<br />
   <INPUT type="submit" name="save" value="<?php echo lang('ok_button_text'); ?>">
   <INPUT type="submit" name="cancel" value="<?php echo lang('cancel_button_text'); ?>">
 </form>
 <?php
   box_end();
-  echo "<BR>";
+  echo "<br />";
   require("footer.inc.php");
 ?>

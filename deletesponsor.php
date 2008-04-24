@@ -53,12 +53,12 @@
   pageheader(lang('delete_sponsor'),
              lang('delete_sponsor'),
              "Update","",$database);
-  echo "<BR>";
+  echo "<br />";
   box_begin("inputbox",lang('delete_sponsor'));
 ?>
-<font color="#ff0000"><b><?php echo lang('delete_sponsor_confirm'); ?> &quot;<b><?php echo $sponsor['name']; ?></b>&quot;</b></font>
+<font color="#ff0000"><strong><?php echo lang('delete_sponsor_confirm'); ?> &quot;<strong><?php echo $sponsor['name']; ?></strong>&quot;</strong></font>
 <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-	<input type="radio" name="deleteevents" value="1"> <?php echo lang('delete_all_events_of_sponsor'); ?><br>
+	<input type="radio" name="deleteevents" value="1"> <?php echo lang('delete_all_events_of_sponsor'); ?><br />
   <input type="radio" name="deleteevents" value="0" checked> 
 	<?php echo lang('reassign_all_events_to_sponsor'); ?>
   <select name="newsponsorid" size="1">
@@ -76,13 +76,13 @@
 <?php
   if ( isset ($id) ) { echo '<input type="hidden" name="id" value="'.$id.'">'; }
 ?>	
-	<BR>
-  <BR>
+	<br />
+  <br />
   <INPUT type="submit" name="save" value="<?php echo lang('ok_button_text'); ?>">
   <INPUT type="submit" name="cancel" value="<?php echo lang('cancel_button_text'); ?>">
 </form>
 <?php
   box_end();
-  echo "<BR>";
+  echo "<br />";
   require("footer.inc.php");
 ?>

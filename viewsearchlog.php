@@ -10,7 +10,7 @@
 	pageheader(lang('view_search_log'),
 					 lang('view_search_log'),
 					 "Update","",$database);
-	echo "<BR>\n";
+	echo "<br />\n";
 	box_begin("inputbox",lang('view_search_log'));
 
 ?>
@@ -22,14 +22,14 @@
 <?php
   box_end();
 ?>
-<br>
+<br />
 <pre>
 <?php
   $result = DBQuery($database, "SELECT * FROM vtcal_searchlog WHERE calendarid='".sqlescape($_SESSION["CALENDARID"])."' ORDER BY time" ); 
   if ( $result->numRows() > 0 ) {
 		for ($i=0; $i<$result->numRows(); $i++) {
 			$searchlog = $result->fetchRow(DB_FETCHMODE_ASSOC,$i);
-			echo "    ",$searchlog['time'],"  ",str_pad($searchlog['ip'], 15, " ", STR_PAD_LEFT)," ",str_pad($searchlog['numresults'], 5, " ", STR_PAD_LEFT),"   ",$searchlog['keyword'],"<br>";
+			echo "    ",$searchlog['time'],"  ",str_pad($searchlog['ip'], 15, " ", STR_PAD_LEFT)," ",str_pad($searchlog['numresults'], 5, " ", STR_PAD_LEFT),"   ",$searchlog['keyword'],"<br />";
 		} // end: for ($i=0; $i<$result->numRows(); $i++)
   }
 	else {
@@ -38,6 +38,6 @@
 ?>	
 </pre>
 <?php
-  echo "<br><br>\n";
+  echo "<br /><br />\n";
   require("footer.inc.php");
 ?>

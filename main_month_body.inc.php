@@ -3,16 +3,16 @@
 ?><table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="<?php echo $_SESSION["GRIDCOLOR"]; ?>">
         <tr align="center">
         <?php if($week_start == 0){?>
-          <td width="14%"><br><strong><?php echo lang('sunday');?></strong></td>
+          <td width="14%"><br /><strong><?php echo lang('sunday');?></strong></td>
          <?php } ?>
-          <td width="14%"><br><strong><?php echo lang('monday');?></strong></td>
-          <td width="14%"><br><strong><?php echo lang('tuesday');?></strong></td>
-          <td width="14%"><br><strong><?php echo lang('wednesday');?></strong></td>
-          <td width="14%"><br><strong><?php echo lang('thursday');?></strong></td>
-          <td width="14%"><br><strong><?php echo lang('friday');?></strong></td>
-          <td width="14%"><br><strong><?php echo lang('saturday');?></strong></td>
+          <td width="14%"><br /><strong><?php echo lang('monday');?></strong></td>
+          <td width="14%"><br /><strong><?php echo lang('tuesday');?></strong></td>
+          <td width="14%"><br /><strong><?php echo lang('wednesday');?></strong></td>
+          <td width="14%"><br /><strong><?php echo lang('thursday');?></strong></td>
+          <td width="14%"><br /><strong><?php echo lang('friday');?></strong></td>
+          <td width="14%"><br /><strong><?php echo lang('saturday');?></strong></td>
         <?php if($week_start == 1){?>
-          <td width="14%"><br><strong><?php echo lang('sunday');?></strong></td>
+          <td width="14%"><br /><strong><?php echo lang('sunday');?></strong></td>
          <?php } ?>
         </tr>
 <?php 
@@ -78,7 +78,7 @@
 				if ($datediff > 0) { echo 'class="past" '; }
 				
 				echo "href=\"main.php?view=day&timebegin=",urlencode(datetime2timestamp($iday['year'],$iday['month'],$iday['day'],12,0,"am")),"&timeend=",urlencode(datetime2timestamp($iday['year'],$iday['month'],$iday['day'],11,59,"pm")),"&sponsorid=",urlencode($sponsorid),"&categoryid=",urlencode($categoryid),"&keyword=",urlencode($keyword),"\">";
-				echo "<b>",$iday['day'],"</b>";
+				echo "<strong>",$iday['day'],"</strong>";
 				echo "</a>\n";
 				echo '  </td>',"\n";
         if (!empty($_SESSION["AUTH_SPONSORID"])) { // display "add event" icon
@@ -115,7 +115,7 @@
 					echo HTMLSpecialChars($event['title']);
 					// add little update, delete icons
 					if ((isset($_SESSION["AUTH_SPONSORID"]) && $_SESSION["AUTH_SPONSORID"] == $event['sponsorid']) || !empty($_SESSION["AUTH_ADMIN"])) {
-						echo " <br><a href=\"changeeinfo.php?eventid=",$event['eventid'],"\" title=\"",lang('update_event'),"\">";
+						echo " <br /><a href=\"changeeinfo.php?eventid=",$event['eventid'],"\" title=\"",lang('update_event'),"\">";
 						echo "<img src=\"images/nuvola/16x16/actions/color_line.png\" height=\"16\" width=\"16\" alt=\"",lang('update_event'),"\" border=\"0\"></a>";
 			
 						echo " <a href=\"changeeinfo.php?copy=1&eventid=",$event['eventid'],"\" title=\"",lang('copy_event'),"\">";
@@ -125,7 +125,7 @@
 						echo "<img src=\"images/nuvola/16x16/actions/button_cancel.png\" height=\"16\" width=\"16\" alt=\"",lang('delete_event'),"\" border=\"0\"></a>";
 					}
 					echo "</a>";
-					echo "<br>\n";
+					echo "<br />\n";
 
           echo "</td></tr>\n";
           // read next event if one exists
@@ -140,7 +140,7 @@
         } // end: while (...)
         echo "</table>\n";
 
-				echo '  <br></td>',"\n";
+				echo '  <br /></td>',"\n";
 				echo '</tr>',"\n";
 				echo '</table>',"\n";
 

@@ -39,28 +39,28 @@
   pageheader(lang('change_email'),
              lang('change_email'),
              "Update","",$database);
-  echo "<BR>";
+  echo "<br />";
   box_begin("inputbox",lang('change_email'));
 ?>
-<B><?php echo lang('change_email_label'); ?></B><BR>
+<strong><?php echo lang('change_email_label'); ?></strong><br />
 <FORM method="post" action="changeemail.php">
 <?php
   if (!checkemail($sponsor["email"])) {
     feedback(lang('email_invalid'),1);
 ?>
-  <BR>
+  <br />
 <?php
   } /* end: if ($checkemail($sponsor["email"])) */
 ?>
   <INPUT type="text" name="sponsor_email" maxlength="100" size="60" value="<?php echo HTMLSpecialChars($sponsor["email"]); ?>">
-  <BR>
-  <BR>
+  <br />
+  <br />
   <INPUT type="submit" name="save" value="<?php echo lang('ok_button_text'); ?>">
   <INPUT type="submit" name="cancel" value="<?php echo lang('cancel_button_text'); ?>">
 </FORM>
 <?php
   box_end();
-  echo "<BR>";
+  echo "<br />";
 
   require("footer.inc.php");
 ?>

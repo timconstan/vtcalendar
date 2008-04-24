@@ -65,22 +65,22 @@
   pageheader(lang('edit_template'),
              lang('edit_template'),
              "Update","",$database);
-  echo "<BR>";
+  echo "<br />";
   box_begin("inputbox",lang('edit_template'));
 ?>
-<BR>
+<br />
 <FORM method="post" action="updatetinfo.php">
 <?php
   if (!isset($check)) { $check=0; }
   inputtemplatedata($event,$_SESSION["AUTH_SPONSORID"],$check,$template_name,$database);
 ?>
-<BR>
+<br />
 <INPUT type="submit" name="savetemplate" value="<?php echo lang('ok_button_text'); ?>">
 <INPUT type="submit" name="cancel" value="<?php echo lang('cancel_button_text'); ?>">
 <INPUT type="hidden" name="templateid" value="<?php echo $templateid; ?>">
 </FORM>
 <?php
   box_end();
-  echo "<BR>";
+  echo "<br />";
   require("footer.inc.php");
 ?>

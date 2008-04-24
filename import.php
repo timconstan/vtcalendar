@@ -167,14 +167,14 @@ function xmlcharacterdata_importevent($parser, $data) {
 
 // default error handler
 function xmlerror_importevent($xml_parser) {
-  echo "<br>\n";
+  echo "<br />\n";
   feedback("XML error: ".xml_error_string(xml_get_error_code($xml_parser))." at line ".xml_get_current_line_number($xml_parser),FEEDBACKNEG);
 } // end: function xmlerror
 
   pageheader(lang('import_events'),
              lang('import_events'),
              "Update","",$database);
-  echo "<BR>";
+  echo "<br />";
   box_begin("inputbox",lang('import_events'));
   
   $showinputbox = 1;
@@ -196,10 +196,10 @@ function xmlerror_importevent($xml_parser) {
                                  "xmlcharacterdata_importevent",
                                  "xmlerror_importevent");
       if ($parsexmlerror == FILEOPENERROR) {
-        feedback(lang('import_error_open_url')."<br>",FEEDBACKNEG);
+        feedback(lang('import_error_open_url')."<br />",FEEDBACKNEG);
       }
       if ($error) {
-        feedback("<br>".lang('no_events_imported')."<br>",FEEDBACKNEG);
+        feedback("<br />".lang('no_events_imported')."<br />",FEEDBACKNEG);
       }
       if (!$parsexmlerror) {
 			  if (!$error) {
@@ -223,9 +223,9 @@ function xmlerror_importevent($xml_parser) {
 							}
 						}
 						$showinputbox = 0;
-						echo "<br>\n";
+						echo "<br />\n";
 						feedback($eventnr." ".lang('events_successfully_imported'),FEEDBACKPOS);
-						echo "<br>\n";
+						echo "<br />\n";
 						echo "<form method=\"post\" action=\"update.php\">\n";
 						echo '  <input type="submit" name="back" value="',lang('back_to_menu'),'">',"\n";
 						echo "</form>\n";
@@ -241,22 +241,22 @@ function xmlerror_importevent($xml_parser) {
 ?>
 <a target="main" href="helpimport.php"><img src="images/nuvola/16x16/actions/help.png" width="16" height="16" alt="" border="0"> 
 <?php echo lang('how_to_import'); ?></a>
-<br>
-<br>
+<br />
+<br />
 <form method="get" action="<?php echo $_SERVER["PHP_SELF"]; ?>">
-<b><?php echo lang('enter_import_url_message'); ?></b><br>
-<br>
+<strong><?php echo lang('enter_import_url_message'); ?></strong><br />
+<br />
 <input type="text" name="importurl" value="<?php 
-if (isset($importurl)) { echo $importurl; } ?>" size="60" maxlength="<?php echo constImporturlMaxLength; ?>"><br>
-<?php echo lang('enter_import_url_example'); ?><br>
-<br>
+if (isset($importurl)) { echo $importurl; } ?>" size="60" maxlength="<?php echo constImporturlMaxLength; ?>"><br />
+<?php echo lang('enter_import_url_example'); ?><br />
+<br />
 <input type="submit" name="startimport" value="<?php echo lang('ok_button_text'); ?>">
 <INPUT type="submit" name="cancel" value="<?php echo lang('cancel_button_text'); ?>">
 </form>
 <?php
   } // end: if ($showinputbox)
   box_end();
-  echo "<BR>";
+  echo "<br />";
 
   require("footer.inc.php");
 ?>

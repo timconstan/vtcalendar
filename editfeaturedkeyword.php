@@ -57,7 +57,7 @@
     pageheader(lang('edit_featured_keyword'),
                lang('edit_featured_keyword'),
                "Update","",$database);
-    echo "<BR>";
+    echo "<br />";
     box_begin("inputbox",lang('edit_featured_keyword'));
 		if ( !isset($check) ) {
   		$result = DBQuery($database, "SELECT * FROM vtcal_searchfeatured WHERE calendarid='".sqlescape($_SESSION["CALENDARID"])."' AND id='".sqlescape($id)."'" );
@@ -70,15 +70,15 @@
     pageheader(lang('add_new_featured_keyword'),
                lang('add_new_featured_keyword'),
                "Update","",$database);
-    echo "<BR>";
+    echo "<br />";
     box_begin("inputbox",lang('add_new_featured_keyword'));
 	}
 ?>
-<br>
+<br />
 <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-  <?php echo lang('featured_keyword_message'); ?><br>
-	<br>
-	<b><?php echo lang('keyword'); ?>:</b><br>
+  <?php echo lang('featured_keyword_message'); ?><br />
+	<br />
+	<strong><?php echo lang('keyword'); ?>:</strong><br />
 <?php
   if ( isset($check) ) {
 		if ($keywordexists) {
@@ -92,10 +92,10 @@
   <input type="text" name="keyword" maxlength="100" size="20" value="<?php 
 	if (!empty($keyword)) {	echo HTMLSpecialChars($keyword); }
 	?>">
-	<br>
-	<br>
+	<br />
+	<br />
 		
-  <b><?php echo lang('featured_text'); ?></b><br>
+  <strong><?php echo lang('featured_text'); ?></strong><br />
 <?php
   if ( isset($check) ) {
 		if ( empty($featuretext) ) {
@@ -112,13 +112,13 @@
 <?php
   if ( !empty($id) ) { echo '<input type="hidden" name="id" value="',$id,'">'; }
 ?>
-	<BR>
-  <BR>
+	<br />
+  <br />
   <INPUT type="submit" name="save" value="<?php echo lang('ok_button_text'); ?>">
   <INPUT type="submit" name="cancel" value="<?php echo lang('cancel_button_text'); ?>">
 </form>
 <?php
   box_end();
-  echo "<BR>";
+  echo "<br />";
   require("footer.inc.php");
 ?>

@@ -26,7 +26,7 @@
 	pageheader(lang('manage_sponsors'),
 					 lang('manage_sponsors'),
 					 "Update","",$database);
-	echo "<BR>\n";
+	echo "<br />\n";
 	box_begin("inputbox",lang('manage_sponsors'));
 ?>
 <form method="post" action="update.php">
@@ -34,8 +34,8 @@
 </form>
 <form method="post" name="mainform" action="managesponsors.php">
 <a href="editsponsor.php"><?php echo lang('add_new_sponsor'); ?></a>
-<?php echo lang('or_modify_existing_sponsor'); ?><br>
-<br>
+<?php echo lang('or_modify_existing_sponsor'); ?><br />
+<br />
 <?php
   $numLines = 15;
 ?>
@@ -50,11 +50,11 @@
 <?php
   } // end: for ($i=0; $i<$result->numRows(); $i++)
 ?>	
-</select><br>
+</select><br />
 <input type="submit" name="edit" value="<?php echo lang('button_edit'); ?>">
-<input type="submit" name="delete" value="<?php echo lang('button_delete'); ?>"><br>
-<br>
-<b><?php echo $result->numRows(); ?> <?php echo lang('sponsors_total'); ?></b>
+<input type="submit" name="delete" value="<?php echo lang('button_delete'); ?>"><br />
+<br />
+<strong><?php echo $result->numRows(); ?> <?php echo lang('sponsors_total'); ?></strong>
 </form>
 <script language="JavaScript" type="text/javascript"><!--
 document.mainform.id.focus();
@@ -65,6 +65,6 @@ document.mainform.id.focus();
 
 <?php
   box_end();
-  echo "<br><br>\n";
+  echo "<br /><br />\n";
   require("footer.inc.php");
 ?>

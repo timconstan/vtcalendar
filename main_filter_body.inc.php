@@ -72,22 +72,22 @@ function validate ( myForm, id ) {
 			  echo " checked";
 			}
 			echo ">\n";
-		echo "<label for=\"category",$c,"\">",$categories_name[$c],"</label><br>\n";
+		echo "<label for=\"category",$c,"\">",$categories_name[$c],"</label><br />\n";
 	} // end: for ($c=0; $c<$numcategories; $c++)
 ?>    
 				</td>
 			</tr>
 			<tr valign="top">
 				<td colspan="3" align="left" valign="top">
-			  	<br>
+			  	<br />
 					<input type="submit" name="ok" value="&nbsp;&nbsp;<?php echo lang('apply_filter'); ?>&nbsp;&nbsp;">&nbsp;
 				</td>
 			</tr>
 			<input type="hidden" name="view" value="week">
 		</form>
 		</table>
-  	<br>
-	  <br>
+  	<br />
+	  <br />
 	</td>
 </tr>
 </table>

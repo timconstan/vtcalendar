@@ -10,19 +10,19 @@
 	pageheader(lang('manage_calendars'),
 					lang('manage_calendars'),
 					 "Update","",$database);
-	echo "<BR>\n";
+	echo "<br />\n";
 	box_begin("inputbox",lang('manage_calendars'));
 ?>
 <form method="post" action="update.php">
 	<input type="submit" name="back" value="<?php echo lang('back_to_menu'); ?>">
 </form>
 <a href="editcalendar.php?new=1"><?php echo lang('add_new_calendar'); ?></a>
-<?php echo lang('or_modify_existing_calendar'); ?><br>
-<br>
+<?php echo lang('or_modify_existing_calendar'); ?><br />
+<br />
 <table border="0" cellspacing="0" cellpadding="4">
   <tr bgcolor="#CCCCCC">
-    <td bgcolor="#CCCCCC"><b><?php echo lang('calendar_id'); ?></b></td>
-    <td bgcolor="#CCCCCC"><b><?php echo lang('calendar_name'); ?></b></td>
+    <td bgcolor="#CCCCCC"><strong><?php echo lang('calendar_id'); ?></strong></td>
+    <td bgcolor="#CCCCCC"><strong><?php echo lang('calendar_name'); ?></strong></td>
     <td bgcolor="#CCCCCC">&nbsp;</td>
   </tr>
 <?php
@@ -54,16 +54,16 @@
 ?>		
 	<tr bgcolor="<?php echo $color; ?>">
 	  <td colspan="3" bgcolor="<?php echo $color; ?>">
-		  <b><?php echo $result->numRows(); ?> <?php echo lang('calendars'); ?></b>
+		  <strong><?php echo $result->numRows(); ?> <?php echo lang('calendars'); ?></strong>
 		</td>
 	</tr>
 </table>
-<br>
+<br />
 <form method="post" action="update.php">
 	<input type="submit" name="back" value="<?php echo lang('back_to_menu'); ?>">
 </form>
 <?php
   box_end();
-  echo "<br><br>\n";
+  echo "<br /><br />\n";
   require("footer.inc.php");
 ?>

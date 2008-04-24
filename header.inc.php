@@ -3,8 +3,10 @@
 
 	function pageheader($title, $headline, $navbaractive, $calendarnavbar, $database) {
 	  global $enableViewMonth, $lang;
-?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
+?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en">
   <head>
     <title><?php echo $title; ?></title>
     <meta http-equiv="Content-Type" content="text/html; charset=<?php
@@ -29,7 +31,7 @@
         <script src="scripts/fix-ie6.js" type="text/javascript"></script>
         <![endif]-->
   </head>
-  <body bgcolor="<?php echo $_SESSION["BGCOLOR"]; ?>" leftMargin="0" topMargin="0" marginheight="0" marginwidth="0">
+  <body bgcolor="<?php echo $_SESSION["BGCOLOR"]; ?>">
 <?php 
     echo $_SESSION["HEADER"];
     require("topnavbar.inc.php"); 

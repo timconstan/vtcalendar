@@ -46,7 +46,7 @@ function feedback($msg,$type) {
   if ($type==1) { echo "feedbackneg"; } // error message
   echo '">';
 	echo $msg;
-  echo '</span><br>';
+  echo '</span><br />';
 }
 
 function redirect2URL($url) {
@@ -62,15 +62,15 @@ function displaylogin($errormsg,$database) {
   pageheader(lang('update_page_header'),
              "Login",
             "Update","",$database);
-  echo "<BR>\n";
+  echo "<br />\n";
   box_begin("inputbox",lang('login'));
 
   if (!empty($errormsg)) {
-    echo "<BR>\n";
+    echo "<br />\n";
     feedback($errormsg,1);
   }
 ?>
-    <BR>
+    <br />
     <DIV align="center">
     <FORM method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>" name="loginform">
 <?php
@@ -80,25 +80,25 @@ function displaylogin($errormsg,$database) {
 ?>
       <TABLE width="50%" border="0" cellspacing="1" cellpadding="3" align="center">
         <TR>
-          <TD class="inputbox" align="right" nowrap><b><?php echo lang('user_id'); ?>:</b></TD>
+          <TD class="inputbox" align="right" nowrap><strong><?php echo lang('user_id'); ?>:</strong></TD>
           <TD align="left"><INPUT type="text" name="login_userid" value=""></TD>
         </TR>
         <TR>
-          <TD class="inputbox" align="right"><b><?php echo lang('password'); ?></b></TD>
+          <TD class="inputbox" align="right"><strong><?php echo lang('password'); ?></strong></TD>
           <TD align="left"><INPUT type="password" name="login_password" value="" maxlength="<?php echo constPasswordMaxLength; ?>"></TD>
         </TR>
         <TR>
           <TD class="inputbox">&nbsp;</TD>
-          <TD align="left"><INPUT type="submit" name="login" value="&nbsp;&nbsp;&nbsp;<?php echo lang('login'); ?>&nbsp;&nbsp;&nbsp;"><br>
-    <br>
+          <TD align="left"><INPUT type="submit" name="login" value="&nbsp;&nbsp;&nbsp;<?php echo lang('login'); ?>&nbsp;&nbsp;&nbsp;"><br />
+    <br />
 		<a href="helpsignup.php" target="newWindow"
-		onclick="new_window(this.href); return false"><b><?php echo lang('new_user'); ?></b></a>
-    <BR>
+		onclick="new_window(this.href); return false"><strong><?php echo lang('new_user'); ?></strong></a>
+    <br />
 					
 					</TD>
         </TR>
       </TABLE>
-      <BR>
+      <br />
 		
       
     </FORM>
@@ -106,10 +106,10 @@ function displaylogin($errormsg,$database) {
   document.loginform.login_userid.focus();
 //--></script>
     </DIV>
-    <BR>
+    <br />
 <?php
   box_end();
-  echo "<BR>\n";
+  echo "<br />\n";
 
   require("footer.inc.php");
 } // end: Function displaylogin
@@ -121,7 +121,7 @@ function displaymultiplelogin($database) {
   pageheader(lang('login'),
              lang('login'),
             "Update","",$database);
-  echo "<BR>\n";
+  echo "<br />\n";
   box_begin("inputbox",lang('choose_sponsor_role'));
 ?>
 <table cellpadding="2" cellspacing="2" border="0">
@@ -152,10 +152,10 @@ function displaymultiplelogin($database) {
 	}
 ?>
 </table>
-    <BR>
+    <br />
 <?php
     box_end();
-  echo "<BR>\n";
+  echo "<br />\n";
 
   require("footer.inc.php");
 } // end: function displaymultiplelogin
@@ -166,16 +166,16 @@ function displaynotauthorized($database) {
   pageheader(lang('login'),
              lang('login'),
             "Update","",$database);
-  echo "<BR>\n";
+  echo "<br />\n";
   box_begin("inputbox",lang('error_not_authorized'));
 ?>
-<?php echo lang('error_not_authorized_message'); ?><br>
-<br>
-    <a href="helpsignup.php" target="newWindow"	onclick="new_window(this.href); return false"><?php echo lang('help_signup_link'); ?></a><br>
-<BR>
+<?php echo lang('error_not_authorized_message'); ?><br />
+<br />
+    <a href="helpsignup.php" target="newWindow"	onclick="new_window(this.href); return false"><?php echo lang('help_signup_link'); ?></a><br />
+<br />
 <?php
     box_end();
-  echo "<BR>\n";
+  echo "<br />\n";
 
   require("footer.inc.php");
 } // end: Function displaynotauthorized
@@ -725,7 +725,7 @@ function helpbox_begin() {
     <link href="stylesheet.php" rel="stylesheet" type="text/css">
   </head>
   <body bgcolor="<?php echo $_SESSION["BGCOLOR"]; ?>" leftMargin="0" topMargin="0" marginheight="0" marginwidth="0" onLoad="this.window.focus()">
-		<br>
+		<br />
 		<table border="0" cellPadding="5" cellSpacing="0">
 			<tr>
 				<td bgcolor="<?php echo $_SESSION["BGCOLOR"]; ?>">&nbsp;</td>
@@ -739,7 +739,7 @@ function helpbox_end() {
 				<td bgcolor="<?php echo $_SESSION["BGCOLOR"]; ?>">&nbsp;</td>
 			</tr>
 		</table>
-		<br>
+		<br />
   </body>
 </html>
 <?php
@@ -767,13 +767,13 @@ function print_week_event(&$event,$preview) {
     echo '<span class="eventtime">';
 		echo timestring($event['timebegin_hour'],$event['timebegin_min'],$event['timebegin_ampm']);
     echo '</span>';
-		echo "<br>";
+		echo "<br />";
   }
 
   if ($preview!=1) {
     echo "<a href=\"main.php?view=event&eventid=",$event['eventid'],"\">";
   }
-  echo "<b>",$event['title'],"</b><br>";
+  echo "<strong>",$event['title'],"</strong><br />";
   if ($preview!=1) {
     echo "</a>";
   echo '<span class="eventcategory">'.$event['category_name'].'</span>';
@@ -781,7 +781,7 @@ function print_week_event(&$event,$preview) {
     // add little update, delete icons
     if ((isset($_SESSION["AUTH_SPONSORID"]) && $_SESSION["AUTH_SPONSORID"] == $event['sponsorid']) || 
          !empty($_SESSION["AUTH_ADMIN"]) ) {
-      echo "<br><a href=\"changeeinfo.php?eventid=",$event['eventid'],"\" title=\"",lang('update_event'),"\">";
+      echo "<br /><a href=\"changeeinfo.php?eventid=",$event['eventid'],"\" title=\"",lang('update_event'),"\">";
       echo "<img src=\"images/nuvola/16x16/actions/color_line.png\" height=\"16\" width=\"16\" alt=\"",lang('update_event'),"\" border=\"0\"></a>";
 
       echo " <a href=\"changeeinfo.php?copy=1&eventid=",$event['eventid'],"\" title=\"",lang('copy_event'),"\">";
@@ -791,7 +791,7 @@ function print_week_event(&$event,$preview) {
       echo "<img src=\"images/nuvola/16x16/actions/button_cancel.png\" height=\"16\" width=\"16\" alt=\"",lang('delete_event'),"\" border=\"0\"></a>";
     }
   };
-  echo "<BR><BR>\n";
+  echo "<br /><br />\n";
 } // end: function print_week_event(&$event)
 
 // remove slashes from event fields
@@ -1738,12 +1738,12 @@ global $lang, $day_end_h;
 		  <table width="100%" border="0" cellpadding="0" cellspacing="5" bgcolor="#FFFFFF">
 				<tr valign="top">
           <td align="center" valign="top" class="eventtimebig">
-					  <img alt="" src="images/spacer.gif" width="1" height="6"><br>
+					  <img alt="" src="images/spacer.gif" width="1" height="6"><br />
 <?php 
 		if ($event['wholedayevent']==0) {
 			echo timestring($event['timebegin_hour'],$event['timebegin_min'],$event['timebegin_ampm']);
 			if ( ! ($event['timeend_hour']==$day_end_h && $event['timeend_min']==59) ) {
-			  echo "<br>",lang('to'),"<br>";
+			  echo "<br />",lang('to'),"<br />";
 			  echo timestring($event['timeend_hour'],$event['timeend_min'],$event['timeend_ampm']);
 			}
     }
@@ -1754,23 +1754,23 @@ global $lang, $day_end_h;
           <td bgcolor="<?php echo $_SESSION["MAINCOLOR"]; ?>">&nbsp;</td>
           <td>
 <span class="eventtitlebig"><?php echo $event['title']; ?></span>
-&nbsp;<br>(<?php echo $event['category_name']; ?>)<br>
-<br>
+&nbsp;<br />(<?php echo $event['category_name']; ?>)<br />
+<br />
 <?php 
   if (!empty($event['description'])) {
-		echo "<p>",str_replace("\r", "<br>", $event['description']);
+		echo "<p>",str_replace("\r", "<br />", $event['description']);
 
   }
 ?>
 <?php 
   if (!empty($event['url']) && $event['url'] != "http://") {
 ?>
-     <br><a href="<?php echo $event['url'],"\">",lang('more_information');?></a>
+     <br /><a href="<?php echo $event['url'],"\">",lang('more_information');?></a>
 <?php
   } // end: if (!empty($event['url'])) {
 	
   if (!empty($event['description'])) {
- 	  echo"</p><br>";
+ 	  echo"</p><br />";
 	}
 ?>				
 
@@ -1823,14 +1823,14 @@ global $lang, $day_end_h;
         <tr> 
           <td align="left" valign="top" nowrap width="5%"><strong><?php echo lang('contact'); ?>:</strong></td>
           <td width="95%">
-<?php if (!empty($event['contact_name']) ) { echo $event['contact_name'],"<br>"; } ?>
+<?php if (!empty($event['contact_name']) ) { echo $event['contact_name'],"<br />"; } ?>
 <?php if (!empty($event['contact_email']) ) { 
   echo '<img src="images/email.gif" width="20" height="20" alt="',lang('email'),'" align="absmiddle">';
-  echo " <a href=\"mailto:",$event['contact_email'],"\">",$event['contact_email'],"</a><br>"; } 
+  echo " <a href=\"mailto:",$event['contact_email'],"\">",$event['contact_email'],"</a><br />"; } 
 ?>
 <?php if (!empty($event['contact_phone']) ) { 
   echo '<img src="images/phone.gif" width="20" height="20" align="absmiddle"> ';
-  echo $event['contact_phone'],"<br>"; } 
+  echo $event['contact_phone'],"<br />"; } 
 ?>
           </td>
         </tr>

@@ -22,7 +22,7 @@
     while (!checkdate($timeend_month,$timeend_day,$timeend_year)) { $timeend_day--; };
   }
 ?>
-<br>
+<br />
 <form method="get" action="main.php" name="searchform">
   <input type="hidden" name="view" value="searchresults">
   <TABLE border="0" cellpadding="3" cellspacing="2">
@@ -31,9 +31,9 @@
         <strong><?php echo lang('keyword'); ?>:&nbsp;&nbsp;&nbsp;</strong>
       </TD>
       <TD class="bodytext" valign="baseline">
-        <INPUT type="text" size="40" name="keyword" value="<?php echo $keyword; ?>" maxlength="<?php echo constKeywordMaxLength; ?>"><br>
-        <?php echo lang('case_insensit'); ?><br>
-        <br>
+        <INPUT type="text" size="40" name="keyword" value="<?php echo $keyword; ?>" maxlength="<?php echo constKeywordMaxLength; ?>"><br />
+        <?php echo lang('case_insensit'); ?><br />
+        <br />
       </TD>
     </TR>
     <tr>
@@ -51,11 +51,11 @@ inputdate($timebegin_month,"timebegin_month",
 					</td></tr>
 						<tr>
 						  <td>&nbsp;</td>
-						  <td><br><INPUT type="submit" name="search" value="&nbsp;&nbsp;&nbsp;<?php echo lang('search'); ?>&nbsp;&nbsp;&nbsp;"></td>
+						  <td><br /><INPUT type="submit" name="search" value="&nbsp;&nbsp;&nbsp;<?php echo lang('search'); ?>&nbsp;&nbsp;&nbsp;"></td>
 						</tr>
 					
         </TABLE>
-  <BR>
+  <br />
 </FORM>				
 				</td>
         </tr>

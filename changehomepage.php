@@ -40,28 +40,28 @@
   pageheader(lang('change_homepage'),
              lang('change_homepage'),
 	           "Update","",$database);
-  echo "<BR>";
+  echo "<br />";
   box_begin("inputbox",lang('change_homepage'));
 ?>
-<B><?php echo lang('change_homepage_label'); ?></B><BR>
-<I><?php echo lang('change_homepage_example'); ?></I>
+<strong><?php echo lang('change_homepage_label'); ?></strong><br />
+<em><?php echo lang('change_homepage_example'); ?></em>
 <FORM method="post" action="changehomepage.php">
 <?php
   if (!checkURL($sponsor['url'])) {
     feedback(lang('url_invalid'),1);
 ?>
-  <BR>
+  <br />
 <?php
   } /* end: if ($checkURL($sponsor[url])) */
 ?>
   <INPUT type="text" name="sponsor_url" maxlength="<?php echo constUrlMaxLength; ?>" size="60" value="<?php echo HTMLSpecialChars($sponsor['url']); ?>">
-  <BR>
-  <BR>
+  <br />
+  <br />
   <INPUT type="submit" name="save" value="<?php echo lang('ok_button_text'); ?>">
   <INPUT type="submit" name="cancel" value="<?php echo lang('cancel_button_text'); ?>">
 </FORM>
 <?php
   box_end();
-  echo "<BR>";
+  echo "<br />";
   require("footer.inc.php");
 ?>

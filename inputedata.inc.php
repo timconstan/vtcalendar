@@ -153,7 +153,7 @@ function inputrecurrences(&$event,&$repeat,$check) {
           <OPTION value="montuewedthufri"<?php if (isset($repeat['frequency1']) && $repeat['frequency1']=="montuewedthufri") { echo " selected"; } ?>><?php echo lang('mon'); ?> - <?php echo lang('fri'); ?></OPTION>
           <OPTION value="satsun"<?php if (isset($repeat['frequency1']) && $repeat['frequency1']=="satsun") { echo " selected"; } ?>><?php echo lang('sat'); ?> &amp; <?php echo lang('sun'); ?></OPTION>
         </SELECT>
-        <BR>
+        <br />
         <INPUT type="radio" name="repeat[mode]" id="repeatmode2" value="2"<?php if ($repeat['mode']==2) { echo " checked"; } ?>> <label for="repeatmode2"><?php echo lang('repeat_on_the'); ?></label>
         <SELECT name="repeat[frequency2modifier1]" size="1">
           <OPTION value="first"<?php if (isset($repeat['frequency2modifier1']) && $repeat['frequency2modifier1']=="first") { echo " selected"; } ?>><?php echo lang('first'); ?></OPTION>
@@ -180,8 +180,8 @@ function inputrecurrences(&$event,&$repeat,$check) {
           <OPTION value="6months"<?php if (isset($repeat['interval2']) && $repeat['interval2']=="6months") { echo " selected"; } ?>>6 <?php echo lang('months'); ?></OPTION>
           <OPTION value="year"<?php if (isset($repeat['interval2']) && $repeat['interval2']=="year") { echo " selected"; } ?>><?php echo lang('year'); ?></OPTION>
         </SELECT>
-	<BR>
-        <BR>
+	<br />
+        <br />
 <?php
   if (isset($check) && $repeat['mode'] > 0) {
 
@@ -227,7 +227,7 @@ function inputrecurrences(&$event,&$repeat,$check) {
 							$event['timeend_year'],"event[timeend_year]");
 		}
 ?>
-        <BR>
+        <br />
 <?php
 } // end: function inputrecurrences
 
@@ -282,17 +282,17 @@ function inputeventdata(&$event,$sponsorid,$inputrequired,$check,$displaydatetim
   }
 
   if ($repeat['mode'] == 0 || $repeat['mode'] == $recurring) {
-    echo "<BR>\n";
+    echo "<br />\n";
     echo "<INPUT type=\"radio\" name=\"repeat[mode]\" id=\"recurringevent\" value=\"$recurring\"";
     if ($repeat['mode']>=1) { echo " checked"; }
     echo ' onClick="this.form.submit()"><label for="recurringevent"> ',lang('recurring_event'),'</label>';
-    echo "<BR>\n";
+    echo "<br />\n";
   }
   elseif ($repeat['mode']>=1 && $repeat['mode']<=2) {
-    echo "<BR>\n";
+    echo "<br />\n";
     inputrecurrences($event,$repeat,$check);
   }
-  echo "<BR>\n";
+  echo "<br />\n";
 ?>
     </TD>
   </TR>
@@ -315,7 +315,7 @@ function inputeventdata(&$event,$sponsorid,$inputrequired,$check,$displaydatetim
 ?>
       <INPUT type="radio" name="event[wholedayevent]" id="alldayevent" value="1"<?php if ($event['wholedayevent']==1) { echo " checked "; } ?>>
       <label for="alldayevent"><?php echo lang('all_day_event'); ?></label>
-      <BR>
+      <br />
    <INPUT type="radio" name="event[wholedayevent]" id="timedevent" value="0"<?php if ($event['wholedayevent']==0) { echo " checked "; } ?>>
    <label for="timedevent"><?php echo lang('timed_event'); ?>:
     <?php echo lang('from'); ?>
@@ -339,7 +339,7 @@ function inputeventdata(&$event,$sponsorid,$inputrequired,$check,$displaydatetim
   }
 ?>
       </SELECT>
-      <B>:</B>
+      <strong>:</strong>
       <SELECT name="event[timebegin_min]" size="1">
 <?php
   // print list with minutes and select the one read from the DB
@@ -393,7 +393,7 @@ function inputeventdata(&$event,$sponsorid,$inputrequired,$check,$displaydatetim
   }
 ?>
       </SELECT>
-      <B>:</B>
+      <strong>:</strong>
       <SELECT name="event[timeend_min]" size="1">
 <?php
   // print list with minutes and select the one read from the DB
@@ -422,8 +422,8 @@ echo'  >pm</OPTION>
 }
 ?>
 			</label>
-      &nbsp;<I><?php echo lang('ending_time_not_required'); ?></I>
-      <BR>
+      &nbsp;<em><?php echo lang('ending_time_not_required'); ?></em>
+      <br />
     </TD>
   </TR>
 <?php
@@ -490,7 +490,7 @@ echo'  >pm</OPTION>
     echo HTMLSpecialChars($event['title']);
 	}
 ?>">
-      <I><?php echo lang('title_example'); ?></I><BR>
+      <em><?php echo lang('title_example'); ?></em><br />
     </TD>
   </TR>
   <TR>
@@ -504,9 +504,9 @@ echo'  >pm</OPTION>
     echo HTMLSpecialChars($event['description']);
 	}
 ?></TEXTAREA>
-      <BR>
-      <I><?php echo lang('description_example'); ?></I><BR>
-      <BR>
+      <br />
+      <em><?php echo lang('description_example'); ?></em><br />
+      <br />
     </TD>
   </TR>
   <TR>
@@ -519,7 +519,7 @@ echo'  >pm</OPTION>
     if ($check) { $event['location']=stripslashes($event['location']); }
     echo HTMLSpecialChars($event['location']);
 	}
-?>"> <I><?php echo lang('location_example'); ?></I><BR>
+?>"> <em><?php echo lang('location_example'); ?></em><br />
     </TD>
   </TR>
   <TR>
@@ -532,7 +532,7 @@ echo'  >pm</OPTION>
     if ($check) { $event['price']=stripslashes($event['price']); }
     echo HTMLSpecialChars($event['price']);
 	}
-?>"> <I><?php echo lang('price_example'); ?></I><BR>
+?>"> <em><?php echo lang('price_example'); ?></em><br />
     </TD>
   </TR>
   <TR>
@@ -545,7 +545,7 @@ echo'  >pm</OPTION>
     if ($check) { $event['contact_name']=stripslashes($event['contact_name']); }
     echo HTMLSpecialChars($event['contact_name']);
 	}
-?>"> <I><?php echo lang('contact_name_example'); ?></I>
+?>"> <em><?php echo lang('contact_name_example'); ?></em>
     </TD>
   </TR>
   <TR>
@@ -558,7 +558,7 @@ echo'  >pm</OPTION>
     if ($check) { $event['contact_phone']=stripslashes($event['contact_phone']); }
     echo HTMLSpecialChars($event['contact_phone']);
 	}
-?>"> <I><?php echo lang('contact_phone_example'); ?></I>
+?>"> <em><?php echo lang('contact_phone_example'); ?></em>
     </TD>
   </TR>
   <TR>
@@ -571,7 +571,7 @@ echo'  >pm</OPTION>
     if ($check) { $event['contact_email']=stripslashes($event['contact_email']); }
     echo HTMLSpecialChars(urldecode($event['contact_email']));
 	}
-?>"> <I><?php echo lang('contact_email_example'); ?></I>
+?>"> <em><?php echo lang('contact_email_example'); ?></em>
     </TD>
   </TR>
   <TR>
@@ -590,8 +590,8 @@ echo'  >pm</OPTION>
     echo HTMLSpecialChars($event['url']);
 	}
 ?>">
-      <BR>
-      <I><?php echo lang('event_page_url_example'); ?></I><BR>
+      <br />
+      <em><?php echo lang('event_page_url_example'); ?></em><br />
     </TD>
   </TR>
   <TR>
@@ -659,7 +659,7 @@ echo'  >pm</OPTION>
 	}
 ?>">
       <INPUT type="submit" name="defaultdisplayedsponsorurl" value="<?php echo lang('button_restore_default'); ?>">
-      <BR>
+      <br />
     </TD>
   </TR>
 <?php
@@ -668,7 +668,7 @@ echo'  >pm</OPTION>
   <TR>
     <TD class="bodytext" valign="top">&nbsp;</TD>
     <TD class="bodytext" valign="top">
-		<br>
+		<br />
 <?php
   if ($check && !empty($event['showondefaultcal']) && $event['showondefaultcal']==1 && !empty($event['showincategory']) && $event['showincategory']==0) {
     feedback(lang('choose_category'),1);
@@ -690,7 +690,7 @@ echo'  >pm</OPTION>
 			</td>
   		<td valign="top">&nbsp;</td>
   		<td valign="top">
-			<?php echo lang('also_display_on'); ?> <?php echo $defaultcalendarname ?><br>
+			<?php echo lang('also_display_on'); ?> <?php echo $defaultcalendarname ?><br />
 			<?php echo lang('assign_to_category'); ?>: 
       <SELECT name="event[showincategory]" size="1">
 <?php

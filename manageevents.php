@@ -9,7 +9,7 @@
 	pageheader(lang('manage_events'),
 					 lang('manage_events'),
 					 "Update","",$database);
-	echo "<BR>\n";
+	echo "<br />\n";
 	box_begin("inputbox",lang('manage_events'));
 
   $ievent = 0;
@@ -31,20 +31,20 @@
 <?php
   if ($result->numRows() > 0 ) {
 ?>
-<?php echo lang('or_manage_existing_events'); ?><br>
-<br>
+<?php echo lang('or_manage_existing_events'); ?><br />
+<br />
 <?php
 /*
-Below you see a list of all <i>future</i> events. <span style="color:#FF0000; font-weight:bold">Past events are NOT shown here.</span><br>
-However, you can use the <a href="main.php?view=day">day</a>/<a href="main.php?view=week">week</a>/<a href="main.php?view=month">month</a> view to find, edit and delete past events.<br>
-<br>
+Below you see a list of all <i>future</i> events. <span style="color:#FF0000; font-weight:bold">Past events are NOT shown here.</span><br />
+However, you can use the <a href="main.php?view=day">day</a>/<a href="main.php?view=week">week</a>/<a href="main.php?view=month">month</a> view to find, edit and delete past events.<br />
+<br />
 */
 ?>
 <table border="0" cellspacing="0" cellpadding="4">
   <tr bgcolor="#CCCCCC">
-    <td bgcolor="#CCCCCC"><b><?php echo lang('date'); ?>/<?php echo lang('time'); ?></b></td>
-    <td bgcolor="#CCCCCC"><b><?php echo lang('title'); ?></b></td>
-    <td bgcolor="#CCCCCC"><b><?php echo lang('status'); ?></b></td>
+    <td bgcolor="#CCCCCC"><strong><?php echo lang('date'); ?>/<?php echo lang('time'); ?></strong></td>
+    <td bgcolor="#CCCCCC"><strong><?php echo lang('title'); ?></strong></td>
+    <td bgcolor="#CCCCCC"><strong><?php echo lang('status'); ?></strong></td>
     <td bgcolor="#CCCCCC">&nbsp;</td>
   </tr>
 <?php
@@ -70,7 +70,7 @@ However, you can use the <a href="main.php?view=day">day</a>/<a href="main.php?v
   echo Day_of_Week_Abbreviation(Day_of_Week($event['timebegin_month'],$event['timebegin_day'],$event['timebegin_year']));
   echo ", ";
 	echo substr(Month_to_Text($event['timebegin_month']),0,3)," ",$event['timebegin_day'],", ",$event['timebegin_year'];
-  echo "<br>\n";
+  echo "<br />\n";
   if ($event['wholedayevent']==0) {
 		echo timestring($event['timebegin_hour'],$event['timebegin_min'],$event['timebegin_ampm']),"-";
 		if (endingtime_specified($event)) { // event has an explicit ending time
@@ -82,7 +82,7 @@ However, you can use the <a href="main.php?view=day">day</a>/<a href="main.php?v
 	}
 
 	if (!empty($event['repeatid'])) {
-		echo "<br>\n";
+		echo "<br />\n";
 		echo '<font color="#00AA00">';
 		readinrepeat($event['repeatid'],$event,$repeat,$database);
 		$repeatdef = repeatinput2repeatdef($event,$repeat);
@@ -93,18 +93,18 @@ However, you can use the <a href="main.php?view=day">day</a>/<a href="main.php?v
 		echo '</font>';
 	}
 ?></td>
-    <td bgcolor="<?php echo $color; ?>" valign="top"><b><?php echo $event['title']; ?></b></td>
+    <td bgcolor="<?php echo $color; ?>" valign="top"><strong><?php echo $event['title']; ?></strong></td>
     <td bgcolor="<?php echo $color; ?>" valign="top">
 <?php
     if ($event['approved'] == -1) {
-      echo '<FONT color="red"><B>rejected</B></FONT>';
-      if (!empty($event['rejectreason'])) { echo "<BR><B>Reason:</B> ",$event['rejectreason']; }
+      echo '<FONT color="red"><strong>rejected</strong></FONT>';
+      if (!empty($event['rejectreason'])) { echo "<br /><strong>Reason:</strong> ",$event['rejectreason']; }
     }
     elseif ($event['approved'] == 0) {
-      echo '<FONT color="blue">',lang('submitted_for_approval'),'</FONT><br>';
+      echo '<FONT color="blue">',lang('submitted_for_approval'),'</FONT><br />';
     }
     elseif ($event['approved'] == 1) {
-      echo '<FONT color="green">',lang('approved'),'</FONT><br>';
+      echo '<FONT color="green">',lang('approved'),'</FONT><br />';
     }
 ?>
     </td>
@@ -119,11 +119,11 @@ However, you can use the <a href="main.php?view=day">day</a>/<a href="main.php?v
     <td colspan="4" bgcolor="#CCCCCC">&nbsp;</td>
   </tr>
 </table>
-<br>
-<b><?php echo lang('status_info_message'); ?></b><br>
+<br />
+<strong><?php echo lang('status_info_message'); ?></strong><br />
 <table border="0" cellspacing="0" cellpadding="3">
 <tr>
-  <td><FONT color="red"><B><?php echo lang('rejected'); ?></B></FONT></td>
+  <td><FONT color="red"><strong><?php echo lang('rejected'); ?></strong></FONT></td>
   <td><?php echo lang('rejected_explanation'); ?></td>
 <tr>
   <td><FONT color="blue"><?php echo lang('submitted_for_approval'); ?></FONT></td>
@@ -132,7 +132,7 @@ However, you can use the <a href="main.php?view=day">day</a>/<a href="main.php?v
   <td><FONT color="green"><?php echo lang('approved'); ?></FONT></td>
   <td><?php echo lang('approved_explanation'); ?></td>
 </tr></table>
-<br>
+<br />
 <form method="post" action="update.php">
 	<input type="submit" name="back" value="<?php echo lang('back_to_menu'); ?>">
 </form>
@@ -140,6 +140,6 @@ However, you can use the <a href="main.php?view=day">day</a>/<a href="main.php?v
 <?php
   } // end: if ($result->numRows() > 0 )
   box_end();
-  echo "<br><br>\n";
+  echo "<br /><br />\n";
   require("footer.inc.php");
 ?>

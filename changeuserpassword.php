@@ -40,14 +40,14 @@
              lang('change_password'),
 	           "Update","",$database);
 
-  echo "<BR>";
+  echo "<br />";
   box_begin("inputbox",lang('change_password'));
 ?>
 <FORM method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
   <TABLE border="0" cellpadding="2" cellspacing="0">
     <TR>
       <TD class="bodytext" valign="top">
-        <b><?php echo lang('old_password'); ?></b>
+        <strong><?php echo lang('old_password'); ?></strong>
       </TD>
       <TD class="bodytext" valign="top">
 <?php
@@ -56,12 +56,12 @@
     }
 ?>
         <INPUT type="password" name="user_oldpassword" maxlength="20" size="20" value="">
-        <I>&nbsp;<?php echo lang('case_sensitive'); ?></I>
+        <em>&nbsp;<?php echo lang('case_sensitive'); ?></em>
       </TD>
     </TR>
     <TR>
       <TD class="bodytext" valign="top">
-        <b><?php echo lang('new_password'); ?></b>
+        <strong><?php echo lang('new_password'); ?></strong>
       </TD>
       <TD class="bodytext" valign="top">
 <?php
@@ -75,25 +75,25 @@
   } // end: if (isset($save))
 ?>
         <INPUT type="password" name="user_newpassword1" maxlength="20" size="20" value="">
-        <I>&nbsp;<?php echo lang('case_sensitive'); ?></I>
+        <em>&nbsp;<?php echo lang('case_sensitive'); ?></em>
       </TD>
     </TR>
     <TR>
       <TD class="bodytext" valign="top">
-        <b><?php echo lang('new_password'); ?></b><BR><?php echo lang('password_repeated'); ?>
+        <strong><?php echo lang('new_password'); ?></strong><br /><?php echo lang('password_repeated'); ?>
       </TD>
       <TD class="bodytext" valign="top">
         <INPUT type="password" name="user_newpassword2" maxlength="20" size="20" value="">
-        <I>&nbsp;<?php echo lang('case_sensitive'); ?></I>
+        <em>&nbsp;<?php echo lang('case_sensitive'); ?></em>
       </TD>
     </TR>
   </TABLE>
-  <BR>
+  <br />
   <INPUT type="submit" name="save" value="<?php echo lang('ok_button_text'); ?>">
   <INPUT type="submit" name="cancel" value="<?php echo lang('cancel_button_text'); ?>">
 </FORM>
 <?php
   box_end();
-  echo "<BR>";
+  echo "<br />";
   require("footer.inc.php");
 ?>

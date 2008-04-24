@@ -187,7 +187,7 @@ if ( $view == "day" ) {
     <td width="1%" rowspan="5" bgcolor="<?php echo $_SESSION["MAINCOLOR"]; ?>"><img src="images/spacer.gif" height="1" width="5" alt=""></td>
     <td width="5%" bgcolor="<?php echo $_SESSION["MAINCOLOR"]; ?>"><img src="images/spacer.gif" height="1" width="5" alt=""></td>
     <td width="1%" rowspan="5" bgcolor="<?php echo $_SESSION["MAINCOLOR"]; ?>"><img src="images/spacer.gif" height="1" width="3" alt=""></td>
-    <td width="1%" rowspan="3" bgcolor="<?php echo $bodycolor; ?>"><img src="images/spacer.gif" height="1" width="3" alt=""><br>
+    <td width="1%" rowspan="3" bgcolor="<?php echo $bodycolor; ?>"><img src="images/spacer.gif" height="1" width="3" alt=""><br />
     </td>
     <td width="90%" rowspan="2" valign="bottom" bgcolor="<?php echo $bodycolor; ?>">
 <?php
@@ -196,11 +196,11 @@ if ( $view == "day" ) {
   	 ) { 
 	  if (isset($filtercategories)) { 
 ?>
-<img src="images/spacer.gif" width="1" height="5" alt=""><br>
+<img src="images/spacer.gif" width="1" height="5" alt=""><br />
 <table width="100%"  border="0" cellspacing="0" cellpadding="2">
 	<tr>
 		<td bgcolor="#ff0000" style="color:#FFFFFF; font-size:0.7em">
-		  &nbsp;<b><?php echo lang('showing_filtered_events'); ?></b> (<?php 
+		  &nbsp;<strong><?php echo lang('showing_filtered_events'); ?></strong> (<?php 
 	
 	$activecategories = "";
 	for ($c=0; $c<$numcategories; $c++) {
@@ -214,7 +214,7 @@ if ( $view == "day" ) {
 	if (strlen($activecategories) > 70) { $activecategories = substr($activecategories,0,70)."..."; }
 	echo $activecategories;	
 ?>)</td>
-    <td nowrap align="right" bgcolor="#ff0000" style="font-size:0.7em"><b><!--a style="color:#0000ff; text-decoration:none" href="main.php?view=filter">Filter events</a-->&nbsp;</b>
+    <td nowrap align="right" bgcolor="#ff0000" style="font-size:0.7em"><strong><!--a style="color:#0000ff; text-decoration:none" href="main.php?view=filter">Filter events</a-->&nbsp;</strong>
 		</td>
 	</tr>
 	</table>
@@ -225,7 +225,7 @@ if ( $view == "day" ) {
       <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="<?php echo $bodycolor; ?>">
         <tr>
           <td valign="bottom">
-					<img alt="" src="images/spacer.gif" width="1" height="3"><br>
+					<img alt="" src="images/spacer.gif" width="1" height="3"><br />
 					<img alt="" src="images/spacer.gif" width="3" height="1"><span class="datetitle"><?php 
 require ( "main_".$view."_datetitle.inc.php" );		  
 		  ?></span></td>
@@ -233,7 +233,7 @@ require ( "main_".$view."_datetitle.inc.php" );
 require ( "main_".$view."_navpreviousnext.inc.php" );		  
 		  ?></td>
         </tr>
-				<tr><td colspan="3"><img alt="" src="images/spacer.gif" height="2" width="1"><br></td></tr>
+				<tr><td colspan="3"><img alt="" src="images/spacer.gif" height="2" width="1"><br /></td></tr>
       </table>
     </td>
     <td width="1%" rowspan="3" bgcolor="<?php echo $bodycolor; ?>"><img src="images/spacer.gif" height="1" width="3" alt=""></td>
@@ -362,7 +362,7 @@ require ( "main_".$view."_navpreviousnext.inc.php" );
 
 ?>				
       </table>
-      <img src="images/spacer.gif" width="1" height="3" alt=""><br>
+      <img src="images/spacer.gif" width="1" height="3" alt=""><br />
       <table width="100%" border="0" cellpadding="0" cellspacing="0">
 			<form name="form1" method="get" action="<?php echo $_SERVER['PHP_SELF']; ?>">
         <tr>
@@ -388,11 +388,11 @@ require ( "main_".$view."_navpreviousnext.inc.php" );
 				</tr>
 			</form>
 			</table>
-      <img src="images/spacer.gif" width="1" height="7" alt=""><br>
+      <img src="images/spacer.gif" width="1" height="7" alt=""><br />
 			
       <table width="100%" border="0" cellpadding="2" cellspacing="0" bgcolor="<?php echo $_SESSION["TODAYCOLOR"]; ?>">
         <tr>
-          <td class="todayis"><?php echo lang('today_is'); ?><br>
+          <td class="todayis"><?php echo lang('today_is'); ?><br />
 <?php
   $showtodaylink = 0;
   if ( !($view=="day" && 
@@ -405,10 +405,10 @@ require ( "main_".$view."_navpreviousnext.inc.php" );
 	if ($showtodaylink) {
     echo "<a href=\"main.php?view=day&amp;timebegin=today\" >";	
 	}
-  echo "<b>";
+  echo "<strong>";
 
 echo today_is_date_format($today['day'], Day_of_Week_to_Text(Day_of_Week($today['month'],$today['day'],$today['year'])),Month_to_Text($today['month']),$today['year']);
-  echo "</b>";
+  echo "</strong>";
 	if ($showtodaylink) {
     echo "</a>";
 	}
@@ -416,29 +416,29 @@ echo today_is_date_format($today['day'], Day_of_Week_to_Text(Day_of_Week($today[
            </td>
         </tr>
       </table>
-      <img src="images/spacer.gif" width="1" height="7" alt=""><br>
+      <img src="images/spacer.gif" width="1" height="7" alt=""><br />
 
-			<br>
+			<br />
 <?php
   if ($view!='subscribe') {
-		echo'<a style="font-weight:bold"  href="main.php?view=subscribe"><b>',lang('subscribe_download'),'</b></a>';
+		echo'<a style="font-weight:bold"  href="main.php?view=subscribe"><strong>',lang('subscribe_download'),'</strong></a>';
 	}
 	else {
-	  echo '<b>',lang('subscribe_download'),'</b>';
+	  echo '<strong>',lang('subscribe_download'),'</strong>';
 	}
 ?>
-			<br>
-      <img src="images/spacer.gif" width="1" height="6" alt=""><br>
+			<br />
+      <img src="images/spacer.gif" width="1" height="6" alt=""><br />
 <?php
   if ($view!='filter') {
-		echo'    <a style="font-weight:bold" href="main.php?view=filter"><b>',lang('filter_events'),'</b></a>';
+		echo'    <a style="font-weight:bold" href="main.php?view=filter"><strong>',lang('filter_events'),'</strong></a>';
 	}
 	else {
-	  echo '<b>',lang('filter_events'),'</b>';
+	  echo '<strong>',lang('filter_events'),'</strong>';
 	}
 ?>
-<br>
-<br>
+<br />
+<br />
     </td>
     <td align="left" valign="top" bgcolor="<?php echo $bodycolor; ?>">
 <?php 

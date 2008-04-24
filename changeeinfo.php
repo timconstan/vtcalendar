@@ -196,7 +196,7 @@ function savechangesbuttons(&$event,&$repeat,$database) {
 /*
   if ($repeat['mode'] > 0 && !empty($event['repeatid'])) {
     if (!recurrenceschanged($event['repeatid'],$repeat,$event,$database)) {
-      echo '<INPUT type="submit" name="saveall" value="Save changes for ALL recurrences"><BR><BR>';
+      echo '<INPUT type="submit" name="saveall" value="Save changes for ALL recurrences"><br /><br />';
     }
   }
 */
@@ -406,7 +406,7 @@ function inputeventbuttons(&$event,&$repeat,$database) {
 			$event['category_name']="???";
 		}
 	
-		echo "<BR>";
+		echo "<br />";
 		box_begin("inputbox",lang('preview_event'));
 		echo '<form method="post" action="changeeinfo.php">',"\n";
     echo '<input type="submit" name="savethis" value="',lang('save_changes'),'">',"\n";
@@ -414,14 +414,14 @@ function inputeventbuttons(&$event,&$repeat,$database) {
 /*
 		if ($repeat['mode'] > 0 && !empty($event['repeatid'])) {
 			if (!recurrenceschanged($event['repeatid'],$repeat,$event,$database)) {
-				echo '<input type="submit" name="saveall" value="Save changes for ALL recurrences"><BR><BR>';
+				echo '<input type="submit" name="saveall" value="Save changes for ALL recurrences"><br /><br />';
 			}
 		}
 */
 ?>
-<input type="submit" name="edit" value="<?php echo lang('go_back_to_make_changes'); ?>"> &nbsp;&nbsp;&nbsp;
-<input type="submit" name="cancel" value="<?php echo lang('cancel_button_text'); ?>"><BR>
-<br>
+<input type="submit" name="edit" value="<?php echo lang('go_back_to_make_changes'); ?>" /> &nbsp;&nbsp;&nbsp;
+<input type="submit" name="cancel" value="<?php echo lang('cancel_button_text'); ?>" /><br />
+<br />
 <table width="100%" border="0" cellpadding="4" cellspacing="0" bgcolor="<?php echo "#cccccc"; ?>">
   <tr>
     <td valign="bottom"><span class="datetitle">
@@ -438,14 +438,14 @@ function inputeventbuttons(&$event,&$repeat,$database) {
 </td>
 </tr>
 </table>
-<BR>
+<br />
 <?php
 		if (!checkeventtime($event)) {
-			echo "<BR>";
+			echo "<br />";
 			feedback(lang('warning_ending_time_before_starting_time'),1);
 		}
 		if ($event['timeend_hour']==0) {
-			echo "<BR>";
+			echo "<br />";
 			feedback(lang('warning_no_ending_time'),1);
 		}
 	
@@ -457,14 +457,14 @@ function inputeventbuttons(&$event,&$repeat,$database) {
 											$event['timebegin_month'],
 											$event['timebegin_day'],
 											$repeatdef);
-			echo "<BR>";
+			echo "<br />";
 			$repeatlist = producerepeatlist($event,$repeat);
 			printrecurrencedetails($repeatlist);
 		}
 		else {
 			echo lang('no_recurrences_defined');
 		}
-		echo "<BR><BR>\n";
+		echo "<br /><br />\n";
 	
 		if (isset($detailscaller)) { echo "<INPUT type=\"hidden\" name=\"detailscaller\" value=\"",$detailscaller,"\">\n"; }
 		passeventvalues($event,$event['sponsorid'],$repeat); // add the common input fields
@@ -478,7 +478,7 @@ function inputeventbuttons(&$event,&$repeat,$database) {
 ?>
 <input type="submit" name="edit" value="<?php echo lang('go_back_to_make_changes'); ?>"> &nbsp;&nbsp;&nbsp;
 <input type="submit" name="cancel" value="<?php echo lang('cancel_button_text'); ?>">
-<br>
+<br />
 </span>
 </form>
 <?php
@@ -544,17 +544,17 @@ function inputeventbuttons(&$event,&$repeat,$database) {
 			else { $repeat['mode'] = 0; }
 		//  $sponsorid = $event[sponsorid];
 		} // end if: "if (isset($eventid))"
-    echo "<br>\n";
+    echo "<br />\n";
 		box_begin("inputbox",lang('input_event_information'));
 		echo "<form name=\"inputevent\" method=\"post\" action=\"changeeinfo.php\">\n";
 		inputeventbuttons($event,$repeat,$database);
-		echo "<br>\n<br>\n";
+		echo "<br />\n<br />\n";
 		if (isset($detailscaller)) { 
 			echo "<INPUT type=\"hidden\" name=\"detailscaller\" value=\"",$detailscaller,"\">\n"; 
 		}
 		if (!isset($check)) { $check = 0; }
  		inputeventdata($event,$event['sponsorid'],1,$check,1,$repeat,$database);
-		echo "<br>\n";
+		echo "<br />\n";
 		echo '<INPUT type="hidden" name="httpreferer" value="',$httpreferer,'">',"\n";
 		if (isset($eventid)) { echo "<INPUT type=\"hidden\" name=\"eventid\" value=\"",$event['id'],"\">\n"; }
 		echo '<INPUT type="hidden" name="event[repeatid]" value="',HTMLSpecialChars($event['repeatid']),"\">\n";
@@ -567,6 +567,6 @@ function inputeventbuttons(&$event,&$repeat,$database) {
 		box_end();
   } // end: else: if (isset($check) && $eventvalid && isset($preview)) { // display preview
 
-	echo "<br>";
+	echo "<br />";
 	require("footer.inc.php");
 ?>

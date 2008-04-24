@@ -33,7 +33,7 @@
 	else {
 ?>
         <tr valign="top">
-          <td colspan="3"><br><span class="announcement">&nbsp;&nbsp;<?php echo lang('no_events');?> </span></td>
+          <td colspan="3"><br /><span class="announcement">&nbsp;&nbsp;<?php echo lang('no_events');?> </span></td>
         </tr>
 <?php	
 	} // end: else: if ($ievent < $result->numRows())
@@ -76,7 +76,7 @@
                 if ( $datediff > 0 ) {
 		  echo " class=\"past\" style=\"background-color : #ffffff\"";
 		}
-                echo "href=\"main.php?view=event&eventid=",$event['eventid'],"\"><b>",$event['title'],"</b></a> -\n";
+                echo "href=\"main.php?view=event&eventid=",$event['eventid'],"\"><strong>",$event['title'],"</strong></a> -\n";
 		echo "            ",$event['category_name']," ";
 		if ( !empty($event['location']) ) { echo "(".$event['location'].")"; }
 
@@ -91,7 +91,7 @@
       echo "<img src=\"images/nuvola/16x16/actions/button_cancel.png\" height=\"16\" width=\"16\" alt=\"",lang('delete_event'),"\" border=\"0\"></a>";
     }
 
-		echo "<br>\n";
+		echo "<br />\n";
 		if (!empty($event['description'])) {
   		echo "            ";
 			if (strlen($event['description']) < 140 ) {
@@ -105,7 +105,7 @@
 		  echo " \n";
 		}
 		else {
-  		echo "<br>\n";
+  		echo "<br />\n";
 		}
 		echo "</td>\n";
 		echo '        </tr>',"\n";
@@ -120,6 +120,6 @@
 	} // end: while (...)
 ?>
         <tr valign="top">
-          <td colspan="3"><br><br><br><br><br><br><br><br><br><br></td>
+          <td colspan="3"><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></td>
         </tr>
       </table>

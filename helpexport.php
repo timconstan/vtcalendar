@@ -53,12 +53,12 @@
 &lt;/events&gt;
 </pre>
 <hr size="1">
-<br>
+<br />
 <P>
 <?php echo lang('help_export_data_format'); ?>
-<br>
-<strong><?php echo lang('help_export_categoryid_intro'); ?></strong><br>
-<br>
+<br />
+<strong><?php echo lang('help_export_categoryid_intro'); ?></strong><br />
+<br />
 <table border="1" cellspacing="0" cellpadding="5">
   <tr>
     <th><?php echo lang('help_categoryid_index'); ?></th>
@@ -78,7 +78,7 @@
   }
 ?>
 </table>
-<br>
+<br />
 <?php
   helpbox_end();
 ?>

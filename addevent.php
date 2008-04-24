@@ -42,38 +42,38 @@
   pageheader(lang('choose_template'),
              lang('choose_template'),
              "","",$database);
-  echo "<BR>";
+  echo "<br />";
   box_begin("inputbox",lang('choose_template'));
 ?>
-<BR>
-<FORM method="post" action="changeeinfo.php">
+<br />
+<form method="post" action="changeeinfo.php">
 <?php
-  echo '<INPUT type="hidden" name="httpreferer" value="',$httpreferer,'">',"\n";
+  echo '<input type="hidden" name="httpreferer" value="',$httpreferer,'">',"\n";
 ?>
-  <SELECT name="templateid" size="6">
-    <OPTION selected value="0">----- <?php echo lang('blank'); ?> -----</OPTION>
+  <select name="templateid" size="6">
+    <option selected value="0">----- <?php echo lang('blank'); ?> -----</option>
 <?php
   $result = DBQuery($database, "SELECT * FROM vtcal_template WHERE calendarid='".sqlescape($_SESSION["CALENDARID"])."' AND sponsorid='".sqlescape($_SESSION["AUTH_SPONSORID"])."'" ); 
   for ($i=0; $i<$result->numRows(); $i++) {
     $template = $result->fetchRow(DB_FETCHMODE_ASSOC,$i);
-    echo "<OPTION value=\"",$template['id'],"\">",$template['name'],"</OPTION>\n";
+    echo "<option value=\"",$template['id'],"\">",$template['name'],"</option>\n";
   }
 ?>
-  </SELECT>
-  <BR>
-  <BR>
-  <INPUT type="submit" name="choosetemplate" value="<?php echo lang('ok_button_text'); ?>">
-  <INPUT type="submit" name="cancel" value="<?php echo lang('cancel_button_text'); ?>">
+  </select>
+  <br />
+  <br />
+  <input type="submit" name="choosetemplate" value="<?php echo lang('ok_button_text'); ?>">
+  <input type="submit" name="cancel" value="<?php echo lang('cancel_button_text'); ?>">
 <?php
   // forward date info, if the page was called with date info appended
   // can later be done with PHP session management
-  if (isset($timebegin_year)) { echo "<INPUT type=\"hidden\" name=\"timebegin_year\" value=\"",$timebegin_year,"\">"; }
-  if (isset($timebegin_month)) { echo "<INPUT type=\"hidden\" name=\"timebegin_month\" value=\"",$timebegin_month,"\">"; }
-  if (isset($timebegin_day)) { echo "<INPUT type=\"hidden\" name=\"timebegin_day\" value=\"",$timebegin_day,"\">"; }
+  if (isset($timebegin_year)) { echo "<input type=\"hidden\" name=\"timebegin_year\" value=\"",$timebegin_year,"\">"; }
+  if (isset($timebegin_month)) { echo "<input type=\"hidden\" name=\"timebegin_month\" value=\"",$timebegin_month,"\">"; }
+  if (isset($timebegin_day)) { echo "<input type=\"hidden\" name=\"timebegin_day\" value=\"",$timebegin_day,"\">"; }
 ?>
-</FORM>
+</form>
 <?php
   box_end();
-  echo "<BR>";
+  echo "<br />";
   require("footer.inc.php");
 ?>

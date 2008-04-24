@@ -22,7 +22,7 @@
 	pageheader(lang('manage_users'),
 					 lang('manage_users'),
 					 "Update","",$database);
-	echo "<BR>\n";
+	echo "<br />\n";
 	box_begin("inputbox",lang('manage_users'));
 ?>
 <form method="post" action="update.php">
@@ -30,8 +30,8 @@
 </form>
 <form method="post" name="mainform" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 <a href="changeuserinfo.php"><?php echo lang('add_new_user'); ?></a>
-<?php echo lang('or_modify_existing_user'); ?><br>
-<br>
+<?php echo lang('or_modify_existing_user'); ?><br />
+<br />
 <?php
   $numLines = 15;
 ?>
@@ -46,11 +46,11 @@
 <?php
   } // end: for ($i=0; $i<$result->numRows(); $i++)
 ?>	
-</select><br>
+</select><br />
 <input type="submit" name="edit" value="<?php echo lang('button_edit'); ?>">
-<input type="submit" name="delete" value="<?php echo lang('button_delete'); ?>"><br>
-<br>
-<b><?php echo $result->numRows(); ?> Users total</b>
+<input type="submit" name="delete" value="<?php echo lang('button_delete'); ?>"><br />
+<br />
+<strong><?php echo $result->numRows(); ?> Users total</strong>
 </form>
 <script language="JavaScript" type="text/javascript"><!--
 document.mainform.userid.focus();
@@ -61,6 +61,6 @@ document.mainform.userid.focus();
 
 <?php
   box_end();
-  echo "<br><br>\n";
+  echo "<br /><br />\n";
   require("footer.inc.php");
 ?>

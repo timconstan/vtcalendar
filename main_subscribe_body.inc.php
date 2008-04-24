@@ -3,10 +3,10 @@
 ?><table width="100%" border="0" cellpadding="0" cellspacing="5" bgcolor="#FFFFFF">
 <tr valign="top">
 	<td>
-	  <br>
+	  <br />
 <?php echo lang('subscribe_message'); ?>
-<br>
-<br>
+<br />
+<br />
 <table border="0" cellspacing="0" cellpadding="4">
 <?php
   $color = '#ffffff';
@@ -49,12 +49,12 @@
   } // end: if ($caldir = opendir('calendars'))
 ?>
 </table>
-<br>
+<br />
 &nbsp;<?php echo $_SESSION["NAME"]; ?> (<?php echo lang('whole_calendar'); ?>)&nbsp; 
 <a href="webcal://<?php echo substr(BASEURL,7); ?>export.php?calendar=<?php echo $_SESSION["CALENDARID"]; ?>&type=ical&sponsortype=all&timebegin=today"><?php echo lang('subscribe'); ?></a> &nbsp; 
 <a href="<?php echo BASEURL; ?>export.php?type=ical&sponsortype=all&timebegin=today"><?php echo lang('download'); ?></a>
-	<br>
-	<br>
+	<br />
+	<br />
 	</td>
 </tr>
 </table>

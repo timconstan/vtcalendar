@@ -124,7 +124,7 @@ $sponsor = $result->fetchRow(DB_FETCHMODE_ASSOC,0);
 pageheader(lang('change_header_footer_colors_auth'),
            lang('change_header_footer_colors_auth'),
            "Update","",$database);
-echo "<br>\n";
+echo "<br />\n";
 box_begin("inputbox", lang('change_header_footer_colors_auth'));
 ?>
 <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" name="globalSettings">
@@ -184,29 +184,29 @@ function WebColorTable( colorVarName, colorImgName, initColor )
   document.writeln('</td></tr></table>');
 }
 </script>
- <br>
+ <br />
 
-  <b><?php echo lang('calendar_title'); ?>:</b> <font color="#999999"><?php echo lang('empty_or_any_text'); ?></font><br>
+  <strong><?php echo lang('calendar_title'); ?>:</strong> <font color="#999999"><?php echo lang('empty_or_any_text'); ?></font><br />
   <input type="text" name="title" maxlength="<?php echo $constCalendarTitleMAXLENGTH; ?>" size="30" value="<?php 
 	echo htmlentities($title);
-	?>"><br>
-  <br>
+	?>" /><br />
+  <br />
 
-  <b><?php echo lang('header_html'); ?>:</b> <font color="#999999"><?php echo lang('empty_or_any_html'); ?></font><br>
+  <strong><?php echo lang('header_html'); ?>:</strong> <font color="#999999"><?php echo lang('empty_or_any_html'); ?></font><br />
   <textarea name="header" wrap="physical" cols="70" rows="10"><?php 
 	echo htmlentities($header);
-	?></textarea><br>
-  <br>
+	?></textarea><br />
+  <br />
 
-  <b><?php echo lang('footer_html'); ?>:</b> <font color="#999999"><?php echo lang('empty_or_any_html'); ?></font><br>
+  <strong><?php echo lang('footer_html'); ?>:</strong> <font color="#999999"><?php echo lang('empty_or_any_html'); ?></font><br />
   <textarea name="footer" wrap="physical" cols="70" rows="10"><?php
 	echo htmlentities($footer);
-  ?></textarea><br>
-  <br>
+  ?></textarea><br />
+  <br />
 
 <?php echo lang('colorscheme'); ?>
-<br>
-<br>
+<br />
+<br />
 <table border="0" cellspacing="0" cellpadding="0" >
 <tr>
 <td colspan="2"><strong><?php echo lang('backgroundcolor'); ?>:</strong></td>
@@ -215,7 +215,7 @@ function WebColorTable( colorVarName, colorImgName, initColor )
 <td>
 <table cellspacing="0" cellpadding="0"><tr><td bgcolor="#000000" ><table cellspacing="1" cellpadding="0"><tr><td>
 <img
-name="imgBgColor" src="images/webcolors/<?php echo substr($bgcolor,1); ?>.gif" height="15" width="15"><br></td>
+name="imgBgColor" src="images/webcolors/<?php echo substr($bgcolor,1); ?>.gif" height="15" width="15"><br /></td>
 </tr></table></td></tr></table>
 </td>
 <td>&nbsp;<input type="text" name="bgcolor" size="8" maxlength="7" value="<?php echo $bgcolor; ?>"></td>
@@ -228,7 +228,7 @@ name="imgBgColor" src="images/webcolors/<?php echo substr($bgcolor,1); ?>.gif" h
 </tr>
 </table>
 
-<br>
+<br />
 
 <table border="0" cellspacing="0" cellpadding="0" ><tr>
 <td colspan="2"><strong><?php echo lang('maincolor'); ?>:</strong></td>
@@ -237,10 +237,10 @@ name="imgBgColor" src="images/webcolors/<?php echo substr($bgcolor,1); ?>.gif" h
 <td>
 <table   cellspacing="0" cellpadding="0"><tr><td bgcolor="#000000" ><table cellspacing="1" cellpadding="0"><tr><td>
 <img
-name="imgMaincolor" src="images/webcolors/<?php echo substr($maincolor,1); ?>.gif" height="15" width="15"><br></td>
+name="imgMaincolor" src="images/webcolors/<?php echo substr($maincolor,1); ?>.gif" height="15" width="15"><br /></td>
 </tr></table></td></tr></table>
 </td>
-<td>&nbsp;<input type="text" name="maincolor" size="8" maxlength="7" value="<?php echo $maincolor; ?>"></td>
+<td>&nbsp;<input type="text" name="maincolor" size="8" maxlength="7" value="<?php echo $maincolor; ?>" /></td>
 </tr>
 <tr><td colspan="2">
 <script language="JavaScript">
@@ -250,19 +250,28 @@ name="imgMaincolor" src="images/webcolors/<?php echo substr($maincolor,1); ?>.gi
 </tr>
 </table>
 
-<br>
+<br />
 
 <table border="0" cellspacing="0" cellpadding="0" ><tr>
 <td colspan="2"><strong><?php echo lang('textcolor'); ?>:</strong></td>
 </tr>
 <tr>
-<td>
-<table   cellspacing="0" cellpadding="0"><tr><td bgcolor="#000000" ><table cellspacing="1" cellpadding="0"><tr><td>
-<img
-name="imgTextcolor" src="images/webcolors/<?php echo substr($textcolor,1); ?>.gif" height="15" width="15"><br></td>
-</tr></table></td></tr></table>
-</td>
-<td>&nbsp;<input type="text" name="textcolor" size="8" maxlength="7" value="<?php echo $textcolor; ?>"></td>
+  <td>
+    <table cellspacing="0" cellpadding="0">
+      <tr>
+        <td bgcolor="#000000">
+          <table cellspacing="1" cellpadding="0">
+            <tr>
+              <td>
+                <img name="imgTextcolor" src="images/webcolors/<?php echo substr($textcolor,1); ?>.gif" height="15" width="15" /><br />
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </td>
+<td>&nbsp;<input type="text" name="textcolor" size="8" maxlength="7" value="<?php echo $textcolor; ?>" /></td>
 </tr>
 <tr><td colspan="2">
 <script language="JavaScript">
@@ -272,7 +281,7 @@ name="imgTextcolor" src="images/webcolors/<?php echo substr($textcolor,1); ?>.gi
 </tr>
 </table>
 
-<br>
+<br />
 
 <table border="0" cellspacing="0" cellpadding="0" ><tr>
 <td colspan="2"><strong><?php echo lang('linkcolor'); ?>:</strong></td>
@@ -280,8 +289,7 @@ name="imgTextcolor" src="images/webcolors/<?php echo substr($textcolor,1); ?>.gi
 <tr>
 <td>
 <table   cellspacing="0" cellpadding="0"><tr><td bgcolor="#000000" ><table cellspacing="1" cellpadding="0"><tr><td>
-<img
-name="imgLinkcolor" src="images/webcolors/<?php echo substr($linkcolor,1); ?>.gif" height="15" width="15"><br></td>
+<img name="imgLinkcolor" src="images/webcolors/<?php echo substr($linkcolor,1); ?>.gif" height="15" width="15" /><br /></td>
 </tr></table></td></tr></table>
 </td>
 <td>&nbsp;<input type="text" name="linkcolor" size="8" maxlength="7" value="<?php echo $linkcolor; ?>"></td>
@@ -294,16 +302,15 @@ name="imgLinkcolor" src="images/webcolors/<?php echo substr($linkcolor,1); ?>.gi
 </tr>
 </table>
 
-<br>
+<br />
 
 <table border="0" cellspacing="0" cellpadding="0" ><tr>
 <td colspan="2"><strong><?php echo lang('gridcolor'); ?>:</strong> <span class="example"><?php echo lang('gridcolor_explanation'); ?></span></td>
 </tr>
 <tr>
 <td>
-<table   cellspacing="0" cellpadding="0"><tr><td bgcolor="#000000" ><table cellspacing="1" cellpadding="0"><tr><td>
-<img
-name="imgGridcolor" src="images/webcolors/<?php echo substr($gridcolor,1); ?>.gif" height="15" width="15"><br></td>
+<table cellspacing="0" cellpadding="0"><tr><td bgcolor="#000000" ><table cellspacing="1" cellpadding="0"><tr><td>
+<img name="imgGridcolor" src="images/webcolors/<?php echo substr($gridcolor,1); ?>.gif" height="15" width="15" /><br /></td>
 </tr></table></td></tr></table>
 </td>
 <td>&nbsp;<input type="text" name="gridcolor" size="8" maxlength="7" value="<?php echo $gridcolor; ?>"></td>
@@ -316,7 +323,7 @@ name="imgGridcolor" src="images/webcolors/<?php echo substr($gridcolor,1); ?>.gi
 </tr>
 </table>
 
-<br>
+<br />
 
 <table border="0" cellspacing="0" cellpadding="0" ><tr>
 <td colspan="2"><strong><?php echo lang('pastcolor'); ?>:</strong></td>
@@ -324,8 +331,7 @@ name="imgGridcolor" src="images/webcolors/<?php echo substr($gridcolor,1); ?>.gi
 <tr>
 <td>
 <table   cellspacing="0" cellpadding="0"><tr><td bgcolor="#000000" ><table cellspacing="1" cellpadding="0"><tr><td>
-<img
-name="imgPastcolor" src="images/webcolors/<?php echo substr($pastcolor,1); ?>.gif" height="15" width="15"><br></td>
+<img name="imgPastcolor" src="images/webcolors/<?php echo substr($pastcolor,1); ?>.gif" height="15" width="15" /><br /></td>
 </tr></table></td></tr></table>
 </td>
 <td>&nbsp;<input type="text" name="pastcolor" size="8" maxlength="7" value="<?php echo $pastcolor; ?>"></td>
@@ -338,16 +344,15 @@ name="imgPastcolor" src="images/webcolors/<?php echo substr($pastcolor,1); ?>.gi
 </tr>
 </table>
 
-<br>
+<br />
 
 <table border="0" cellspacing="0" cellpadding="0" ><tr>
 <td colspan="2"><strong><?php echo lang('todaycolor'); ?>:</strong></td>
 </tr>
 <tr>
 <td>
-<table   cellspacing="0" cellpadding="0"><tr><td bgcolor="#000000" ><table cellspacing="1" cellpadding="0"><tr><td>
-<img
-name="imgTodayColor" src="images/webcolors/<?php echo substr($todaycolor,1); ?>.gif" height="15" width="15"><br></td>
+<table cellspacing="0" cellpadding="0"><tr><td bgcolor="#000000" ><table cellspacing="1" cellpadding="0"><tr><td>
+<img name="imgTodayColor" src="images/webcolors/<?php echo substr($todaycolor,1); ?>.gif" height="15" width="15" /><br /></td>
 </tr></table></td></tr></table>
 </td>
 <td>&nbsp;<input type="text" name="todaycolor" size="8" maxlength="7" value="<?php echo $todaycolor; ?>"></td>
@@ -360,7 +365,7 @@ name="imgTodayColor" src="images/webcolors/<?php echo substr($todaycolor,1); ?>.
 </tr>
 </table>
 
-<br>
+<br />
 
 <table border="0" cellspacing="0" cellpadding="0" ><tr>
 <td colspan="2"><strong><?php echo lang('futurecolor'); ?>:</strong></td>
@@ -368,11 +373,10 @@ name="imgTodayColor" src="images/webcolors/<?php echo substr($todaycolor,1); ?>.
 <tr>
 <td>
 <table   cellspacing="0" cellpadding="0"><tr><td bgcolor="#000000" ><table cellspacing="1" cellpadding="0"><tr><td>
-<img
-name="imgFuturecolor" src="images/webcolors/<?php echo substr($futurecolor,1); ?>.gif" height="15" width="15"><br></td>
+<img name="imgFuturecolor" src="images/webcolors/<?php echo substr($futurecolor,1); ?>.gif" height="15" width="15" /><br /></td>
 </tr></table></td></tr></table>
 </td>
-<td>&nbsp;<input type="text" name="futurecolor" size="8" maxlength="7" value="<?php echo $futurecolor; ?>"></td>
+<td>&nbsp;<input type="text" name="futurecolor" size="8" maxlength="7" value="<?php echo $futurecolor; ?>" /></td>
 </tr>
 <tr><td colspan="2">
 <script language="JavaScript">
@@ -382,7 +386,7 @@ name="imgFuturecolor" src="images/webcolors/<?php echo substr($futurecolor,1); ?
 </tr>
 </table>
 
-<br>
+<br />
 
 <?php
   if ( $_SESSION["CALENDARID"] != "default" ) {
@@ -392,34 +396,34 @@ name="imgFuturecolor" src="images/webcolors/<?php echo substr($futurecolor,1); ?
   $c = $result->fetchRow(DB_FETCHMODE_ASSOC,0);
   $defaultcalendarname = $c['name'];
 ?>
-<br>
+<br />
   <table border="0">
     <tr align="left" valign="top">
       <td><input type="checkbox" name="forwardeventdefault" id="forwardeventdefault" value="1"<?php if ($forwardeventdefault=="1") { echo " checked"; } ?>></td>
-      <td><strong><label for="forwardeventdefault">By default also display events on the <?php echo $defaultcalendarname ?></label></strong> <br>
+      <td><strong><label for="forwardeventdefault">By default also display events on the <?php echo $defaultcalendarname ?></label></strong> <br />
         (Sponsors can still disable this on a per-event basis)</td>
     </tr>
   </table>
 <?php
   } // end: if ( $_SESSION["CALENDARID"] != "default" ) {
 ?>
- <br>
-<br>
+ <br />
+<br />
 
-    <b><?php echo lang('login_required_for_viewing'); ?></b>
+    <strong><?php echo lang('login_required_for_viewing'); ?></strong>
 </p>
 <table border="0" cellpadding="3" cellspacing="3">
 <tr>
   <td align="right"><input type="radio" name="viewauthrequired" value="0"<?php 
 	if ( $viewauthrequired == 0 ) { echo " checked"; }
 	?>></td>
-  <td align="left"><?php echo lang('no_login_required'); ?><br></td>
+  <td align="left"><?php echo lang('no_login_required'); ?><br /></td>
 </tr>
 <tr>
   <td align="right" valign="top"><input type="radio" name="viewauthrequired" value="1"<?php 
 	if ( $viewauthrequired != 0 ) { echo " checked"; }
 	?>></td>
-  <td align="left"><?php echo lang('login_required_user_ids'); ?>:<br>
+  <td align="left"><?php echo lang('login_required_user_ids'); ?>:<br />
 <?php
   if (!empty($addPIDError)) {    
     feedback($addPIDError,1);
@@ -440,17 +444,17 @@ name="imgFuturecolor" src="images/webcolors/<?php echo substr($futurecolor,1); ?
 				$i++;
 			}
 		}
-		?></textarea><br>
-		<i><?php echo lang('separate_user_ids_with_comma'); ?></i>
+		?></textarea><br />
+		<em><?php echo lang('separate_user_ids_with_comma'); ?></em>
 	</td>
 </tr>
 </table>
-  <br>  
-  <br>
+  <br />  
+  <br />
   <input type="submit" name="save" value="<?php echo lang('ok_button_text'); ?>" class="button">&nbsp;&nbsp;<input type="submit" name="cancel" value="<?php echo lang('cancel_button_text'); ?>" class="button">
 </form>
 <?php 
   box_end();
-  echo "<br>";
+  echo "<br />";
   require("footer.inc.php");
 ?>

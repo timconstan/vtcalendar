@@ -39,22 +39,22 @@
   pageheader(lang('delete_user'),
              lang('delete_user'),
              "Update","",$database);
-  echo "<BR>";
+  echo "<br />";
   box_begin("inputbox",lang('delete_user'));
 ?>
 <FORM method="post" action="deleteuser.php">
-  <B><?php echo lang('delete_user_confirm'); ?> &quot;<?php echo $userid; ?>&quot;</B>
-  <BR>
-  <BR>
+  <strong><?php echo lang('delete_user_confirm'); ?> &quot;<?php echo $userid; ?>&quot;</strong>
+  <br />
+  <br />
   <INPUT type="hidden" name="userid" value="<?php echo $userid; ?>">
   <INPUT type="hidden" name="deleteconfirmed" value="1">
   <INPUT type="submit" name="deleteuser" value="<?php echo lang('ok_button_text'); ?>">
   &nbsp;
   <INPUT type="submit" name="cancel" value="<?php echo lang('cancel_button_text'); ?>">
-  <BR>
+  <br />
 </FORM>
 <?php
   box_end();
-  echo "<BR>";
+  echo "<br />";
   require("footer.inc.php");
 ?>

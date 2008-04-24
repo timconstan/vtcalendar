@@ -36,37 +36,37 @@
   pageheader(lang('add_new_event_category'),
              lang('add_new_event_category'),
              "Update","",$database);
-  echo "<BR>";
+  echo "<br />";
   box_begin("inputbox",lang('add_new_event_category'));
 ?>
-<br>
+<br />
 <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 <?php
   if ( isset($check) ) {
 		if ( empty($category['name']) ) {
 			feedback(lang('category_name_cannot_be_empty'),1);
-			echo "<br>";
+			echo "<br />";
 		} // end: if ( $namealreadyexists )
 		elseif ( $namealreadyexists ) {
 			feedback(lang('category_name_already_exists'),1);
-			echo "<br>";
+			echo "<br />";
 		} // end: if ( $namealreadyexists )
   }
 ?>
-  <b><?php echo lang('category_name'); ?>:&nbsp;</b>
+  <strong><?php echo lang('category_name'); ?>:&nbsp;</strong>
 	<input type="text" name="category[name]" maxlength="<?php echo constCategory_nameMaxLength; ?>" size="25" value="<?php 
 	if (!empty($category['name'])) {
 		echo HTMLSpecialChars($category['name']); 
 	}
 	?>">
 	<input type="hidden" name="check" value="1">
-	<BR>
-  <BR>
+	<br />
+  <br />
   <INPUT type="submit" name="save" value="<?php echo lang('ok_button_text'); ?>">
   <INPUT type="submit" name="cancel" value="<?php echo lang('cancel_button_text'); ?>">
 </form>
 <?php
   box_end();
-  echo "<BR>";
+  echo "<br />";
   require("footer.inc.php");
 ?>

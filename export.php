@@ -386,14 +386,14 @@ $categoryidlist = $_GET['categoryidlist'];
     pageheader(lang('export_events'),
                lang('export_events'),
                "","",$database);
-    echo "<BR>";
+    echo "<br />";
     box_begin("inputbox",lang('export_events'));
 ?>
 <a target="newWindow" onclick="new_window(this.href); return false" 
    href="helpexport.php"><img src="images/nuvola/16x16/actions/help.png" width="16" height="16" alt="" border="0"> 
    <?php echo lang('how_to_export_events'); ?></a>
-<br>
-<br>
+<br />
+<br />
 <form method="get" action="<?php echo $_SERVER["PHP_SELF"]; ?>">
 <table border="0" cellspacing="0" cellpadding="0">
   <tr>
@@ -407,8 +407,8 @@ $categoryidlist = $_GET['categoryidlist'];
         <option value="rss">XML/RSS 0.91</option>
         <option value="rss1_0">XML/RSS 1.0</option>
         <option value="vxml">VoiceXML 2.0</option>
-      </select> <br>
-      <br>
+      </select> <br />
+      <br />
     </td>
   </tr>
   <TR>
@@ -434,8 +434,8 @@ for ($i=0; $i<$result->numRows(); $i++) {
   echo "value=\"",$category['id'],"\">",$category['name'],"</OPTION>\n";
 }
 ?>
-      </SELECT><br>
-      <br>
+      </SELECT><br />
+      <br />
     </TD>
   </TR>
   <TR>
@@ -443,20 +443,20 @@ for ($i=0; $i<$result->numRows(); $i++) {
       <strong><?php echo lang('sponsor'); ?>:</strong>
     </TD>
     <TD class="bodytext" valign="top">
-      <input type="radio" name="sponsortype" value="all" checked> <?php echo lang('all'); ?><br>
+      <input type="radio" name="sponsortype" value="all" checked> <?php echo lang('all'); ?><br />
 <?php
   if (!empty($_SESSION["AUTH_SPONSORID"])) {
     // read sponsor name from DB
     $result = DBQuery($database, "SELECT name FROM vtcal_sponsor WHERE calendarid='".sqlescape($_SESSION["CALENDARID"])."' AND id='".sqlescape($_SESSION["AUTH_SPONSORID"])."'" ); 
     $s = $result->fetchRow(DB_FETCHMODE_ASSOC,0);
-    echo '<input type="radio" name="sponsortype" value="self"> ',$s['name'],"<br>\n";
+    echo '<input type="radio" name="sponsortype" value="self"> ',$s['name'],"<br />\n";
   }
 ?>
         <input type="radio" name="sponsortype" value="specific"> <?php echo lang('specific_sponsor'); ?>
         <INPUT type="text" size="28" maxlength="<?php echo constSpecificsponsorMaxLength; ?>" name="specificsponsor" value="">
-      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	  <i><?php echo lang('specific_sponsor_example'); ?></i><BR>
-      <br>
+      <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  <i><?php echo lang('specific_sponsor_example'); ?></i><br />
+      <br />
     </TD>
   </TR>
   <TR>
@@ -545,16 +545,16 @@ for ($i=date("Y")-1; $i<=date("Y")+3; $i++) {
     </TR>
   </TABLE>
 </table>
-<br>
+<br />
 
-<?php echo lang('export_message'); ?><br>
-<br>
+<?php echo lang('export_message'); ?><br />
+<br />
 <input type="submit" name="startexport" value="<?php echo lang('ok_button_text'); ?>">
 <input type="submit" name="cancel" value="<?php echo lang('cancel_button_text'); ?>">
 </form>
 <?php    
     box_end();
-    echo "<BR>";
+    echo "<br />";
     require("footer.inc.php");
   }
 ?>

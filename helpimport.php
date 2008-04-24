@@ -59,7 +59,7 @@
 &lt;/events&gt;
 </pre>
 <hr size="1">
-<br>
+<br />
 <?php echo lang('help_import_data_format_intro'); ?>
 <table border="1" cellspacing="0" cellpadding="5">
   <tr>
@@ -83,7 +83,7 @@
 </li>            
 </ul>
 <?php echo lang('help_import_data_format'); ?>
-<br>
+<br />
 <?php
   helpbox_end();
 ?>

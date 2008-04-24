@@ -51,7 +51,7 @@
       pageheader(lang('edit_user'),
                  lang('edit_user'),
 	             "Update","",$database);
-      echo "<BR>\n";
+      echo "<br />\n";
       box_begin("inputbox",lang('edit_user'));
 		}
   }
@@ -59,7 +59,7 @@
     pageheader(lang('add_new_main_admin'),
                lang('add_new_main_admin'),
                "Update","",$database);
-    echo "<BR>\n";
+    echo "<br />\n";
     box_begin("inputbox",lang('add_new_main_admin'));
   }
   if (isset($user['id']) && (!isset($check) || $check != 1)) { // load user to update information if it's the first time the form is viewed
@@ -67,13 +67,13 @@
     $user = $result->fetchRow(DB_FETCHMODE_ASSOC);
   } // end if: "if (isset($mainuserid))"
 ?>
-<FORM method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" name="mainform">
-<TABLE border="0" cellpadding="2" cellspacing="0">
-  <TR>
-    <TD class="bodytext" valign="baseline">
-      <b><?php echo lang('user_id'); ?>:</b>
-    </TD>
-    <TD class="bodytext" valign="baseline">
+<form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" name="mainform">
+<table border="0" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="bodytext" valign="baseline">
+      <strong><?php echo lang('user_id'); ?>:</strong>
+    </td>
+    <td class="bodytext" valign="baseline">
 <?php
   	if (isset($check) && $check && (empty($mainuserid))) {
       feedback(lang('choose_user_id'),1);
@@ -84,30 +84,30 @@
     elseif (isset($check) && $check && !isValidUser($database, $mainuserid)) {
       feedback(lang('user_not_exists'),1);
     }
-?><INPUT type="text" size="20" name="mainuserid" maxlength="50" value="<?php
+?><input type="text" size="20" name="mainuserid" maxlength="50" value="<?php
   if (!empty($mainuserid)) {
 		if ($check) { $mainuserid=stripslashes($mainuserid); }
   	echo $mainuserid;
 	}
-?>"> <I><?php echo lang('user_id_example'); ?></I>
-<BR>
-    </TD>
-  </TR>
+?>" /> <em><?php echo lang('user_id_example'); ?></em>
+<br />
+    </td>
+  </tr>
   <tr>
     <td>&nbsp;</td>
     <td>
-      <INPUT type="submit" name="save" value="<?php echo lang('ok_button_text'); ?>">
-      <INPUT type="submit" name="cancel" value="<?php echo lang('cancel_button_text'); ?>">
+      <input type="submit" name="save" value="<?php echo lang('ok_button_text'); ?>" />
+      <input type="submit" name="cancel" value="<?php echo lang('cancel_button_text'); ?>" />
     </td>
 	</tr>
-</TABLE>
-<INPUT type="hidden" name="check" value="1">
+</table>
+<input type="hidden" name="check" value="1">
 <script language="JavaScript" type="text/javascript"><!--
 document.mainform.userid.focus();
 //--></script>
-</FORM>
+</form>
 <?php
   box_end();
-  echo "<br><br>";
+  echo "<br /><br />";
   require("footer.inc.php");
 ?>

@@ -10,7 +10,7 @@
 	pageheader(lang('manage_event_categories'),
 					 lang('manage_event_categories'),
 					 "Update","",$database);
-	echo "<BR>\n";
+	echo "<br />\n";
 	box_begin("inputbox",lang('manage_event_categories'));
 
   $result = DBQuery($database, "SELECT * FROM vtcal_category WHERE calendarid='".sqlescape($_SESSION["CALENDARID"])."' ORDER BY name" ); 
@@ -22,11 +22,11 @@
 <?php
   if ($result->numRows() > 0 ) {
 ?>
-<?php echo lang('or_modify_existing_category'); ?><br>
-<br>
+<?php echo lang('or_modify_existing_category'); ?><br />
+<br />
 <table border="0" cellspacing="0" cellpadding="4">
   <tr bgcolor="#CCCCCC">
-    <td bgcolor="#CCCCCC"><b><?php echo lang('category_name'); ?></b></td>
+    <td bgcolor="#CCCCCC"><strong><?php echo lang('category_name'); ?></strong></td>
     <td bgcolor="#CCCCCC">&nbsp;</td>
   </tr>
 <?php
@@ -44,7 +44,7 @@
   } // end: for ($i=0; $i<$result->numRows(); $i++)
 ?>	
 </table>
-<br>
+<br />
 <form method="post" action="update.php">
 	<input type="submit" name="back" value="<?php echo lang('back_to_menu'); ?>">
 </form>
@@ -53,6 +53,6 @@
   } // end: if ($result->numRows() > 0 )
 	
   box_end();
-  echo "<br><br>\n";
+  echo "<br /><br />\n";
   require("footer.inc.php");
 ?>

@@ -144,7 +144,7 @@
     pageheader(lang('edit_sponsor'),
                lang('edit_sponsor'),
                "Update","",$database);
-    echo "<BR>";
+    echo "<br />";
     box_begin("inputbox",lang('edit_sponsor'));
 		if ( !isset($check) ) {
   		$result = DBQuery($database, "SELECT * FROM vtcal_sponsor WHERE calendarid='".sqlescape($_SESSION["CALENDARID"])."' AND id='".sqlescape($id)."'" );
@@ -155,11 +155,11 @@
     pageheader(lang('add_new_sponsor'),
                lang('add_new_sponsor'),
                "Update","",$database);
-    echo "<BR>";
+    echo "<br />";
     box_begin("inputbox",lang('add_new_sponsor'));
 	}
 ?>
-<br>
+<br />
 <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 <TABLE border="0" cellpadding="2" cellspacing="0">
   <TR>
@@ -181,7 +181,7 @@
       <INPUT type="text" size="50" name="sponsor[name]" maxlength=<?php echo constSponsor_nameMaxLength; ?>  value="<?php
     if ( isset($check) ) { $sponsor['name']=stripslashes($sponsor['name']); }
     if ( isset($sponsor['name']) ) { echo HTMLSpecialChars($sponsor['name']); }
-?>"> <I><?php echo lang('sponsor_name_example'); ?></I><BR>
+?>"> <em><?php echo lang('sponsor_name_example'); ?></em><br />
     </TD>
   </TR>
   <TR>
@@ -199,7 +199,7 @@
   if ( isset($check) ) { $sponsor['email']=stripslashes($sponsor['email']); }
   if ( isset($sponsor['email'])) { echo HTMLSpecialChars($sponsor['email']); }
 ?>">
-      <I><?php echo lang('email_example'); ?></I><BR>
+      <em><?php echo lang('email_example'); ?></em><br />
     </TD>
   </TR>
   <TR>
@@ -216,7 +216,7 @@
   if ( isset($check) ) { $sponsor['url']=stripslashes($sponsor['url']); }
   if ( isset($sponsor['url']) ) { echo HTMLSpecialChars($sponsor['url']); }
 ?>">
-      <I><?php echo lang('url_example'); ?></I><BR>
+      <em><?php echo lang('url_example'); ?></em><br />
     </TD>
   </TR>
   <TR>
@@ -244,7 +244,7 @@
 				$i++;
 			}
 		}
-		?></textarea><br>
+		?></textarea><br />
 		<i><?php echo lang('administrative_members_example'); ?></i>
     </TD>
   </TR>
@@ -253,13 +253,13 @@
 <?php
   if ( isset ($id) ) { echo '<input type="hidden" name="id" value="',$id,'">'; }
 ?>
-	<BR>
-  <BR>
+	<br />
+  <br />
   <INPUT type="submit" name="save" value="<?php echo lang('ok_button_text'); ?>">
   <INPUT type="submit" name="cancel" value="<?php echo lang('cancel_button_text'); ?>">
 </form>
 <?php
   box_end();
-  echo "<BR>";
+  echo "<br />";
   require("footer.inc.php");
 ?>

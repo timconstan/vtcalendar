@@ -73,7 +73,7 @@ foreach (glob('*.js') as $filename) {
      ?>
      </select>
      <blockquote style="font-size: 90%">
-       <b>NOTE</b>: as of this release, 0.9.6, only "EN" and "RO", which I
+       <strong>NOTE</strong>: as of this release, 0.9.6, only "EN" and "RO", which I
        maintain, function correctly.  Other language files do not work
        because they need to be updated.  If you update some language file,
        please consider sending it back to me so that I can include it in the

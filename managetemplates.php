@@ -9,7 +9,7 @@
 	pageheader(lang('manage_templates'),
 					 lang('manage_templates'),
 					 "Update","",$database);
-	echo "<BR>\n";
+	echo "<br />\n";
 	box_begin("inputbox",lang('manage_templates'));
 
   $result = DBQuery($database, "SELECT * FROM vtcal_template WHERE calendarid='".sqlescape($_SESSION["CALENDARID"])."' AND sponsorid='".sqlescape($_SESSION["AUTH_SPONSORID"])."' ORDER BY name" ); 
@@ -21,11 +21,11 @@
 <?php
   if ($result->numRows() > 0 ) {
 ?>
-<?php echo lang('or_modify_existing_template'); ?><br>
-<br>
+<?php echo lang('or_modify_existing_template'); ?><br />
+<br />
 <table border="0" cellspacing="0" cellpadding="4">
   <tr bgcolor="#CCCCCC">
-    <td bgcolor="#CCCCCC"><b><?php echo lang('template_name'); ?></b></td>
+    <td bgcolor="#CCCCCC"><strong><?php echo lang('template_name'); ?></strong></td>
     <td bgcolor="#CCCCCC">&nbsp;</td>
   </tr>
 <?php
@@ -43,13 +43,13 @@
   } // end: for ($i=0; $i<$result->numRows(); $i++)
 ?>	
 </table>
-<br>
+<br />
 <form method="post" action="update.php">
 	<input type="submit" name="back" value="<?php echo lang('back_to_menu'); ?>">
 </form>
 <?php
   } // end: if ($result->numRows() > 0 )
   box_end();
-  echo "<br><br>\n";
+  echo "<br /><br />\n";
   require("footer.inc.php");
 ?>

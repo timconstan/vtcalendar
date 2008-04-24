@@ -103,7 +103,7 @@ function sendrejectionemail($eventid,$database) {
   pageheader(lang('approve_reject_event_updates'),
              lang('approve_reject_event_updates'),
 	           "Update","",$database);
-  echo "<BR>";
+  echo "<br />";
   box_begin("inputbox",lang('approve_reject_event_updates'));
 
   // print list with events
@@ -111,17 +111,17 @@ function sendrejectionemail($eventid,$database) {
   $query.= " ORDER BY e.timebegin asc, e.wholedayevent DESC";
   $result = DBQuery($database, $query ); 
 ?>
-      <FORM method="post" action="update.php">
-        <INPUT type="submit" name="back" value="<?php echo lang('back_to_menu'); ?>">
-      </FORM>
-<br>
-<b><a href="<?php echo $_SERVER["PHP_SELF"]; ?>"><?php echo lang('refresh_display'); ?></a></b><br>
+      <form method="post" action="update.php">
+        <input type="submit" name="back" value="<?php echo lang('back_to_menu'); ?>" />
+      </form>
+<br />
+<strong><a href="<?php echo $_SERVER["PHP_SELF"]; ?>"><?php echo lang('refresh_display'); ?></a></strong><br />
 <?php
   if ($result->numRows() > 0 ) {
 ?>
-<br>
+<br />
 <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-<INPUT type="submit" name="approveallevents" value="<?php echo lang('approve_all_events'); ?>">
+<input type="submit" name="approveallevents" value="<?php echo lang('approve_all_events'); ?>" />
 <input type="hidden" name="eventidlist" value="<?php
   // read first event if one exists
   $ievent = 0;
@@ -131,16 +131,16 @@ function sendrejectionemail($eventid,$database) {
 	  echo $event["id"];
   	$ievent++;
   }
-?>">
+?>" />
 </form>
 <table border="0" cellspacing="0" cellpadding="4">
   <tr bgcolor="#CCCCCC">
-    <td bgcolor="#CCCCCC"><b><?php echo lang('date'),"/",lang('time'); ?></b></td>
-    <td bgcolor="#CCCCCC"><b><?php echo lang('category'),": ",lang('title'),"/",lang('description'); ?></b></td>
-    <td bgcolor="#CCCCCC"><b><?php echo lang('sponsor'); ?></b></td>
-    <td bgcolor="#CCCCCC"><b><?php echo lang('location'); ?></b></td>
-    <td bgcolor="#CCCCCC"><b><?php echo lang('price'); ?></b></td>
-    <td bgcolor="#CCCCCC"><b><?php echo lang('contact'); ?></b></td>
+    <td bgcolor="#CCCCCC"><strong><?php echo lang('date'),"/",lang('time'); ?></strong></td>
+    <td bgcolor="#CCCCCC"><strong><?php echo lang('category'),": ",lang('title'),"/",lang('description'); ?></strong></td>
+    <td bgcolor="#CCCCCC"><strong><?php echo lang('sponsor'); ?></strong></td>
+    <td bgcolor="#CCCCCC"><strong><?php echo lang('location'); ?></strong></td>
+    <td bgcolor="#CCCCCC"><strong><?php echo lang('price'); ?></strong></td>
+    <td bgcolor="#CCCCCC"><strong><?php echo lang('contact'); ?></strong></td>
     <td bgcolor="#CCCCCC">&nbsp;</td>
   </tr>
 <?php
@@ -166,7 +166,7 @@ function sendrejectionemail($eventid,$database) {
   echo Day_of_Week_Abbreviation(Day_of_Week($event['timebegin_month'],$event['timebegin_day'],$event['timebegin_year']));
   echo ", ";
 	echo substr(Month_to_Text($event['timebegin_month']),0,3)," ",$event['timebegin_day'],", ",$event['timebegin_year'];
-  echo "<br>\n";
+  echo "<br />\n";
   if ($event['wholedayevent']==0) {
 		echo timestring($event['timebegin_hour'],$event['timebegin_min'],$event['timebegin_ampm']),"-";
 		if (endingtime_specified($event)) { // event has an explicit ending time
@@ -178,7 +178,7 @@ function sendrejectionemail($eventid,$database) {
 	}
 
 	if (!empty($event['repeatid'])) {
-		echo "<br>\n";
+		echo "<br />\n";
 		echo '<font color="#00AA00">';
 		readinrepeat($event['repeatid'],$event,$repeat,$database);
 		$repeatdef = repeatinput2repeatdef($event,$repeat);
@@ -191,34 +191,34 @@ function sendrejectionemail($eventid,$database) {
 ?></td>
     <td bgcolor="<?php echo $color; ?>" valign="top"><?php 
   echo $event['category_name'],": "; 
-	echo "<b>",$event['title'],"</b>\n"; 
-	echo "<br>",$event['description'];
+	echo "<strong>",$event['title'],"</strong>\n"; 
+	echo "<br />",$event['description'];
 ?></td>
     <td bgcolor="<?php echo $color; ?>" valign="top"><?php 
   echo $event['displayedsponsor'];
 	if ( $event['displayedsponsor'] != $event['sponsor_name'] ) {
-	  echo ' (<font color="#ff0000"><b>',$event['sponsor_name'],'</b></font>)';
+	  echo ' (<font color="#ff0000"><strong>',$event['sponsor_name'],'</strong></font>)';
 	}
 
   if ($_SESSION["CALENDARID"] != $event['sponsor_calendarid']) {
 	  $q = "SELECT name FROM vtcal_calendar WHERE id='".sqlescape($event['sponsor_calendarid'])."'";
     $r = DBQuery($database, $q ); 
   	$c = $r->fetchRow(DB_FETCHMODE_ASSOC, 0);
-		echo "<br>(<font color=\"#339933\"><b>".$c['name']."</b></font>)";
+		echo "<br />(<font color=\"#339933\"><strong>".$c['name']."</strong></font>)";
 	}
 ?>
 		</td>
     <td bgcolor="<?php echo $color; ?>" valign="top"><?php echo $event['location']; ?></td>
     <td bgcolor="<?php echo $color; ?>" valign="top"><?php echo $event['price']; ?></td>
     <td bgcolor="<?php echo $color; ?>" valign="top" nowrap><?php 
- if (!empty($event['contact_name']) ) { echo $event['contact_name'],"<br>"; } 
+ if (!empty($event['contact_name']) ) { echo $event['contact_name'],"<br />"; } 
  if (!empty($event['contact_email']) ) { 
    echo '<img src="images/email.gif" width="20" height="20" alt="e-mail">';
-   echo "<a href=\"mailto:",$event['contact_email'],"\">",$event['contact_email'],"</a><br>"; 
+   echo "<a href=\"mailto:",$event['contact_email'],"\">",$event['contact_email'],"</a><br />"; 
  } 
  if (!empty($event['contact_phone']) ) { 
   echo '<img src="images/phone.gif" width="20" height="20">';
-  echo $event['contact_phone'],"<br>"; 
+  echo $event['contact_phone'],"<br />"; 
  }	 
 ?></td>
     <td bgcolor="<?php echo $color; ?>" valign="top" nowrap><a href="approval.php?<?php 
@@ -240,13 +240,13 @@ function sendrejectionemail($eventid,$database) {
     <td colspan="7" bgcolor="#CCCCCC">&nbsp;</td>
   </tr>
 </table>
-<br>
+<br />
 <form method="post" action="update.php">
 	<input type="submit" name="back" value="<?php echo lang('back_to_menu'); ?>">
 </form>
 <?php
   } // end: if ($result->numRows() > 0 )
   box_end();
-  echo "<BR>";
+  echo "<br />";
   require("footer.inc.php");
 ?>

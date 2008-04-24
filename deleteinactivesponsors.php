@@ -127,7 +127,7 @@
   pageheader(lang('delete_inactive_sponsors'),
              lang('delete_inactive_sponsors'),
 	           "Update","",$database);
-  echo "<BR>";
+  echo "<br />";
   box_begin("inputbox",lang('delete_inactive_sponsors'));
 ?>
 <FORM method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
@@ -137,13 +137,13 @@
 <option value="2"><?php echo lang('delete_inactive_sponsors_2years'); ?></option>
 <option value="3"><?php echo lang('delete_inactive_sponsors_3years'); ?></option>
 </select>.
-  <BR>
-  <BR>
+  <br />
+  <br />
   <INPUT type="submit" name="save" value="<?php echo lang('ok_button_text'); ?>">
   <INPUT type="submit" name="cancel" value="<?php echo lang('cancel_button_text'); ?>">
 </FORM>
 <?php
   box_end();
-  echo "<BR>";
+  echo "<br />";
   require("footer.inc.php");
 ?>

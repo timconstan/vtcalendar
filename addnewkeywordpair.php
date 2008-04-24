@@ -27,29 +27,29 @@
   pageheader(lang('add_new_keyword_pair'),
              lang('add_new_keyword_pair'),
              "Update","",$database);
-  echo "<BR>";
+  echo "<br />";
   box_begin("inputbox",lang('add_new_keyword_pair'));
 ?>
-<br>
+<br />
 <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
   <?php echo lang('add_new_keyword_pair_instructions'); ?>
-	<br>
+	<br />
 	<table cellpadding="3" cellspacing="3" border="0">
 	  <tr>
-		  <td><b><?php echo lang('keyword'); ?>:</b>
+		  <td><strong><?php echo lang('keyword'); ?>:</strong>
 <?php
   if ( isset($check) ) {
 		if ( empty($keyword) ) {
-			feedback("<br>".lang('keyword_cannot_be_empty'),1);
+			feedback("<br />".lang('keyword_cannot_be_empty'),1);
 		} 
   }
 ?>
 			</td>
-		  <td><b><?php echo lang('alternative_keyword'); ?></b>
+		  <td><strong><?php echo lang('alternative_keyword'); ?></strong>
 <?php
   if ( isset($check) ) {
 		if ( empty($alternativekeyword) ) {
-			feedback("<br>".lang('keyword_cannot_be_empty'),1);
+			feedback("<br />".lang('keyword_cannot_be_empty'),1);
 		} 
   }
 ?>
@@ -64,18 +64,18 @@
 		  <td>
 			  <input type="text" name="alternativekeyword" maxlength="<?php echo constKeywordMaxLength; ?>" size="20" value="<?php 
 				if (!empty($alternativekeyword)) { echo HTMLSpecialChars($alternativekeyword); } 
-				?>">
+				?>" />
 			</td>
 		</tr>
 	</table>
-	<input type="hidden" name="check" value="1">
-	<BR>
-  <BR>
-  <INPUT type="submit" name="save" value="<?php echo lang('ok_button_text'); ?>">
-  <INPUT type="submit" name="cancel" value="<?php echo lang('cancel_button_text'); ?>">
+	<input type="hidden" name="check" value="1" />
+	<br />
+  <br />
+  <input type="submit" name="save" value="<?php echo lang('ok_button_text'); ?>" />
+  <input type="submit" name="cancel" value="<?php echo lang('cancel_button_text'); ?>" />
 </form>
 <?php
   box_end();
-  echo "<BR>";
+  echo "<br />";
   require("footer.inc.php");
 ?>

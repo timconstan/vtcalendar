@@ -10,17 +10,17 @@
     $datediff = Delta_Days($iday['month'],$iday['day'],$iday['year'],date("m"),date("d"),date("Y"));
 
 	echo '<td valign="top" width="14%" align="center">';
-    echo "<b>\n";
+    echo "<strong>\n";
     echo Day_of_Week_to_Text(($weekday+$week_start)%7); // use modulus 7 as week can begin with Sunday or Monday
-    echo "<br>\n";
+    echo "<br />\n";
     echo "<a href=\"main.php?view=day&timebegin=",urlencode(datetime2timestamp($iday['year'],$iday['month'],$iday['day'],12,0,"am")),"&timeend=",urlencode(datetime2timestamp($iday['year'],$iday['month'],$iday['day'],11,59,"pm")),"\">".week_header_date_format($iday['day'],Month_to_Text($iday['month']),0,3)."</a>\n";
 
     if (!empty($_SESSION["AUTH_SPONSORID"])) { // display "add event" icon
-			echo "<br><a href=\"addevent.php?timebegin_year=".$iday['year']."&timebegin_month=".$iday['month']."&timebegin_day=".$iday['day']."\" title=\"",lang('add_new_event'),"\">";
+			echo "<br /><a href=\"addevent.php?timebegin_year=".$iday['year']."&timebegin_month=".$iday['month']."&timebegin_day=".$iday['day']."\" title=\"",lang('add_new_event'),"\">";
       echo '<img src="images/nuvola/16x16/actions/filenew.png" height="16" width="16" alt="',lang('add_new_event'),'" border="0"></a>';
     }
 
-    echo "</b>\n</td>\n";
+    echo "</strong>\n</td>\n";
   }
 ?>		
         </tr>
@@ -92,7 +92,7 @@
 		// making sure the spacing looks ok, even if there are no or few (<3) events per day
 		if ( $events_per_day < 3 ) {
 		  for ($i=$events_per_day; $i < 3; $i++) {
-			  echo "<br><br><br>";
+			  echo "<br /><br /><br />";
 			}
 		}
     echo "&nbsp;\n</td>\n";

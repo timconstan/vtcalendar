@@ -49,21 +49,21 @@
   pageheader(lang('delete_calendar'),
              lang('delete_calendar'),
              "Update","",$database);
-  echo "<BR>";
+  echo "<br />";
   box_begin("inputbox",lang('delete_calendar'));
 ?>
-<font color="#ff0000"><b><?php echo lang('warning_calendar_delete'); ?> &quot;<b><?php echo $c['name']; ?></b>&quot;</b></font>
+<font color="#ff0000"><strong><?php echo lang('warning_calendar_delete'); ?> &quot;<strong><?php echo $c['name']; ?></strong>&quot;</strong></font>
 <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 <?php
   if ( isset ($cal['id']) ) { echo '<input type="hidden" name="cal[id]" value="'.$cal['id'].'">'; }
 ?>	
-	<BR>
-  <BR>
+	<br />
+  <br />
   <INPUT type="submit" name="save" value="<?php echo lang('ok_button_text'); ?>">
   <INPUT type="submit" name="cancel" value="<?php echo lang('cancel_button_text'); ?>">
 </form>
 <?php
   box_end();
-  echo "<BR>";
+  echo "<br />";
   require("footer.inc.php");
 ?>

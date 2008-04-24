@@ -49,12 +49,12 @@
   pageheader(lang('delete_event_category'),
              lang('delete_event_category'),
              "Update","",$database);
-  echo "<BR>";
+  echo "<br />";
   box_begin("inputbox",lang('delete_event_category'));
 ?>
-<font color="#ff0000"><b><?php echo lang('warning_event_category_delete'); ?> &quot;<b><?php echo $category['name']; ?></b>&quot;</b></font>
+<font color="#ff0000"><strong><?php echo lang('warning_event_category_delete'); ?> &quot;<strong><?php echo $category['name']; ?></strong>&quot;</strong></font>
 <form method="post" action="deletecategory.php">
-	<input type="radio" name="deleteevents" value="1"> <?php echo lang('delete_all_events_in_category'); ?><br>
+	<input type="radio" name="deleteevents" value="1"> <?php echo lang('delete_all_events_in_category'); ?><br />
   <input type="radio" name="deleteevents" value="0" checked> 
 	<?php echo lang('reassign_all_events_to_category'); ?>
   <select name="newcategoryid" size="1">
@@ -70,13 +70,13 @@
 ?>
   </select>
 	<input type="hidden" name="categoryid" value="<?php echo $categoryid; ?>">
-	<BR>
-  <BR>
+	<br />
+  <br />
   <INPUT type="submit" name="save" value="<?php echo lang('ok_button_text'); ?>">
   <INPUT type="submit" name="cancel" value="<?php echo lang('cancel_button_text'); ?>">
 </form>
 <?php
   box_end();
-  echo "<BR>";
+  echo "<br />";
   require("footer.inc.php");
 ?>
