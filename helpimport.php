@@ -8,9 +8,9 @@
   $database = DBopen();
   helpbox_begin();
 ?>
-<H3><IMG alt="" border=0 height=16 src="images/nuvola/16x16/actions/help.png" width=16>
+<h3><IMG alt="" border=0 height=16 src="images/nuvola/16x16/actions/help.png" width=16>
 <?php echo lang('help_import'); ?>
-</H3>
+</h3>
 <?php echo lang('help_import_intro'); ?>
 <hr size="1">
 <pre style="font-size:10pt">

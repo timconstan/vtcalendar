@@ -8,9 +8,9 @@
   $database = DBopen();
   helpbox_begin();
 ?>
-<H3><IMG alt="" border=0 height=16 src="images/nuvola/16x16/actions/help.png" width=16>
+<h3><IMG alt="" border=0 height=16 src="images/nuvola/16x16/actions/help.png" width=16>
 <?php echo lang('help_export'); ?>
-</H3>
+</h3>
 <?php echo lang('help_export_intro'); ?>
   &quot;<?php echo $calendarurl; ?>export.php?calendar=<?php echo $_SESSION["CALENDARID"]; ?>&amp;type=xml&amp;timebegin=2000-03-17&amp;timeend=2000-05-20</a>&quot;.</li>
 </ul>
