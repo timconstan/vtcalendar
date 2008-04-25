@@ -59,7 +59,7 @@
 		  <td>
 			  <input type="text" name="keyword" maxlength="<?php echo constKeywordMaxLength; ?>" size="20" value="<?php 
 				if (!empty($keyword)) { echo HTMLSpecialChars($keyword); }
-				?>">
+				?>" />
 			</td>
 		  <td>
 			  <input type="text" name="alternativekeyword" maxlength="<?php echo constKeywordMaxLength; ?>" size="20" value="<?php 

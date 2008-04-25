@@ -58,12 +58,12 @@
 	if (!empty($category['name'])) {
 		echo HTMLSpecialChars($category['name']); 
 	}
-	?>">
-	<input type="hidden" name="check" value="1">
+	?>" />
+	<input type="hidden" name="check" value="1" />
 	<br />
   <br />
-  <INPUT type="submit" name="save" value="<?php echo lang('ok_button_text'); ?>">
-  <INPUT type="submit" name="cancel" value="<?php echo lang('cancel_button_text'); ?>">
+  <input type="submit" name="save" value="<?php echo lang('ok_button_text'); ?>" />
+  <input type="submit" name="cancel" value="<?php echo lang('cancel_button_text'); ?>" />
 </form>
 <?php
   box_end();

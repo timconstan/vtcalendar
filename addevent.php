@@ -48,7 +48,7 @@
 <br />
 <form method="post" action="changeeinfo.php">
 <?php
-  echo '<input type="hidden" name="httpreferer" value="',$httpreferer,'">',"\n";
+  echo '<input type="hidden" name="httpreferer" value="',$httpreferer,'" />',"\n";
 ?>
   <select name="templateid" size="6">
     <option selected value="0">----- <?php echo lang('blank'); ?> -----</option>
@@ -62,14 +62,14 @@
   </select>
   <br />
   <br />
-  <input type="submit" name="choosetemplate" value="<?php echo lang('ok_button_text'); ?>">
-  <input type="submit" name="cancel" value="<?php echo lang('cancel_button_text'); ?>">
+  <input type="submit" name="choosetemplate" value="<?php echo lang('ok_button_text'); ?>" />
+  <input type="submit" name="cancel" value="<?php echo lang('cancel_button_text'); ?>" />
 <?php
   // forward date info, if the page was called with date info appended
   // can later be done with PHP session management
-  if (isset($timebegin_year)) { echo "<input type=\"hidden\" name=\"timebegin_year\" value=\"",$timebegin_year,"\">"; }
-  if (isset($timebegin_month)) { echo "<input type=\"hidden\" name=\"timebegin_month\" value=\"",$timebegin_month,"\">"; }
-  if (isset($timebegin_day)) { echo "<input type=\"hidden\" name=\"timebegin_day\" value=\"",$timebegin_day,"\">"; }
+  if (isset($timebegin_year)) { echo "<input type=\"hidden\" name=\"timebegin_year\" value=\"",$timebegin_year,"\" />"; }
+  if (isset($timebegin_month)) { echo "<input type=\"hidden\" name=\"timebegin_month\" value=\"",$timebegin_month,"\" />"; }
+  if (isset($timebegin_day)) { echo "<input type=\"hidden\" name=\"timebegin_day\" value=\"",$timebegin_day,"\" />"; }
 ?>
 </form>
 <?php

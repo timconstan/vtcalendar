@@ -101,7 +101,7 @@
     </td>
 	</tr>
 </table>
-<input type="hidden" name="check" value="1">
+<input type="hidden" name="check" value="1" />
 <script language="JavaScript" type="text/javascript"><!--
 document.mainform.userid.focus();
 //--></script>
