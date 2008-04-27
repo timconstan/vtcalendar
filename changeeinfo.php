@@ -99,7 +99,7 @@
 
 function passeventvalues(&$event,$sponsorid,&$repeat) {
   // pass the values
-//  echo '<INPUT type="hidden" name="event[rejectreason]" value="',HTMLSpecialChars($event['rejectreason']),"\">\n";
+//  echo '<input type="hidden" name="event[rejectreason]" value="',HTMLSpecialChars($event['rejectreason']),"\" />\n";
   echo '<input type="hidden" name="event[timebegin_year]" value="',HTMLSpecialChars($event['timebegin_year']),"\" />\n";
   echo '<input type="hidden" name="event[timebegin_month]" value="',HTMLSpecialChars($event['timebegin_month'])," /\">\n";
   echo '<input type="hidden" name="event[timebegin_day]" value="',HTMLSpecialChars($event['timebegin_day']),"\" />\n";
@@ -196,7 +196,7 @@ function savechangesbuttons(&$event,&$repeat,$database) {
 /*
   if ($repeat['mode'] > 0 && !empty($event['repeatid'])) {
     if (!recurrenceschanged($event['repeatid'],$repeat,$event,$database)) {
-      echo '<INPUT type="submit" name="saveall" value="Save changes for ALL recurrences"><br /><br />';
+      echo '<input type="submit" name="saveall" value="Save changes for ALL recurrences" /><br /><br />';
     }
   }
 */
