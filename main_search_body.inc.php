@@ -56,7 +56,7 @@ inputdate($timebegin_month,"timebegin_month",
 					
         </table>
   <br />
-</FORM>				
+</form>				
 				</td>
         </tr>
       </table>

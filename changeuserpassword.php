@@ -43,7 +43,7 @@
   echo "<br />";
   box_begin("inputbox",lang('change_password'));
 ?>
-<FORM method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+<form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
   <table border="0" cellpadding="2" cellspacing="0">
     <TR>
       <TD class="bodytext" valign="top">
@@ -91,7 +91,7 @@
   <br />
    <input type="submit" name="save" value="<?php echo lang('ok_button_text'); ?>" />
   <input type="submit" name="cancel" value="<?php echo lang('cancel_button_text'); ?>" />
-</FORM>
+</form>
 <?php
   box_end();
   echo "<br />";

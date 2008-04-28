@@ -130,7 +130,7 @@
   echo "<br />";
   box_begin("inputbox",lang('delete_inactive_sponsors'));
 ?>
-<FORM method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+<form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 <?php echo lang('delete_inactive_sponsors_message'); ?> 
 <select name="duration">
 <option value="1" selected><?php echo lang('delete_inactive_sponsors_year'); ?></option>
@@ -141,7 +141,7 @@
   <br />
   <INPUT type="submit" name="save" value="<?php echo lang('ok_button_text'); ?>">
   <INPUT type="submit" name="cancel" value="<?php echo lang('cancel_button_text'); ?>">
-</FORM>
+</form>
 <?php
   box_end();
   echo "<br />";

@@ -30,7 +30,7 @@
   echo '</SPAN>';
 ?>
 <br />
-<FORM method="post" action="approval.php">
+<form method="post" action="approval.php">
   <?php echo lang('reason_for_rejection'); ?>
   <br />
   <TEXTAREA name="rejectreason" rows="2" cols="50" wrap=virtual></TEXTAREA>
@@ -45,7 +45,7 @@
   } 
 ?>
   <INPUT type="submit" name="cancel" value="<?php echo lang('cancel_button_text'); ?>">
-</FORM>
+</form>
 <br />
 <?php
   box_end();

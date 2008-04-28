@@ -72,7 +72,7 @@ function displaylogin($errormsg,$database) {
 ?>
     <br />
     <DIV align="center">
-    <FORM method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>" name="loginform">
+    <form method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>" name="loginform">
 <?php
 	if (isset($GLOBALS["eventid"])) { echo "<input type=\"hidden\" name=\"eventid\" value=\"",$GLOBALS["eventid"],"\">\n"; }
   if (isset($GLOBALS["httpreferer"])) {  echo "<input type=\"hidden\" name=\"httpreferer\" value=\"",$GLOBALS["httpreferer"],"\">\n"; }
@@ -101,7 +101,7 @@ function displaylogin($errormsg,$database) {
       <br />
 		
       
-    </FORM>
+    </form>
 <script language="JavaScript1.2"><!--
   document.loginform.login_userid.focus();
 //--></script>

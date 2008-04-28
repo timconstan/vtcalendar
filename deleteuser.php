@@ -42,7 +42,7 @@
   echo "<br />";
   box_begin("inputbox",lang('delete_user'));
 ?>
-<FORM method="post" action="deleteuser.php">
+<form method="post" action="deleteuser.php">
   <strong><?php echo lang('delete_user_confirm'); ?> &quot;<?php echo $userid; ?>&quot;</strong>
   <br />
   <br />
@@ -52,7 +52,7 @@
   &nbsp;
   <INPUT type="submit" name="cancel" value="<?php echo lang('cancel_button_text'); ?>">
   <br />
-</FORM>
+</form>
 <?php
   box_end();
   echo "<br />";

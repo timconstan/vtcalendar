@@ -105,7 +105,7 @@
   echo "<br />";
   box_begin("inputbox",lang('delete_event'));
 ?>
-<FORM method="post" action="deleteevent.php">
+<form method="post" action="deleteevent.php">
 <?php
     echo '<INPUT type="hidden" name="httpreferer" value="',$httpreferer,'">',"\n";
     if (isset($detailscaller)) { echo "<INPUT type=\"hidden\" name=\"detailscaller\" value=\"$detailscaller\">\n"; }
@@ -160,7 +160,7 @@
   &nbsp;
   <INPUT type="submit" name="cancel" value="<?php echo lang('cancel_button_text'); ?>">
   <br />
-</FORM>
+</form>
 <?php
   box_end();
   echo "<br />";

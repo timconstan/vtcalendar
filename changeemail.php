@@ -43,7 +43,7 @@
   box_begin("inputbox",lang('change_email'));
 ?>
 <strong><?php echo lang('change_email_label'); ?></strong><br />
-<FORM method="post" action="changeemail.php">
+<form method="post" action="changeemail.php">
 <?php
   if (!checkemail($sponsor["email"])) {
     feedback(lang('email_invalid'),1);
@@ -57,7 +57,7 @@
   <br />
   <input type="submit" name="save" value="<?php echo lang('ok_button_text'); ?>" />
   <input type="submit" name="cancel" value="<?php echo lang('cancel_button_text'); ?>" />
-</FORM>
+</form>
 <?php
   box_end();
   echo "<br />";

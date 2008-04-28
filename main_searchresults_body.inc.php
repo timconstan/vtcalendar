@@ -1,7 +1,7 @@
 <?php
 if (!defined("ALLOWINCLUDES")) { exit; } // prohibits direct calling of include files
 ?><table cellspacing="5" cellpadding="0" width="100%" bgcolor="#ffffff" border="0">
-      <FORM method="post" action="main.php?view=search">
+      <form method="post" action="main.php?view=search">
 			<tr><td colspan="3">
 			<br />
         <INPUT type="submit" name="back" value="&laquo; <?php echo lang('back_to_prev_page'); ?>">
@@ -169,5 +169,5 @@ $searchlogresult = DBQuery($database, "INSERT INTO vtcal_searchlog (calendarid,t
         <tr valign="top">
           <td colspan="3"><br /><br /><br /></td>
         </tr>
-      </FORM>
+      </form>
       </table>

@@ -69,7 +69,7 @@
   box_begin("inputbox",lang('edit_template'));
 ?>
 <br />
-<FORM method="post" action="updatetinfo.php">
+<form method="post" action="updatetinfo.php">
 <?php
   if (!isset($check)) { $check=0; }
   inputtemplatedata($event,$_SESSION["AUTH_SPONSORID"],$check,$template_name,$database);
@@ -78,7 +78,7 @@
 <INPUT type="submit" name="savetemplate" value="<?php echo lang('ok_button_text'); ?>">
 <INPUT type="submit" name="cancel" value="<?php echo lang('cancel_button_text'); ?>">
 <INPUT type="hidden" name="templateid" value="<?php echo $templateid; ?>">
-</FORM>
+</form>
 <?php
   box_end();
   echo "<br />";

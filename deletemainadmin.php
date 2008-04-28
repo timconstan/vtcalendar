@@ -40,7 +40,7 @@
   echo "<br />";
   box_begin("inputbox",lang('delete_main_admin'));
 ?>
-<FORM method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+<form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
   <strong><?php echo lang('delete_main_admin_confirm'); ?> &quot;<?php echo $mainuserid; ?>&quot;</strong>
   <br />
   <br />
@@ -49,7 +49,7 @@
   <INPUT type="submit" name="save" value="<?php echo lang('ok_button_text'); ?>">
   <INPUT type="submit" name="cancel" value="<?php echo lang('cancel_button_text'); ?>">
   <br />
-</FORM>
+</form>
 <?php
   box_end();
   echo "<br />";

@@ -162,7 +162,7 @@
       <input type="password" size="14" name="user[password]" maxlength=<?php echo constPasswordMaxLength; ?>  value="<?php if (!empty($chooseuser)) { echo "#nochange$"; } ?>" /> <br />
     </td>
   </tr>
-  <Ttr>
+  <tr>
     <td class="bodytext" valign="baseline">
       <strong><?php echo lang('email'); ?></strong>
     </td>
