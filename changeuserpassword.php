@@ -55,7 +55,7 @@
       feedback(lang('old_password_wrong'),1);
     }
 ?>
-        <INPUT type="password" name="user_oldpassword" maxlength="20" size="20" value="">
+        <input type="password" name="user_oldpassword" maxlength="20" size="20" value="" />
         <em>&nbsp;<?php echo lang('case_sensitive'); ?></em>
       </TD>
     </TR>
@@ -74,7 +74,7 @@
     } // end: if ($newpw_error == 2)
   } // end: if (isset($save))
 ?>
-        <INPUT type="password" name="user_newpassword1" maxlength="20" size="20" value="">
+        <input type="password" name="user_newpassword1" maxlength="20" size="20" value="" />
         <em>&nbsp;<?php echo lang('case_sensitive'); ?></em>
       </TD>
     </TR>
@@ -83,14 +83,14 @@
         <strong><?php echo lang('new_password'); ?></strong><br /><?php echo lang('password_repeated'); ?>
       </TD>
       <TD class="bodytext" valign="top">
-        <INPUT type="password" name="user_newpassword2" maxlength="20" size="20" value="">
+        <input type="password" name="user_newpassword2" maxlength="20" size="20" value="" />
         <em>&nbsp;<?php echo lang('case_sensitive'); ?></em>
       </TD>
     </TR>
   </TABLE>
   <br />
-  <INPUT type="submit" name="save" value="<?php echo lang('ok_button_text'); ?>">
-  <INPUT type="submit" name="cancel" value="<?php echo lang('cancel_button_text'); ?>">
+   <input type="submit" name="save" value="<?php echo lang('ok_button_text'); ?>" />
+  <input type="submit" name="cancel" value="<?php echo lang('cancel_button_text'); ?>" />
 </FORM>
 <?php
   box_end();

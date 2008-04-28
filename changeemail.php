@@ -52,11 +52,11 @@
 <?php
   } /* end: if ($checkemail($sponsor["email"])) */
 ?>
-  <INPUT type="text" name="sponsor_email" maxlength="100" size="60" value="<?php echo HTMLSpecialChars($sponsor["email"]); ?>">
+  <input type="text" name="sponsor_email" maxlength="100" size="60" value="<?php echo HTMLSpecialChars($sponsor["email"]); ?>" />
   <br />
   <br />
-  <INPUT type="submit" name="save" value="<?php echo lang('ok_button_text'); ?>">
-  <INPUT type="submit" name="cancel" value="<?php echo lang('cancel_button_text'); ?>">
+  <input type="submit" name="save" value="<?php echo lang('ok_button_text'); ?>" />
+  <input type="submit" name="cancel" value="<?php echo lang('cancel_button_text'); ?>" />
 </FORM>
 <?php
   box_end();
