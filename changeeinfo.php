@@ -409,12 +409,12 @@ function inputeventbuttons(&$event,&$repeat,$database) {
 		echo "<br />";
 		box_begin("inputbox",lang('preview_event'));
 		echo '<form method="post" action="changeeinfo.php">',"\n";
-    echo '<input type="submit" name="savethis" value="',lang('save_changes'),'">',"\n";
+    echo '<input type="submit" name="savethis" value="',lang('save_changes'),'" />',"\n";
 
 /*
 		if ($repeat['mode'] > 0 && !empty($event['repeatid'])) {
 			if (!recurrenceschanged($event['repeatid'],$repeat,$event,$database)) {
-				echo '<input type="submit" name="saveall" value="Save changes for ALL recurrences"><br /><br />';
+				echo '<input type="submit" name="saveall" value="Save changes for ALL recurrences" /><br /><br />';
 			}
 		}
 */
@@ -466,14 +466,14 @@ function inputeventbuttons(&$event,&$repeat,$database) {
 		}
 		echo "<br /><br />\n";
 	
-		if (isset($detailscaller)) { echo "<INPUT type=\"hidden\" name=\"detailscaller\" value=\"",$detailscaller,"\">\n"; }
+		if (isset($detailscaller)) { echo "input type=\"hidden\" name=\"detailscaller\" value=\"",$detailscaller,"\" />\n"; }
 		passeventvalues($event,$event['sponsorid'],$repeat); // add the common input fields
 ?>
 <input type="hidden" name="check" value="1" />
 <?php
-		echo '<INPUT type="hidden" name="httpreferer" value="',$httpreferer,'">',"\n";
-		if (isset($eventid)) { echo "<INPUT type=\"hidden\" name=\"eventid\" value=\"",$event['id'],"\">\n"; }
-		if (isset($copy)) { echo "<INPUT type=\"hidden\" name=\"copy\" value=\"",$copy,"\">\n"; }
+		echo '<input type="hidden" name="httpreferer" value="',$httpreferer,'" />',"\n";
+		if (isset($eventid)) { echo "<input type=\"hidden\" name=\"eventid\" value=\"",$event['id'],"\" />\n"; }
+		if (isset($copy)) { echo "<input type=\"hidden\" name=\"copy\" value=\"",$copy,"\" />\n"; }
 		savechangesbuttons($event,$repeat,$database);
 ?>
 <input type="submit" name="edit" value="<?php echo lang('go_back_to_make_changes'); ?>" /> &nbsp;&nbsp;&nbsp;
@@ -490,7 +490,7 @@ function inputeventbuttons(&$event,&$repeat,$database) {
 				pageheader(lang('copy_event'),
 									 lang('copy_event'),
 									 "Update","",$database);
-				echo "<INPUT type=\"hidden\" name=\"copy\" value=\"",$copy,"\">\n";
+				echo "<input type=\"hidden\" name=\"copy\" value=\"",$copy,"\" />\n";
 			} else {
 				pageheader(lang('update_event'),
 									 lang('update_event'),
@@ -550,13 +550,13 @@ function inputeventbuttons(&$event,&$repeat,$database) {
 		inputeventbuttons($event,$repeat,$database);
 		echo "<br />\n<br />\n";
 		if (isset($detailscaller)) { 
-			echo "<INPUT type=\"hidden\" name=\"detailscaller\" value=\"",$detailscaller,"\">\n"; 
+			echo "<input type=\"hidden\" name=\"detailscaller\" value=\"",$detailscaller,"\" />\n"; 
 		}
 		if (!isset($check)) { $check = 0; }
  		inputeventdata($event,$event['sponsorid'],1,$check,1,$repeat,$database);
 		echo "<br />\n";
 		echo '<input type="hidden" name="httpreferer" value="',$httpreferer,'" />',"\n";
-		if (isset($eventid)) { echo "<INPUT type=\"hidden\" name=\"eventid\" value=\"",$event['id'],"\">\n"; }
+		if (isset($eventid)) { echo "<input type=\"hidden\" name=\"eventid\" value=\"",$event['id'],"\" />\n"; }
 		echo '<input type="hidden" name="event[repeatid]" value="',HTMLSpecialChars($event['repeatid']),"\" />\n";
 		if (!$_SESSION["AUTH_ADMIN"]) { echo "<input type=\"hidden\" name=\"event[sponsorid]\" value=\"",$event['sponsorid'],"\" />\n"; }
 		if (isset($copy)) { echo "<input type=\"hidden\" name=\"copy\" value=\"",$copy,"\" />\n"; }
