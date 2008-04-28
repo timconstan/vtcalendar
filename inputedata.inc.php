@@ -244,7 +244,7 @@ function inputeventdata(&$event,$sponsorid,$inputrequired,$check,$displaydatetim
   $result = DBQuery($database, "SELECT name,url FROM vtcal_sponsor WHERE calendarid='".sqlescape($_SESSION["CALENDARID"])."' AND id='".sqlescape($sponsorid)."'" ); 
   $sponsor = $result->fetchRow(DB_FETCHMODE_ASSOC,0);
 ?>
-<TABLE border="0" cellpadding="2" cellspacing="0">
+<table border="0" cellpadding="2" cellspacing="0">
 <?php
   // switch from "recurring event" to "repeat ..."
   if ($repeat['mode']==$recurring) { $repeat['mode'] = 1; }
@@ -718,7 +718,7 @@ echo'  >pm</OPTION>
 <?php
   } // end: if ( $_SESSION["CALENDARID"] != "default" )
 ?>
-</TABLE>
+</table>
 <INPUT type="hidden" name="check" value="1">
 <?php
   return 1;

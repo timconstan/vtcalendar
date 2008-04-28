@@ -906,7 +906,7 @@ can be empty or not (like <code>&lt;timeend&gt;&lt;/timeend&gt;</code>).
 $lang['help_inputfields'] = 'Input fields';
 $lang['help_inputfields_contents'] = 'The following table shows the meaning of the input fields:<br />
 <br />
-<TABLE width="100%" border="1" cellspacing="1" cellpadding="3">
+<table width="100%" border="1" cellspacing="1" cellpadding="3">
   <TR align="left">
     <TH class="helpbox">Field name</TH>
     <TH class="helpbox">Meaning</TH>
@@ -988,7 +988,7 @@ $lang['help_inputfields_contents'] = 'The following table shows the meaning of t
       <TD class="helpbox">Sponsor page web address</TD>
       <TD class="helpbox">Specify the address for the homepage of your organization here.</TD>
     <TR>
-</TABLE>';
+</table>';
 
 $lang['help_signup'] = 'How to post events';
 $lang['help_signup_authorization'] = 'Authorization can be obtained by contacting the calendar coordinator

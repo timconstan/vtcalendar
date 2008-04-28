@@ -25,7 +25,7 @@
 <br />
 <form method="get" action="main.php" name="searchform">
   <input type="hidden" name="view" value="searchresults">
-  <TABLE border="0" cellpadding="3" cellspacing="2">
+  <table border="0" cellpadding="3" cellspacing="2">
     <TR>
       <TD class="bodytext" valign="baseline">
         <strong><?php echo lang('keyword'); ?>:&nbsp;&nbsp;&nbsp;</strong>
@@ -54,7 +54,7 @@ inputdate($timebegin_month,"timebegin_month",
 						  <td><br /><INPUT type="submit" name="search" value="&nbsp;&nbsp;&nbsp;<?php echo lang('search'); ?>&nbsp;&nbsp;&nbsp;"></td>
 						</tr>
 					
-        </TABLE>
+        </table>
   <br />
 </FORM>				
 				</td>

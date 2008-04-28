@@ -4,7 +4,7 @@
 
   function inputtemplatedata(&$event,$sponsorid,$check,$template_name,$database) {
 ?>
-<TABLE border="0" cellpadding="2" cellspacing="0">
+<table border="0" cellpadding="2" cellspacing="0">
   <TR>
     <TD class="bodytext" valign="top">
       <strong><?php echo lang('template_name'); ?>:</strong> <font color="#FF0000">*</FONT>

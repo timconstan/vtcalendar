@@ -44,7 +44,7 @@
   box_begin("inputbox",lang('change_password'));
 ?>
 <FORM method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-  <TABLE border="0" cellpadding="2" cellspacing="0">
+  <table border="0" cellpadding="2" cellspacing="0">
     <TR>
       <TD class="bodytext" valign="top">
         <strong><?php echo lang('old_password'); ?></strong>
@@ -87,7 +87,7 @@
         <em>&nbsp;<?php echo lang('case_sensitive'); ?></em>
       </TD>
     </TR>
-  </TABLE>
+  </table>
   <br />
    <input type="submit" name="save" value="<?php echo lang('ok_button_text'); ?>" />
   <input type="submit" name="cancel" value="<?php echo lang('cancel_button_text'); ?>" />

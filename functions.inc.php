@@ -78,7 +78,7 @@ function displaylogin($errormsg,$database) {
   if (isset($GLOBALS["httpreferer"])) {  echo "<input type=\"hidden\" name=\"httpreferer\" value=\"",$GLOBALS["httpreferer"],"\">\n"; }
 	if (isset($GLOBALS["authsponsorid"])) { echo "<input type=\"hidden\" name=\"authsponsorid\" value=\"",$GLOBALS["authsponsorid"],"\">\n"; }
 ?>
-      <TABLE width="50%" border="0" cellspacing="1" cellpadding="3" align="center">
+      <table width="50%" border="0" cellspacing="1" cellpadding="3" align="center">
         <TR>
           <TD class="inputbox" align="right" nowrap><strong><?php echo lang('user_id'); ?>:</strong></TD>
           <TD align="left"><INPUT type="text" name="login_userid" value=""></TD>
@@ -97,7 +97,7 @@ function displaylogin($errormsg,$database) {
 					
 					</TD>
         </TR>
-      </TABLE>
+      </table>
       <br />
 		
       
@@ -693,7 +693,7 @@ function assemble_eventtime(&$event) {
 // prints out the HTML code a box begins with, use box_end to finish the box
 function box_begin($class, $headertext) {
 ?>
-<TABLE border="0" cellPadding="7" cellSpacing="0">
+<table border="0" cellPadding="7" cellSpacing="0">
   <TR>
     <TD bgcolor="<?php echo $_SESSION["BGCOLOR"]; ?>">&nbsp;</td>
     <TD bgcolor="#eeeeee">
@@ -710,7 +710,7 @@ function box_end() {
 ?>
     </TD>
   </TR>
-</TABLE>
+</table>
 <?php
 } // end: function box_end()
 

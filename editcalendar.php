@@ -134,7 +134,7 @@
 ?>
 <br />
 <form method="post" action="editcalendar.php">
-<TABLE border="0" cellpadding="2" cellspacing="0">
+<table border="0" cellpadding="2" cellspacing="0">
   <TR>
     <TD class="bodytext" valign="top">
       <?php echo lang('calendar_id'); ?>:
@@ -263,7 +263,7 @@
     <INPUT type="submit" name="cancel" value="<?php echo lang('cancel_button_text'); ?>">
   	</td>
 	</tr>
-</TABLE>
+</table>
 </form>
 <?php
   box_end();

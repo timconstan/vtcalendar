@@ -51,7 +51,7 @@
 		}
   } // end: if ( isset($fbid) )
 ?>
-<TABLE width="100%" border="0" cellspacing="1" cellpadding="2">
+<table width="100%" border="0" cellspacing="1" cellpadding="2">
 <TR>
   <TD class="inputbox">
     <A href="addevent.php"><?php echo lang('add_new_event'); ?></A>
@@ -126,7 +126,7 @@
   </TD>
   <TD></TD>
 </TR>
-</TABLE>
+</table>
 <?php
   echo "</fieldset>\n";
 ?>
@@ -137,7 +137,7 @@
 	  echo "<fieldset>\n";
 	  echo "<legend><strong>",lang('administrators_options'),"&nbsp;</strong></legend><br />\n";
 ?>
-<TABLE width="100%" border="0" cellspacing="1" cellpadding="2">
+<table width="100%" border="0" cellspacing="1" cellpadding="2">
 <TR>
   <TD class="inputbox">
     <A href="approval.php"><?php echo lang('approve_reject_event_updates'); ?></A>
@@ -205,7 +205,7 @@
 		  echo "<fieldset>\n";
 		  echo "<legend><strong>",lang('main_administrators_options'),"&nbsp;</strong></legend><br />\n";
 ?>
-<TABLE width="100%" border="0" cellspacing="1" cellpadding="3">
+<table width="100%" border="0" cellspacing="1" cellpadding="3">
 <?php
 	if ( AUTH_DB ) {
 ?>

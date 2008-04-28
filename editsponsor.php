@@ -161,7 +161,7 @@
 ?>
 <br />
 <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-<TABLE border="0" cellpadding="2" cellspacing="0">
+<table border="0" cellpadding="2" cellspacing="0">
   <TR>
     <TD class="bodytext" valign="top">
       <strong><?php echo lang('sponsor_name'); ?></strong>
@@ -248,7 +248,7 @@
 		<i><?php echo lang('administrative_members_example'); ?></i>
     </TD>
   </TR>
-</TABLE>
+</table>
 	<input type="hidden" name="check" value="1">
 <?php
   if ( isset ($id) ) { echo '<input type="hidden" name="id" value="',$id,'">'; }

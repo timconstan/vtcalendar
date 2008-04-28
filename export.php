@@ -464,7 +464,7 @@ for ($i=0; $i<$result->numRows(); $i++) {
       <strong><?php echo lang('date'); ?>:</strong>
     </TD>
     <TD class="bodytext" valign="top">
-      <TABLE border="0">
+      <table border="0">
         <TR>
           <TD class="bodytext" valign="top"><?php echo lang('from'); ?>:</TD>
           <TD class="bodytext" valign="top">
@@ -543,7 +543,7 @@ for ($i=date("Y")-1; $i<=date("Y")+3; $i++) {
         </SELECT>
       </TD>
     </TR>
-  </TABLE>
+  </table>
 </table>
 <br />
 
